@@ -73,8 +73,9 @@ While the core enterprise codebase remains proprietary, I architected and built 
     *   **Hardware Assembly:** Built the physical quadcopter drone from the ground up, which was utilized for the physical demonstration side of the setup.
     *   **RF & VTX Integration:** Integrated a live video transmitter (VTX) system that streamed the virtual camera feed from the simulation directly to physical field monitors and FPV goggles over the air (proving successful real-world RF broadcasting during the exhibition).
 *   **System Architecture:** Developed as a Hardware-in-the-Loop (HITL) system where the physical drone mirrored the real movements of the simulation. *(Note: Radio signal routing/splitting and the basic Python/C++ communication layer were co-developed with the Lead Architect).*
+<p align="center">
 <img width="695" height="389" alt="image" src="https://github.com/user-attachments/assets/eea6155d-099e-4fe3-9f11-34f098147ced" />
-  
+</p>
 [Showcase Video](/images/drone_expo26.mp4)   
 
 
@@ -86,11 +87,14 @@ While the core enterprise codebase remains proprietary, I architected and built 
     *   **Flight Dynamics Integration:** Engineered a full, integration between **Unreal Engine** and **JSBSim** (an open-source Flight Dynamics Model framework) using Python.
     *   **Geospatial Mapping App:** Developed a dedicated tracking application that captured the drone's live GPS telemetry data from the simulation and overlaid it in real-time onto a digital street map interface for operator tracking.
 *   **System Architecture:** Implemented high-performance, real-time data exchange utilizing Python scripts. *(Note: The underlying low-level RAM-disk file-based communication channel between Python and Unreal Engine was co-developed with the Lead Architect).*
-   
+<p align="center">
 <img width="343" height="376" alt="image" src="https://github.com/user-attachments/assets/ad99795d-62f9-4c9b-8b45-0b513fa4bfe4" />
-
----
-<a name="other-r-and-d"></a>
+</p>  
+  
+---  
+  
+<a name="other-r-and-d"></a>  
+  
 ## Other R&D & Hardware Projects
 
 Click on the links below to see dedicated pages with detailed descriptions.
