@@ -130,6 +130,8 @@ If you are here to quickly evaluate my programming proficiency and architectural
 *   **Modern C++ (C++17):** Look straight into the **[Mini-Redis Engine](https://github.com/grzesiekk013/mini-redis)** repo. It demonstrates how I handle C++ language.
 *   **Python Engineering:** Check out my **[PowerTrack (Engineering Thesis)](projects/power-track.md)** for a full-stack Django & SQL setup on embedded SBCs. See pico-worker/core and backend/PowerTrack/core.
 
+--- 
+
 *  🌱 I’m currently learning: C++ and STM32 microcontrollers (focusing on HAL, LL drivers, and direct register access).
 <!--
 **grzesiekk013/grzesiekk013** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
