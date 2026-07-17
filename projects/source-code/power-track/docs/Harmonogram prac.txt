@@ -1,0 +1,4 @@
+1. Zbudowanie prototypu (polutowanie, połączenie, instalacja systemu) 40%
+2. Odczytanie licznika z komputera, parser i które dane są potrzebne? - dobrze będzie coś uciąć
+3. organizacja danych i przesłanie ich do serwera
+4. podział na pomieszczenia

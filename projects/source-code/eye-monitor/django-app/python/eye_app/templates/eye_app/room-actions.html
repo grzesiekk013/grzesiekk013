@@ -1,0 +1,111 @@
+{% extends 'eye_app/base.html' %}
+{% block side_panel %} {% include 'eye_app/side_panel.html' %} {% endblock %}
+{% block main %}
+
+<div class="col position-relative bg-body-secondary rounded me-4 p-4">
+
+    <div class="position-absolute top-0 end-0 bg-body-secondary p-4 rounded z-1 text-end">
+        <div class="px-4 pt-3 pb-2 bg-body-tertiary rounded border">
+        <h1>{{ room.room_number }}</h1>
+        {% if last_seen %}
+        <span><small>Ostatnio widziany:</small></span>
+        <h5>{{ last_seen|date:"Y-m-d H:i:s" }}</h5>
+        {% endif %}
+    </div>
+    </div>
+
+    <h1>Ustawienia Akcji</h1><br>
+
+    <!-- przycisk dodawania -->
+    <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#addAction">
+        <span class="bi bi-plus-square"></span> Dodaj Nową Akcję
+    </button>
+
+    <!-- modal dodawania -->
+    <div class="modal fade" id="addAction">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Dodanie Nowej Akcji</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="id_parameter" class="form-label">Typ pomiaru</label>
+                            {{ form.parameter }}
+                        </div>
+                        <div class="mb-3">
+                            <label for="id_custom_name" class="form-label">Nazwa (opcjonalna)</label>
+                            {{ form.custom_name }}
+                        </div>
+                        <div class="mb-3">
+                            <label for="id_min" class="form-label">Minimalna wartość</label>
+                            {{ form.min }}
+                        </div>
+                        <div class="mb-3">
+                            <label for="id_max" class="form-label">Maksymalna wartość</label>
+                            {{ form.max }}
+                        </div>
+                        <div class="mb-3">
+                            <label for="id_url" class="form-label">URL</label>
+                            {{ form.url }}
+                        </div>
+                        
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-light">
+                            <span class="bi bi-plus-square"></span> Dodaj
+                        </button>
+                        <button type="button" class="btn btn-light" data-bs-dismiss="modal">
+                            <span class="bi bi-x-square"></span> Anuluj
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <h3>Istniejące Akcje</h3>
+
+    <div class="rounded-table-container bg-body-tertiary p-2 pb-0 rounded mt-2 border">
+        <table class="table w-auto mb-0">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Typ Pomiaru</th>
+                    <th>Min - Max</th>
+                    <th>URL</th>
+                    <th>Akcja</th>
+                </tr>
+            </thead>
+            <tbody class="table-group-divider">
+                {% for action in actions %}
+                <tr>
+                    <td>{{ action.id }}</td>
+                    <td>{{ action.custom_name|default:action.get_parameter_display }}</td>
+                    <td>{{ action.min }} - {{ action.max }}</td>
+                    <td>{{ action.url }}</td>
+                    <td>
+                        <div class="btn-group btn-group-sm" role="group">
+                            <a href="{% url 'edit_action' room.id action.id %}" class="btn btn-primary">Edytuj</a>
+                            <a href="{% url 'delete_action' room.id action.id %}" class="btn btn-danger">Usuń</a>
+                        </div>
+                    </td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="6" class="text-center">Brak zdefiniowanych akcji dla tego pomieszczenia.</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+{% endblock %}

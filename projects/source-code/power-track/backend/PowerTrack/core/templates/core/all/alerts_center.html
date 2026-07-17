@@ -1,0 +1,132 @@
+{% extends 'core/base.html' %}
+{% block aside %} {% include 'core/side_panel.html' with role=request.user.userrole.role %}
+{% endblock %}
+{% block main %}
+<div class="d-sm-flex align-items-center justify-content-between mb-2">
+  <p class="h3">{{ request.user.first_name }} {{ request.user.last_name }} <small>({{ request.user.userrole.get_role_display }})</small></p>
+  <p class="h3">Centrum zdarzeń</p>
+</div>
+
+<hr class="mb-2">
+
+<div class="row mb-2">
+    <div class="col-lg-8">
+    <div class="card shadow">
+      <div class="card-header py-3">
+        <p class="h6 m-0 font-weight-bold text-color">Zdarzenia</p>
+      </div>
+      <div class="card-body">
+       <table class="table table-striped">
+          <form method="GET" action="{%url 'alerts_center' %}">
+          <thead class="table-secondary">
+          <tr>
+            <th class="small" scope="col">Zdarzenie</th>
+            <th class="small" scope="col">Profil</th>
+            <th class="small" scope="col">Czas Wystąpienia</th>
+            <th class="small" scope="col">Potwierdzony</th>
+            <th class="small" scope="col">Licznik (Pomieszczenie)</th>
+            <th class="small" scope="col">Akcja</th>
+          </tr>
+          <tr>
+             <th class="small" scope="col">
+               <div class="btn-group me-2" role="group" aria-label="">
+               <input type="text" class="form-control form-control-sm clearable-input" name="fname" id="fname" value="{{ form_vals.fname }}">
+               <button type="button" class="btn btn-sm clear-btn btn-outline-danger"><span class="bi bi-archive" title="Wyczyść filtr"></span>
+               </div>
+             </th>
+             <th class="small" scope="col">
+               <select class="form-select form-control form-select-sm" id="falert" name="falert">
+                  <option value="" {% if not form_vals.falert %} selected {%endif%}>Pusty</option>
+                 {% for alert in alert_profiles %}
+                 <option value="{{alert.id}}" {% if form_vals.falert == alert.id|stringformat:"s" %} selected {%endif%}>{{ alert.name }}</option>
+                  {% endfor %}
+                </select>
+             </th>
+            <th></th>
+            <th class="small" scope="col">
+               <select class="form-select form-control form-select-sm" id="fconfirmed" name="fconfirmed">
+                  <option value="" {% if not form_vals.fconfirmed %} selected {%endif%}>Pusty</option>
+                 <option value="Tak" {% if form_vals.fconfirmed == "Tak" %} selected {%endif%}>Tak</option>
+                 <option value="Nie" {% if form_vals.fconfirmed == "Nie" %} selected {%endif%}>Nie</option>
+                </select>
+             </th>
+
+            <th class="small" scope="col">
+               <select class="form-select form-control form-select-sm" id="fmeter" name="fmeter">
+
+                  <option value="" {% if not form_vals.fmeter %} selected {%endif%}>Pusty</option>
+                 {% for meter in meters %}
+                 <option value="{{meter.id}}" {% if form_vals.fmeter == meter.id|stringformat:"s" %} selected {%endif%}>{{ meter }} ({{ meter.room }})</option>
+                 {% endfor %}
+                </select>
+             </th>
+            <th class="small" scope="col">
+               <div class="btn-group me-2" role="group" aria-label="">
+               <button type="submit" class="btn btn-sm btn-outline-dark"><span class="bi bi-filter-square" title="Filtruj wyniki"></span>  </button>
+               <a class="btn btn-sm btn-outline-dark" href="{% url 'alerts_center' %}" ><span class="bi bi-x-square" title="Wyczyść filtry"></span></a>
+               </div>
+             </th>
+          </tr>
+          </thead>
+          </form>
+          <tbody>
+          {% for alert in alerts %}
+          <tr>
+            <td class="small">{{ alert.message }}</td>
+            <td class="small">{{ alert.alert_profile.name }}</td>
+            <td class="small">{{ alert.datetime_from|date:"d.m.Y H:i" }}</td>
+            <td class="small">{% if request.user.userrole.role == "user" %} {% if alert.confirmed_user %} Tak {% else %} Nie {% endif %} {% else %} {% if alert.confirmed_admin_operator %} Tak {% else %} Nie {% endif %} {% endif%}</td>
+            <td class="small">{{ alert.energy_meter }} ({{ alert.energy_meter.room }})</td>
+            <td class="small">
+              <div class="btn-group me-2" role="group" aria-label="">
+                <a class="btn btn-sm btn-outline-success" href="{% url 'show_alert_center' alert.id %}" target="_blank"><span class="bi bi-printer" title="Drukuj"></span></a>
+                <button type="button" class="btn btn-sm btn-outline-warning" data-bs-toggle="modal" data-bs-target="#confirm_alert{{ alert.id }}" ><span class="bi bi-hand-thumbs-up" title="Potwierdź"></span></button>
+                {% block confirm_alert %} {% include 'core/modals/confirm_alert_center.html' %} {% endblock %}
+                {% if request.user.userrole.role == "admin" %}
+                <button type="button" class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#delete_alert{{ alert.id }}"><span class="bi bi-archive" title="Usuń pozycję"></span>  </button>
+                {% block delete_alert %} {% include 'core/modals/delete_alert_center.html' %} {% endblock %}
+                {% endif %}
+              </div>
+            </td>
+          {% endfor %}
+          </tbody>
+        </table>
+        <!-- Paginacja -->
+        {% with objects=alerts%}
+        {% block pagination %}
+        {% include 'core/all/pagination.html' %}
+        {% endblock %}
+        {% endwith %}
+        <!-- Paginacja -->
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4">
+    <div class="card shadow">
+      <div class="card-header py-3">
+        <p class="h6 m-0 font-weight-bold text-color" title="Filtrowanie treści ma wpływ na statystyki">Statystyki*</p>
+      </div>
+      <div class="card-body">
+        <div>
+          <p class="h6 d-inline">Liczba wszystkich zdarzeń: </p>
+          <p class="h6 d-inline">{{ alerts.paginator.count }}</p>
+      </div>
+    </div>
+    </div>
+</div>
+
+
+
+<script>
+  document.querySelectorAll('.clear-btn').forEach(btn => {
+  btn.addEventListener('click', function() {
+  const th = this.closest('th');
+  const input = th.querySelector('input.clearable-input');
+  if (input) {
+  input.value = '';
+  input.focus()
+  }});
+  });
+</script>
+
+{% endblock %}

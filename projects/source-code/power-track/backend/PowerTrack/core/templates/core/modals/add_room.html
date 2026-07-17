@@ -1,0 +1,46 @@
+<div class="modal fade" id="create_room">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <form method="POST" action="{%url 'manage_add_room' %}">
+        {% csrf_token %}
+        <div class="modal-header">
+          <p class="h4"><span class="bi bi-patch-plus"></span>  Nowe Pomieszczenie</p>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <hr>
+        <div class="modal-body">
+          <div class="form-group mb-2">
+            <label for="name">Nazwa</label>
+            <input id="name" type="text" class="form-control form-control-sm" name="name" required minlength="2" maxlength="32">
+          </div>
+          <div class="form-group mb-2">
+            <label for="number">Numer</label>
+            <input id="number" type="text" class="form-control form-control-sm" name="number" required  minlength="2" maxlength="16">
+          </div>
+          <div class="form-group mb-2">
+            <label for="client_id">Grupa</label>
+            <select class="form-select" id="client_id" name="client_id">
+              <option selected value="">-- Brak --</option>
+              {% for client in clients %}
+              <option value="{{ client.id }}">{{ client.name }}</option>
+              {% endfor %}
+            </select>
+          </div>
+          <div class="form-group mb-2">
+            <label for="start_lease_date">Początek Najmu</label>
+            <input id="start_lease_date" type="date" class="form-control form-control-sm" name="start_lease_date">
+          </div>
+          <div class="form-group mb-2">
+            <label for="end_lease_date">Koniec Najmu</label>
+            <input id="end_lease_date" type="date" class="form-control form-control-sm" name="end_lease_date">
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-sm btn-outline-success"><span class="bi bi-plus-square"></span>  Utwórz</button>
+            <button type="button" class="btn btn-sm btn-outline-danger" data-bs-dismiss="modal"><span class="bi bi-x-square"></span>  Anuluj</button>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>

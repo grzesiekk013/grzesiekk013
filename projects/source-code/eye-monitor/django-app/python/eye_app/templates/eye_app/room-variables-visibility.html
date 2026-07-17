@@ -1,0 +1,54 @@
+{% extends 'eye_app/base.html' %}
+{% block side_panel %} {% include 'eye_app/side_panel.html' %} {% endblock %}
+{% block main %}
+
+<div class="col position-relative bg-body-secondary rounded p-4 me-4">
+
+    <h1>Widoczność Pomiarów</h1>
+
+    <!--nazwa pokoju w prawym górnym kącie strony -->
+    <div class="position-absolute top-0 end-0 bg-body-secondary p-4 rounded z-1 text-end">
+        <div class="px-4 pt-3 pb-2 bg-body-tertiary rounded border">
+            <h1>{{ room.room_number }}</h1>
+            {% if last_seen %}
+            <span><small>Ostatnio widziany:</small></span>
+            <h5>{{ last_seen|date:"Y-m-d H:i:s" }}</h5>
+            {% endif %}
+        </div>
+    </div>
+
+    <hr>
+    <form method="post">
+        {% csrf_token %}
+        <div class="rounded-table-container bg-body-tertiary p-2 pb-0 rounded mt-2 border">
+            <table class="table w-auto mb-0">
+                <thead>
+                    <tr>
+                        <th>Pomiar</th>
+                        <th>Widoczny</th>
+                    </tr>
+                </thead>
+                <tbody class="table-group-divider">
+                    {% for param in parameters %}
+                    <tr>
+                        <td>{{ param.label }}</td>
+                        <td class="d-flex justify-content-center align-items-center">
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" style="transform: scale(1.4);" type="checkbox"
+                                    role="switch" name="{{ param.key }}" {% if param.visible %}checked{% endif %}>
+                            </div>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <div class="text-start w-50 mt-2">
+            <button type="submit" class="btn btn-light">
+                <span class="bi bi-save"></span> Zapisz
+            </button>
+        </div>
+    </form>
+</div>
+
+{% endblock %}

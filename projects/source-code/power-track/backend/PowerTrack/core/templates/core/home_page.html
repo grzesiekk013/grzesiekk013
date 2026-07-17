@@ -1,0 +1,92 @@
+{% extends 'core/base.html' %}
+{% block aside %} {% include 'core/side_panel.html' with role=request.user.userrole.role %}
+{% endblock %}
+{% block main %}
+
+<div class="d-sm-flex align-items-center justify-content-between mb-2">
+  <p class="h3">{{ request.user.first_name }} {{ request.user.last_name }} <small>({{ request.user.userrole.get_role_display }})</small></p>
+  <p class="h3">Strona Główna</p>
+</div>
+
+<hr class="mb-4">
+
+<div class="row">
+  <div class="col-xl-2">
+    <div class="card shadow">
+      <div class="card-header py-3">
+        <p class="h6 m-0 font-weight-bold text-color">Zdarzenia</p>
+      </div>
+      <div class="card-body">
+        <p><strong>Niepotwierdzone: </strong>{{ stats_vals.cnt_alerts_not_confirmed }}</p>
+        <p><strong>Wszystkich: </strong>{{ stats_vals.cnt_alerts_all }}</p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="col-xl-2">
+    <div class="card shadow">
+      <div class="card-header py-3">
+        <p class="h6 m-0 font-weight-bold text-color">Konwersacje</p>
+      </div>
+      <div class="card-body">
+        <p><strong>Nieprzeczytane: </strong>{{ stats_vals.cnt_unread_messages }}</p>
+        <p><strong>Wszystkich: </strong>{{ stats_vals.cnt_messages }}</p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="col-lg-8">
+    <div class="card shadow">
+      <div class="card-header py-3">
+        <p class="h6 m-0 font-weight-bold text-color">Twoje Uprawnienia</p>
+      </div>
+      {% if request.user.userrole.role == 'operator' %}
+      <div class="card-body">
+         <ul class="list-group m-2 mt-4">
+          <li class="list-group-item">Dodawanie, edytowanie rozdzielni</li>
+          <li class="list-group-item">Dodawanie, edytowanie urządzeń</li>
+          <li class="list-group-item">Dodawanie, edytowanie pomieszczeń</li>
+          <li class="list-group-item">Dodawanie, edytowanie liczników</li>
+          <li class="list-group-item">Przypisywanie liczników do pomieszczeń</li>
+          <li class="list-group-item">Podgląd historii liczników oraz podgląd bieżącego zużycia</li>
+          <li class="list-group-item">Definicja alertów</li>
+          <li class="list-group-item">Podgląd zdarzeń</li>
+          <li class="list-group-item">Tworzenie oraz przeglądanie przypisanych zgłoszeń</li>
+        </ul>
+        <p>* dotyczy jedynie pustych</p>
+      </div>
+      {% elif request.user.userrole.role == 'admin' %}
+      <div class="card-body">
+      <ul class="list-group m-2 mt-4">
+        <li class="list-group-item">Dodawanie, usuwanie, edytowanie użytkowników i ról</li>
+        <li class="list-group-item">Dodawanie, usuwanie, edytowanie grup klientów</li>
+        <li class="list-group-item">Dodawanie, usuwanie, edytowanie rozdzielni</li>
+        <li class="list-group-item">Dodawanie, usuwanie, edytowanie urządzeń</li>
+        <li class="list-group-item">Dodawanie, usuwanie, edytowanie pomieszczeń</li>
+        <li class="list-group-item">Dodawanie, usuwanie, edytowanie liczników</li>
+        <li class="list-group-item">Czyszczenie historii liczników</li>
+        <li class="list-group-item">Przypisywanie liczników do pomieszczeń</li>
+        <li class="list-group-item">Podgląd historii liczników oraz podgląd bieżącego zużycia</li>
+        <li class="list-group-item">Definicja alertów</li>
+        <li class="list-group-item">Podgląd zdarzeń</li>
+        <li class="list-group-item">Przeglądanie i administracja zgłoszeń</li>
+        <li class="list-group-item">Generowanie raportów</li>
+      </ul>
+      </div>
+      {% else %}
+      <div class="card-body">
+        <ul class="list-group m-2 mt-4">
+          <li class="list-group-item">Podgląd historii liczników oraz podgląd bieżącego zużycia</li>
+          <li class="list-group-item">Podgląd zdarzeń</li>
+          <li class="list-group-item">Tworzenie zgłoszeń</li>
+          <li class="list-group-item">Podgląd raportów</li>
+        </ul>
+      </div>
+      {% endif %}
+
+    </div>
+  </div>
+</div>
+{% endblock %}

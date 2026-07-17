@@ -1,0 +1,76 @@
+<div class="modal fade" id="message_add">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <form method="POST" action="{%url 'message_add_chat' %}">
+        {% csrf_token %}
+        <div class="modal-header">
+          <p class="h4"><span class="bi bi-patch-plus"></span>  Nowa Konwersacja</p>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <hr>
+        <div class="modal-body">
+          {% if request.user.userrole.role == 'admin' %}
+          <div class="form-group mb-2">
+            <label for="foperator">Do operatora</label>
+            <select class="form-select" id="foperator" name="foperator">
+              <option value="" selected>Pusty</option>
+              {% for user in users %}
+              {% if user.userrole.role == 'operator' %}
+              <option value="{{user.id}}">{{user.first_name}} {{user.last_name}}</option>
+              {%endif%}
+              {%endfor%}
+            </select>
+          </div>
+          {% endif %}
+          {% if request.user.userrole.role == 'admin' %}
+          <div class="form-group mb-2">
+            <label for="fuser">Do użytkownika</label>
+            <select class="form-select" id="fuser" name="fuser">
+              <option value="" selected>Pusty</option>
+              {% for user in users %}
+              {% if user.userrole.role == 'user' %}
+              <option value="{{user.id}}">{{user.first_name}} {{user.last_name}} ({{ user.roomgroup.name}}</option>
+              {%endif%}
+              {%endfor%}
+            </select>
+          </div>
+          {% endif %}
+          {% if request.user.userrole.role or request.user.userrole.role == 'admin'%}
+          <div class="form-group mb-2">
+            <label for="fadmin">Do administratora</label>
+            <select class="form-select" id="fadmin" name="fadmin" >
+              <option value="" selected>Pusty</option>
+              {% for user in users %}
+              {% if user.userrole.role == 'admin' %}
+              <option value="{{user.id}}">{{user.first_name}} {{user.last_name}}</option>
+              {%endif%}
+              {%endfor%}
+            </select>
+          </div>
+
+          {% endif %}
+          {% if request.user.userrole.role == 'admin' or request.user.userrole.role == 'operator' %}
+          <div class="form-group mb-2">
+            <label class="form-check-label" for="fis_internal">Wiadomość wewnętrzna</label>
+            <input id="fis_internal" type="checkbox" class="form-check-input" name="fis_internal">
+          </div>
+          {% endif %}
+          <div class="form-group mb-2">
+            <label for="ftitle">Tytuł</label>
+            <input id="ftitle" type="text" class="form-control form-control-sm" name="ftitle" required maxlength="64" minlength="8">
+          </div>
+
+          <div class="form-group mb-2">
+            <label for="fdescription">Treść</label>
+            <textarea id="fdescription" class="form-control form-control-sm" name="fdescription" required maxlength="1024" minlength="8"></textarea>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-sm btn-outline-success"><span class="bi bi-plus-square"></span>  Wyślij Wiadomość</button>
+            <button type="button" class="btn btn-sm btn-outline-danger" data-bs-dismiss="modal"><span class="bi bi-x-square"></span>  Anuluj</button>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>

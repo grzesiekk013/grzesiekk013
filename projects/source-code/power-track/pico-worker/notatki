@@ -1,0 +1,16 @@
+Server Link ma bezpieczne połączenie - szyfrowane
+- pobiera alerty
+- wysyła alerty
+- pobiera liczniki
+- wysyła dane
+- zwraca status
+
+
+Sekwencja
+- pobranie i aktualizacja liczników
+- per mi odczyt licznikow
+- wyslanie danych
+- pobranie i aktualizacja alertow
+- wyslanie alertow
+
+dodac skanowanie urządzeń, ktore bedzie wysylac dane, ktore sa niepoprawne, brak, czy nadmiar

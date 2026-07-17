@@ -1,0 +1,33 @@
+{% extends 'eye_app/base.html' %}
+{% block side_panel %} {% include 'eye_app/side_panel.html' %} {% endblock %}
+{% block main %}
+
+<!-- strona nieużywana -->
+
+<div class="col position-relative bg-body-secondary rounded me-4 p-4">
+
+    <!--nazwa pokoju w prawym górnym kącie strony -->
+    <div class="position-absolute top-0 end-0 bg-body-secondary p-4 rounded z-1 text-end">
+        <div class="px-4 pt-3 pb-2 bg-body-tertiary rounded">
+            <h1>C122</h1>
+        </div>
+    </div>
+
+    <h1>Edytuj Pomieszczenie</h1>
+    <hr>
+    <div class="bg-body-tertiary p-2 rounded w-50 mt-4 pb-3">
+        <!--wip, jeszcze nie wiadomo wszystkich edytowalnych aspektów pokojów-->
+        <p>Nazwa Pomieszczenia:</p>
+        <div class="input-group mb-3 w-50">
+            <input type="text" class="form-control" placeholder="Nowa Nazwa Pomieszczenia">
+        </div>
+        <!--placeholder-->
+        <p><span class="placeholder-glow"><span class="placeholder placeholder-glow col-2"></span></span> :</p>
+        <div class="input-group mb-3 w-50">
+            <input type="text" class="form-control" disabled>
+        </div>
+        <button type="button" class="btn btn-light mt-2"><span class="bi bi-floppy"></span> Zapisz</button>
+    </div>
+</div>
+
+{% endblock %}

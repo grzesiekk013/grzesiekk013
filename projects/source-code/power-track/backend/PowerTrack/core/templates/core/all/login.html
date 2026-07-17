@@ -1,0 +1,54 @@
+{% extends 'core/base.html' %}
+{% block aside %} {% include 'core/side_panel.html' with role=request.user.userrole.role %}
+{% endblock %}
+{% block main %}
+
+<div class="d-flex justify-content-center align-items-center" style="min-height:90vh">
+  <div class="card shadow-lg" style="width:450px">
+    <div class="card-header">
+      <h3 class="text-venter mb-3 text-center pt-4">Panel Logowania</h3>
+    </div>
+    <div class="card-body p-3">
+      {% if messages %}
+        {% for message in messages %}
+          <div class="alert small {% if message.tags == 'success' %} alert-success {% elif message.tags == 'error' %} alert-danger {% else %} alert-primary {% endif%}" >{{message}}</div>
+        {% endfor %}
+      {% endif %}
+      <form method="POST">
+        {%csrf_token%}
+
+        <div class="form-group m-3">
+           <label for="username" class="form-label">Nazwa użytkownika/Adres e-mail</label>
+          <div class="btn-group me-2" role="group" aria-label="">
+           <input id="username" type="text" class="form-control form-control-sm" name="username" required minlength="4" maxlength="128" autofocus>
+          </div>
+        </div>
+        <div class="form-group m-3">
+           <label for="username" class="form-label">Hasło</label> <br>
+           <div class="btn-group me-2" role="group" aria-label="">
+             <input id="password" type="password" class="form-control form-control-sm" name="password" required minlength="4" maxlength="128" autofocus>
+             <button type="button" id="togglePasswd" class="btn btn-sm btn-outline-dark"><span class="bi bi-eye"></span></button>
+             <script>
+               document.addEventListener('DOMContentLoaded', function() {
+                  const passwdInput = document.querySelector("#password");
+                  const toggleBtn = document.querySelector("#togglePasswd");
+
+                  if (toggleBtn) {
+                    toggleBtn.addEventListener('click', function () {
+                      const newType = passwdInput.getAttribute('type') == 'password' ? 'text' : 'password';
+                      passwdInput.setAttribute('type', newType);
+                    });
+                  }
+               });
+             </script>
+           </div>
+        </div>
+
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-sm btn-outline-success"><span class="bi bi-shield-lock"></span> Zaloguj sie</button>
+          </div>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

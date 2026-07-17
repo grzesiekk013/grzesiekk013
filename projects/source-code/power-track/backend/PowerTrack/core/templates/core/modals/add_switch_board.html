@@ -1,0 +1,33 @@
+<div class="modal fade" id="add_switch_board">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <form method="POST" action="{%url 'manage_add_switch_board' %}">
+        {% csrf_token %}
+        <div class="modal-header">
+          <p class="h4"><span class="bi bi-patch-plus"></span>  Nowa Rodzielnia</p>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <hr>
+        <div class="modal-body">
+          <div class="form-group mb-2">
+            <label for="name">Nazwa</label>
+            <input id="name" type="text" class="form-control form-control-sm" name="name" required minlength="4" maxlength="128">
+          </div>
+          <div class="form-group mb-2">
+            <label for="location">Lokalizacja</label>
+            <input id="location" type="text" class="form-control form-control-sm" name="location" required minlength="4" maxlength="64">
+          </div>
+          <div class="form-group mb-2">
+            <label for="description">Opis</label>
+            <input id="description" type="text" class="form-control form-control-sm" name="description" required minlength="4" maxlength="128">
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-sm btn-outline-success"><span class="bi bi-plus-square"></span>  Utwórz</button>
+            <button type="button" class="btn btn-sm btn-outline-danger" data-bs-dismiss="modal"><span class="bi bi-x-square"></span>  Anuluj</button>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>

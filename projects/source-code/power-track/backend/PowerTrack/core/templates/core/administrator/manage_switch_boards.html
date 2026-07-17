@@ -1,0 +1,125 @@
+{% extends 'core/base.html' %}
+{% block aside %} {% include 'core/side_panel.html' with role=request.user.userrole.role %}
+{% endblock %}
+{% block main %}
+<div class="d-sm-flex align-items-center justify-content-between mb-2">
+  <p class="h3">{{ request.user.first_name }} {{ request.user.last_name }} <small>({{ request.user.userrole.get_role_display }})</small></p>
+  <p class="h3">Zarządzanie Rozdzielniami</p>
+</div>
+
+<hr class="mb-2">
+
+<div class="mb-2">
+  <button type="button" class="btn btn-sm btn-dark my-2" data-bs-toggle="modal" data-bs-target="#add_switch_board"><span class="bi bi-plus-square"></span> Dodaj Rozdzielnię</button>
+ </div>
+
+<hr class="mb-2">
+{% block modal %}
+{% include 'core/modals/add_switch_board.html' %}
+{% endblock %}
+
+<div class="row mb-2">
+    <div class="col-lg-8">
+    <div class="card shadow">
+      <div class="card-header py-3">
+        <p class="h6 m-0 font-weight-bold text-color">Rozdzielnie</p>
+      </div>
+      <div class="card-body">
+       <table class="table table-striped">
+          <form method="GET" action="{%url 'manage_switch_boards' %}">
+          <thead>
+          <tr class="table-secondary">
+            <th class="small">Nazwa</th>
+            <th class="small">Lokalizacja</th>
+            <th class="small">Opis</th>
+            <th class="small">Akcja</th>
+          </tr>
+          <tr class="table-secondary">
+             <td class="small" scope="col">
+               <div class="btn-group me-2" role="group" aria-label="">
+               <input type="text" class="form-control form-control-sm clearable-input" name="fname" id="fname" value="{{ form_vals.fname }}">
+               <button type="button" class="btn btn-sm clear-btn btn-outline-danger"><span class="bi bi-archive" title="Wyczyść filtr"></span>
+               </div>
+             </th>
+              <td class="small" scope="col">
+               <div class="btn-group me-2" role="group" aria-label="">
+               <input type="text" class="form-control form-control-sm clearable-input" name="flocation" id="flocation" value="{{ form_vals.flocation }}">
+               <button type="button" class="btn btn-sm clear-btn btn-outline-danger"><span class="bi bi-archive" title="Wyczyść filtr"></span>
+               </div>
+             </th>
+
+              <td class="small" scope="col">
+               <div class="btn-group me-2" role="group" aria-label="">
+               <input type="text" class="form-control form-control-sm clearable-input" name="fdescription" id="fdescription" value="{{ form_vals.fdescription }}">
+               <button type="button" class="btn btn-sm clear-btn btn-outline-danger"><span class="bi bi-archive" title="Wyczyść filtr"></span>
+               </div>
+             </th>
+            <td class="small" scope="col">
+               <div class="btn-group me-2" role="group" aria-label="">
+               <button type="submit" class="btn btn-sm btn-outline-dark"><span class="bi bi-filter-square" title="Filtruj wyniki"></span>  </button>
+               <a class="btn btn-sm btn-outline-dark" href="{% url 'manage_switch_boards' %}" ><span class="bi bi-x-square" title="Wyczyść filtry"></span></a>
+               </div>
+             </th>
+            </tr>
+          </tr>
+          </thead>
+          </form>
+          <tbody>
+          <tr>
+            {% for switch_board in switch_boards %}
+            <td class="small">{{ switch_board.name }}</td>
+            <td class="small">{{ switch_board.location }}</td>
+            <td class="small">{{ switch_board.description }}</td>
+            <td class="small">
+              <div class="btn-group me-2" role="group" aria-label="">
+                <button type="button" class="btn btn-sm btn-outline-warning" data-bs-toggle="modal" data-bs-target="#manage_edit_switch_board{{ switch_board.id }}"><span class="bi bi-pencil-square" title="Edytuj pozycję"></span>  </button>
+                {% if request.user.userrole.role == "admin" %}
+                <button type="button" class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#manage_delete_switch_board{{ switch_board.id }}"><span class="bi bi-archive" title="Usuń pozycję"></span>  </button>
+                {% endif %}
+                {% block modal_edit %} {% include 'core/modals/edit_switch_board.html' %} {% endblock %}
+                {% block modal_delete %} {% include 'core/modals/delete_switch_board.html' %} {% endblock %}
+              </div>
+            </td>
+          </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+        <!-- Paginacja -->
+        {% with objects=switch_boards%}
+        {% block pagination %}
+        {% include 'core/all/pagination.html' %}
+        {% endblock %}
+        {% endwith %}
+        <!-- Paginacja -->
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4">
+    <div class="card shadow">
+      <div class="card-header py-3">
+        <p class="h6 m-0 font-weight-bold text-color" title="Filtrowanie treści ma wpływ na statystyki">Statystyki*</p>
+      </div>
+      <div class="card-body">
+        <div>
+          <p class="h6 d-inline">Liczba Rozdzielni: </p>
+          <p class="h6 d-inline">{{ switch_boards.paginator.count }}</p>
+        </div>
+
+      </div>
+    </div>
+    </div>
+</div>
+
+<script>
+  document.querySelectorAll('.clear-btn').forEach(btn => {
+  btn.addEventListener('click', function() {
+  const th = this.closest('th');
+  const input = th.querySelector('input.clearable-input');
+  if (input) {
+  input.value = '';
+  input.focus()
+  }});
+  });
+</script>
+
+{% endblock %}

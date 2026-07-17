@@ -1,0 +1,64 @@
+{% block aside %}
+<div class="col-sm-2 bg-body-tertiary rounded mx-4 p-4">
+    <a type="button" class="btn btn-outline-light text-start mb-1" href="{% url 'main' %}">
+        <span class="bi bi-arrow-left"></span> Wróć Do Głównej
+    </a>
+    <hr>
+
+    {% if room %}
+    <div class="btn-group-vertical my-2 w-100" role="group">
+        <a type="button" {% if user_access.has_read_access or user.is_staff %} style="opacity:1.0" {% else %} style="opacity:0.2" {% endif %}
+           class="btn btn-outline-light text-start {% if request.resolver_match.url_name == 'room_overall' %}active{% endif %}"
+           href="{% url 'room_overall' room.id %}">
+            Widok Ogólny
+        </a>
+
+        <a type="button" {% if user_access.has_read_access or user.is_staff %} style="opacity:1.0" {% else %} style="opacity:0.2" {% endif %}
+           class="btn btn-outline-light text-start {% if request.resolver_match.url_name == 'room_advanced' %}active{% endif %}"
+           href="{% url 'room_advanced' room.id %}">
+            Widok Zaawansowany
+        </a>
+
+        <a type="button" {% if user_access.has_read_write_access or user.is_staff %} style="opacity:1.0" {% else %} style="opacity:0.2" {% endif %}
+           class="btn btn-outline-light text-start {% if request.resolver_match.url_name == 'room_manage_access' %}active{% endif %}"
+           href="{% url 'room_manage_access' room.id %}">
+            Zarządzanie Dostępem
+        </a>
+
+        <a type="button" {% if user_access.has_read_write_access or user.is_staff %} style="opacity:1.0" {% else %} style="opacity:0.2" {% endif %}
+           class="btn btn-outline-light text-start {% if request.resolver_match.url_name == 'room_variables_visibility' %}active{% endif %}"
+           href="{% url 'room_variables_visibility' room.id %}">
+            Widoczność Pomiarów
+        </a>
+    </div>
+
+    <hr>
+
+    <div class="btn-group-vertical my-2 w-100" role="group">
+        <a type="button" {% if user_access.has_read_write_access or user.is_staff %} style="opacity:1.0" {% else %} style="opacity:0.2" {% endif %}
+           class="btn btn-outline-light text-start {% if request.resolver_match.url_name == 'room_details' %}active{% endif %}"
+           href="{% url 'room_details' room.id %}">
+            Ustawienia Pomieszczenia
+        </a>
+
+        <a type="button" {% if user_access.has_read_write_access or user.is_staff %} style="opacity:1.0" {% else %} style="opacity:0.2" {% endif %}
+           class="btn btn-outline-light text-start {% if request.resolver_match.url_name == 'room_actions' %}active{% endif %}"
+           href="{% url 'room_actions' room.id %}">
+            Ustawienia Akcji
+        </a>
+
+        <a type="button" {% if user_access.has_read_write_access or user.is_staff %} style="opacity:1.0" {% else %} style="opacity:0.2" {% endif %}
+           class="btn btn-outline-light text-start {% if request.resolver_match.url_name == 'room_names' %}active{% endif %}"
+           href="{% url 'room_names' room.id %}">
+            Ustawienia Pojęć
+        </a>
+
+        <a type="button" {% if user_access.has_read_write_access or user.is_staff %} style="opacity:1.0" {% else %} style="opacity:0.2" {% endif %}
+           class="btn btn-outline-light text-start {% if request.resolver_match.url_name == 'room_device' %}active{% endif %}"
+           href="{% url 'room_device' room.id %}">
+            Ustawienia Urządzenia
+        </a>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

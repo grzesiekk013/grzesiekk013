@@ -1,0 +1,80 @@
+{% block aside %}
+<!--https://icons.getbootstrap.com/?q=people-->
+<a href="{% url 'home' %}" class="nav-link text-white font-weight-bold">
+  <h4 class="text-white m-3 ml-2"><span class="bi bi-plug"></span>  PowerTrack</h4>
+</a>
+<ul class="nav nav-pills flex-column mb-auto">
+
+{% if role == 'admin' %}
+  <li>
+      <hr class="text-white">
+  </li>
+
+  <li>
+      <a href="{% url 'manage_users' %}" class="nav-link text-white">
+       <p class="sml m-0"><span class="bi bi-person"></span>  Użytkownicy i Uprawnienia</p>
+      </a>
+  </li>
+  <li>
+      <a href="{% url 'manage_clients' %}" class="nav-link text-white">
+       <p class="sml m-0"><span class="bi bi-people"></span>  Grupy</p>
+      </a>
+  </li>
+  {% endif %}
+  <li>
+      <hr class="text-white">
+  </li>
+  {% if role == 'admin' or role == 'operator' %}
+  <li>
+      <a href="{% url 'manage_switch_boards' %}" class="nav-link text-white">
+       <p class="sml m-0"><span class="bi bi-hdd-rack"></span>  Rozdzielnie</p>
+      </a>
+  </li>
+  <li>
+      <a href="{% url 'manage_devices' %}" class="nav-link text-white">
+       <p class="sml m-0"><span class="bi bi-motherboard"></span>  Urządzenia</p>
+      </a>
+  </li>
+  <li>
+      <a href="{% url 'manage_meters' %}" class="nav-link text-white">
+       <p class="sml m-0"><span class="bi bi-database"></span>  Liczniki</p>
+      </a>
+  </li>
+  <li>
+      <a href="{% url 'manage_rooms' %}" class="nav-link text-white">
+       <p class="sml m-0"><span class="bi bi-building"></span>  Pomieszczenia</p>
+      </a>
+  </li>
+  <li>
+      <hr class="text-white">
+  </li>
+  <li>
+      <a href="{% url 'manage_alerts' %}" class="nav-link text-white">
+       <p class="sml m-0"><span class="bi bi-calendar"></span>  Profile Zdarzeń</p>
+      </a>
+  </li>
+  {% endif %}
+  <li>
+      <a href="{% url 'alerts_center' %}" class="nav-link text-white">
+       <p class="sml m-0"><span class="bi bi-calendar-event"></span> Zdarzenia</p>
+      </a>
+  </li>
+
+
+  <li>
+      <hr class="text-white">
+  </li>
+  <li>
+      <a href="{% url 'my_meters_home' %}" class="nav-link text-white">
+       <p class="sml m-0"><span class="bi bi-activity"></span>  Moje liczniki</p>
+      </a>
+  </li>
+  <li>
+      <a href="{% url 'reports_list' %}" class="nav-link text-white">
+       <p class="sml m-0"><span class="bi bi-file-bar-graph"></span>  Raporty</p>
+      </a>
+  </li>
+
+</ul>
+
+{% endblock %}

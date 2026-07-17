@@ -1,0 +1,164 @@
+<html>
+<head>
+  <style>
+    @media print{
+      .hide_print{ display:none !important}
+    }
+    button { background-color: #eee; padding: 20px; border-radius:5px; border: 1px solid black; font-size:24px; position:sticky; top: 50%}
+  </style>
+  <title>
+    PowerTrack - Raport ze Zdarzenia {{ alert.id }}
+  </title>
+</head>
+<body>
+<table border="0px solid" style="width:100%">
+  <tr>
+    <td colspan="4"><h1>PowerTrack</h1></td>
+    <td><p style="text-align:right">{% now "j E Y H:i:s" %}</p></td>
+  </tr>
+  <tr>
+    <td colspan="5">
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="5"><h2 style="text-align:center">Raport ze zdarzenia</h2><p style="text-align:center">identyfikator #{{alert.id}}</p></td>
+  </tr>
+  <tr>
+    <td colspan="5">
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td><p><strong>Czas wystąpienia:</strong> {{ alert.datetime_from }}</p></td>
+  </tr>
+  <tr>
+    <td colspan="5">
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p><strong>Treść:</strong> {{ alert.message }}</p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="5">
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td><p><strong>Dotyczy:</strong> licznik o identyfikatorze <i><u>{{ alert.energy_meter }}</u></i>, do którego przypisano pomieszczenie <i><u>{{ alert.room}}</u></i></p></td>
+  </tr>
+  <tr>
+    <td colspan="5">
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td><p><strong>Dane pomieszczenia: </strong><i><u>{{ alert.room.name }}</i></u> o numerze <i><u>{{ alert.room.number }}</i></u>, którego najemcą jest <i><u>{{ alert.room.room_group.name }}</i></u>. Czas najmu trwa od <i><u>{% if alert.room.start_lease_date %} {{ alert.room.start_lease_date }} {% else %} nie określono {% endif %}</u></i> do <i><u>{% if alert.room.end_lease_date %} {{ alert.room.end_lease_date }} {% else %} nie określono {% endif %}</u></i>.</p></td>
+  </tr>
+  <tr>
+    <td colspan="5">
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td><p><strong>Konfiguracja alertu</strong></p>
+    <p><strong>Nazwa:</strong> {{alert.alert_profile.name}}</p>
+    <table style="border: 1px dashed black; text-align:center">
+      <tr style="background-color:#eee">
+        <th>Monitoruj L1</th>
+        <th>Monitoruj L2</th>
+        <th>Monitoruj L3</th>
+      </tr>
+      <tr>
+        <td>{% if alert.alert_profile.l1_enable %} Tak {% else %} Nie {% endif %}</td>
+        <td>{% if alert.alert_profile.l2_enable %} Tak {% else %} Nie {% endif %}</td>
+        <td>{% if alert.alert_profile.l3_enable %} Tak {% else %} Nie {% endif %}</td>
+      </tr>
+    </table>
+      <br>
+      <table style="border: 1px dashed black">
+  <tr style="background-color:#eee">
+    <th>Nazwa</th>
+    <th>Aktywny</th>
+    <th>Minimum</th>
+    <th>Maksimum</th>
+    <th>Jednostka</th>
+  </tr>
+  <tr>
+    <td>Napięcie</td>
+    <td>{% if alert.alert_profile.monitor_voltage %}Tak{%else%}Nie{% endif %}</td>
+    <td>{{ alert.alert_profile.min_voltage }}</td>
+    <td>{{ alert.alert_profile.max_voltage }}</td>
+    <td>[V]</td>
+  </tr>
+  <tr>
+    <td>Prąd</td>
+    <td>{% if alert.alert_profile.monitor_voltage %}Tak{%else%}Nie{% endif %}</td>
+    <td>{{ alert.alert_profile.min_current }}</td>
+    <td>{{ alert.alert_profile.max_current }}</td>
+    <td>[A]</td>
+  </tr>
+  <tr>
+    <td>Częstotliwość</td>
+    <td>{% if alert.alert_profile.monitor_voltage %}Tak{%else%}Nie{% endif %}</td>
+    <td>{{ alert.alert_profile.min_frequency }}</td>
+    <td>{{ alert.alert_profile.max_frequency }}</td>
+    <td>[Hz]</td>
+  </tr>
+  <tr>
+    <td>Moc Czynna</td>
+    <td>{% if alert.alert_profile.monitor_voltage %}Tak{%else%}Nie{% endif %}</td>
+    <td>{{ alert.alert_profile.min_active_power }}</td>
+    <td>{{ alert.alert_profile.max_active_power }}</td>
+    <td>[W]</td>
+  </tr>
+  <tr>
+    <td>Moc Bierna</td>
+    <td>{% if alert.alert_profile.monitor_voltage %}Tak{%else%}Nie{% endif %}</td>
+    <td>{{ alert.alert_profile.min_reactive_power }}</td>
+    <td>{{ alert.alert_profile.max_reactive_power }}</td>
+    <td>[W]</td>
+  </tr>
+  <tr>
+    <td>Jakość</td>
+    <td>{% if alert.alert_profile.monitor_voltage %}Tak{%else%}Nie{% endif %}</td>
+    <td>{{ alert.alert_profile.min_power_factor }}</td>
+    <td>{{ alert.alert_profile.max_power_factor }}</td>
+    <td>[cos(φ)]</td>
+  </tr>
+</table>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="5">
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p><strong>Raport wygenerowany przez: </strong> {{ request.user.first_name }} {{ request.user.last_name }} <i>({{ request.user.userrole.role }})</i></p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="5">
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="5" style="text-align: center">
+      Grzegorz Lademann
+    </td>
+  </tr>
+  <tr colspan="5">
+    <td><button class="hide_print" onclick="window.print()">Drukuj Raport</button></td>
+  </tr>
+</table>
+
+</body>
+</html>
+
+
+

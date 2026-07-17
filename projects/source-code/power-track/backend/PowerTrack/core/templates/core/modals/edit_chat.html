@@ -1,0 +1,70 @@
+<div class="modal fade" id="edit_chat">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <form method="POST" action="{%url 'message_edit_chat' chat_id=chat.id %}">
+        {% csrf_token %}
+        <div class="modal-header">
+          <p class="h4"><span class="bi bi-pencil-square"></span>  Konwersacja <i>{{ chat.author }}</i> </p>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <hr>
+        <div class="modal-body">
+          {% if request.user.userrole.role == 'admin' %}
+          <div class="form-group mb-2">
+            <label for="foperator">Operator</label>
+            <select class="form-select" id="foperator" name="foperator">
+              <option value="" selected>Pusty</option>
+              {% for user in users %}
+              {% if user.userrole.role == 'operator' %}
+              <option value="{{user.id}}" {% if chat.assigned_operator.id == user.id %} selected {%endif%}>{{user.first_name}} {{user.last_name}}</option>
+              {%endif%}
+              {%endfor%}
+            </select>
+          </div>
+          <div class="form-group mb-2">
+            <label for="fuser">Użytkownik</label>
+            <select class="form-select" id="fuser" name="fuser">
+              <option value="" selected>Pusty</option>
+              {% for user in users %}
+              {% if user.userrole.role == 'user' %}
+              <option value="{{user.id}}" {% if chat.assigned_user.id == user.id %} selected {%endif%}>{{user.first_name}} {{user.last_name}} {% if user.roomgroup.name %}({{ user.roomgroup.name}}){%else%}(Brak){%endif%}</option>
+              {%endif%}
+              {%endfor%}
+            </select>
+          </div>
+          <div class="form-group mb-2">
+            <label for="fadmin">Administrator</label>
+            <select class="form-select" id="fadmin" name="fadmin" >
+              <option value="" selected>Pusty</option>
+              {% for user in users %}
+              {% if user.userrole.role == 'admin' %}
+              <option value="{{user.id}}" {% if chat.assigned_admin.id == user.id %} selected {%endif%}>{{user.first_name}} {{user.last_name}}</option>
+              {%endif%}
+              {%endfor%}
+            </select>
+          </div>
+          <div class="form-group mb-2">
+            <label for="fstatus">Status</label>
+            <select class="form-select" id="fstatus" name="fstatus" >
+              <option value="new" {% if chat.status == 'new' %} selected {% endif %}>Nowy</option>
+              <option value="in_progress" {% if chat.status == 'in_progress' %} selected {% endif %}>W trakcie</option>
+              <option value="ended" {% if chat.status == 'ended' %} selected {% endif %}>Zakończony</option>
+
+            </select>
+          </div>
+
+          {% endif %}
+          <div class="form-group mb-2">
+            <label for="ftitle">Tytuł</label>
+            <input id="ftitle" type="text" class="form-control form-control-sm" name="ftitle" required maxlength="64" minlength="8" value="{{ chat.title }}">
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-sm btn-outline-success"><span class="bi bi-floppy"></span>  Zapisz</button>
+            <button type="button" class="btn btn-sm btn-outline-danger" data-bs-dismiss="modal"><span class="bi bi-x-square"></span>  Anuluj</button>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>

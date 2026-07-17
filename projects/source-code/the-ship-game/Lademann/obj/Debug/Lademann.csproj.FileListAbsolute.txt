@@ -1,0 +1,529 @@
+C:\Users\Grzep\source\repos\Lademann\bin\Debug\Lademann.exe.config
+C:\Users\Grzep\source\repos\Lademann\bin\Debug\Lademann.exe
+C:\Users\Grzep\source\repos\Lademann\bin\Debug\Lademann.pdb
+C:\Users\Grzep\source\repos\Lademann\obj\Debug\Lademann.csproj.AssemblyReference.cache
+C:\Users\Grzep\source\repos\Lademann\obj\Debug\Lademann.csproj.SuggestedBindingRedirects.cache
+C:\Users\Grzep\source\repos\Lademann\obj\Debug\Lademann.Form1.resources
+C:\Users\Grzep\source\repos\Lademann\obj\Debug\Lademann.Properties.Resources.resources
+C:\Users\Grzep\source\repos\Lademann\obj\Debug\Lademann.csproj.GenerateResource.cache
+C:\Users\Grzep\source\repos\Lademann\obj\Debug\Lademann.csproj.CoreCompileInputs.cache
+C:\Users\Grzep\source\repos\Lademann\obj\Debug\Lademann.exe
+C:\Users\Grzep\source\repos\Lademann\obj\Debug\Lademann.pdb
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\Lademann\bin\Debug\Lademann.exe.config
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\Lademann\bin\Debug\Lademann.exe
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\Lademann\bin\Debug\Lademann.pdb
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\Lademann\obj\Debug\Lademann.csproj.AssemblyReference.cache
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\Lademann\obj\Debug\Lademann.csproj.SuggestedBindingRedirects.cache
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\Lademann\obj\Debug\Lademann.Form1.resources
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\Lademann\obj\Debug\Lademann.Play.Play.resources
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\Lademann\obj\Debug\Lademann.Properties.Resources.resources
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\Lademann\obj\Debug\Lademann.csproj.GenerateResource.cache
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\Lademann\obj\Debug\Lademann.csproj.CoreCompileInputs.cache
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\Lademann\obj\Debug\Lademann.exe
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\Lademann\obj\Debug\Lademann.pdb
+C:\Users\kubal\OneDrive\Pulpit\proj\Lademann\bin\Debug\Lademann.exe.config
+C:\Users\kubal\OneDrive\Pulpit\proj\Lademann\bin\Debug\Lademann.exe
+C:\Users\kubal\OneDrive\Pulpit\proj\Lademann\bin\Debug\Lademann.pdb
+C:\Users\kubal\OneDrive\Pulpit\proj\Lademann\obj\Debug\Lademann.csproj.AssemblyReference.cache
+C:\Users\kubal\OneDrive\Pulpit\proj\Lademann\obj\Debug\Lademann.csproj.SuggestedBindingRedirects.cache
+C:\Users\kubal\OneDrive\Pulpit\proj\Lademann\obj\Debug\Lademann.Properties.Resources.resources
+C:\Users\kubal\OneDrive\Pulpit\proj\Lademann\obj\Debug\Lademann.views.MainView.resources
+C:\Users\kubal\OneDrive\Pulpit\proj\Lademann\obj\Debug\Lademann.csproj.GenerateResource.cache
+C:\Users\kubal\OneDrive\Pulpit\proj\Lademann\obj\Debug\Lademann.csproj.CoreCompileInputs.cache
+C:\Users\kubal\OneDrive\Pulpit\proj\Lademann\obj\Debug\Lademann.exe
+C:\Users\kubal\OneDrive\Pulpit\proj\Lademann\obj\Debug\Lademann.pdb
+C:\Users\kubal\OneDrive\Pulpit\proj\Lademann\obj\Debug\Lademann.views.SettingsView.resources
+C:\Users\kubal\OneDrive\Pulpit\proj\Lademann\obj\Debug\Lademann.FormMain.resources
+C:\Users\kubal\OneDrive\Pulpit\proj\Lademann\obj\Debug\Lademann.Play.PlayView.resources
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\Projekt 1V\Lademann\bin\Debug\Lademann.exe.config
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\Projekt 1V\Lademann\bin\Debug\Lademann.exe
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\Projekt 1V\Lademann\bin\Debug\Lademann.pdb
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\Projekt 1V\Lademann\obj\Debug\Lademann.csproj.AssemblyReference.cache
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\Projekt 1V\Lademann\obj\Debug\Lademann.csproj.SuggestedBindingRedirects.cache
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\Projekt 1V\Lademann\obj\Debug\Lademann.FormMain.resources
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\Projekt 1V\Lademann\obj\Debug\Lademann.Play.PlayView.resources
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\Projekt 1V\Lademann\obj\Debug\Lademann.Properties.Resources.resources
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\Projekt 1V\Lademann\obj\Debug\Lademann.views.MainView.resources
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\Projekt 1V\Lademann\obj\Debug\Lademann.views.ScoreboardView.resources
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\Projekt 1V\Lademann\obj\Debug\Lademann.views.SettingsView.resources
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\Projekt 1V\Lademann\obj\Debug\Lademann.csproj.GenerateResource.cache
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\Projekt 1V\Lademann\obj\Debug\Lademann.csproj.CoreCompileInputs.cache
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\Projekt 1V\Lademann\obj\Debug\Lademann.exe
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\Projekt 1V\Lademann\obj\Debug\Lademann.pdb
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\Projekt 1V\Lademann\obj\Debug\Lademann.views.CreditsView.resources
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\Projekt 1V\Lademann\obj\Debug\Lademann.views.GameLobbyView.resources
+C:\Users\Grzep\Desktop\proj\Lademann\obj\Debug\Lademann.csproj.AssemblyReference.cache
+C:\Users\Grzep\Desktop\proj\Lademann\obj\Debug\Lademann.csproj.SuggestedBindingRedirects.cache
+C:\Users\Grzep\Desktop\proj\Lademann\obj\Debug\Lademann.FormMain.resources
+C:\Users\Grzep\Desktop\proj\Lademann\obj\Debug\Lademann.views.CreditsView.resources
+C:\Users\Grzep\Desktop\proj\Lademann\obj\Debug\Lademann.views.GameLobbyView.resources
+C:\Users\Grzep\Desktop\proj\Lademann\obj\Debug\Lademann.Play.PlayView.resources
+C:\Users\Grzep\Desktop\proj\Lademann\obj\Debug\Lademann.Properties.Resources.resources
+C:\Users\Grzep\Desktop\proj\Lademann\obj\Debug\Lademann.views.MainView.resources
+C:\Users\Grzep\Desktop\proj\Lademann\obj\Debug\Lademann.views.ScoreboardView.resources
+C:\Users\Grzep\Desktop\proj\Lademann\obj\Debug\Lademann.views.SettingsView.resources
+C:\Users\Grzep\Desktop\proj\Lademann\obj\Debug\Lademann.csproj.GenerateResource.cache
+C:\Users\Grzep\Desktop\proj\Lademann\obj\Debug\Lademann.csproj.CoreCompileInputs.cache
+C:\Users\Grzep\Desktop\proj\Lademann\obj\Debug\Lademann.exe
+C:\Users\Grzep\Desktop\proj\Lademann\obj\Debug\Lademann.pdb
+C:\Users\Grzep\Desktop\proj\Lademann\bin\Debug\Lademann.exe.config
+C:\Users\Grzep\Desktop\proj\Lademann\bin\Debug\Lademann.exe
+C:\Users\Grzep\Desktop\proj\Lademann\bin\Debug\Lademann.pdb
+C:\Users\Grzep\Desktop\proj\Lademann\obj\Debug\Lademann.views.GameView.resources
+C:\Users\czars\Downloads\grawstatki02032023\Lademann\bin\Debug\Lademann.exe.config
+C:\Users\czars\Downloads\grawstatki02032023\Lademann\bin\Debug\Lademann.exe
+C:\Users\czars\Downloads\grawstatki02032023\Lademann\bin\Debug\Lademann.pdb
+C:\Users\czars\Downloads\grawstatki02032023\Lademann\obj\Debug\Lademann.csproj.AssemblyReference.cache
+C:\Users\czars\Downloads\grawstatki02032023\Lademann\obj\Debug\Lademann.csproj.SuggestedBindingRedirects.cache
+C:\Users\czars\Downloads\grawstatki02032023\Lademann\obj\Debug\Lademann.FormMain.resources
+C:\Users\czars\Downloads\grawstatki02032023\Lademann\obj\Debug\Lademann.views.CreditsView.resources
+C:\Users\czars\Downloads\grawstatki02032023\Lademann\obj\Debug\Lademann.views.GameLobbyView.resources
+C:\Users\czars\Downloads\grawstatki02032023\Lademann\obj\Debug\Lademann.views.GameView.resources
+C:\Users\czars\Downloads\grawstatki02032023\Lademann\obj\Debug\Lademann.Play.PlayView.resources
+C:\Users\czars\Downloads\grawstatki02032023\Lademann\obj\Debug\Lademann.Properties.Resources.resources
+C:\Users\czars\Downloads\grawstatki02032023\Lademann\obj\Debug\Lademann.views.MainView.resources
+C:\Users\czars\Downloads\grawstatki02032023\Lademann\obj\Debug\Lademann.views.ScoreboardView.resources
+C:\Users\czars\Downloads\grawstatki02032023\Lademann\obj\Debug\Lademann.views.SettingsView.resources
+C:\Users\czars\Downloads\grawstatki02032023\Lademann\obj\Debug\Lademann.csproj.GenerateResource.cache
+C:\Users\czars\Downloads\grawstatki02032023\Lademann\obj\Debug\Lademann.csproj.CoreCompileInputs.cache
+C:\Users\czars\Downloads\grawstatki02032023\Lademann\obj\Debug\Lademann.exe
+C:\Users\czars\Downloads\grawstatki02032023\Lademann\obj\Debug\Lademann.pdb
+C:\Users\czars\Desktop\pojekt23-krac\Lademann\bin\Debug\Lademann.exe.config
+C:\Users\czars\Desktop\pojekt23-krac\Lademann\bin\Debug\Lademann.exe
+C:\Users\czars\Desktop\pojekt23-krac\Lademann\bin\Debug\Lademann.pdb
+C:\Users\czars\Desktop\pojekt23-krac\Lademann\obj\Debug\Lademann.csproj.AssemblyReference.cache
+C:\Users\czars\Desktop\pojekt23-krac\Lademann\obj\Debug\Lademann.csproj.SuggestedBindingRedirects.cache
+C:\Users\czars\Desktop\pojekt23-krac\Lademann\obj\Debug\Lademann.FormMain.resources
+C:\Users\czars\Desktop\pojekt23-krac\Lademann\obj\Debug\Lademann.views.CreditsView.resources
+C:\Users\czars\Desktop\pojekt23-krac\Lademann\obj\Debug\Lademann.views.GameLobbyView.resources
+C:\Users\czars\Desktop\pojekt23-krac\Lademann\obj\Debug\Lademann.views.GameView.resources
+C:\Users\czars\Desktop\pojekt23-krac\Lademann\obj\Debug\Lademann.Play.PlayView.resources
+C:\Users\czars\Desktop\pojekt23-krac\Lademann\obj\Debug\Lademann.Properties.Resources.resources
+C:\Users\czars\Desktop\pojekt23-krac\Lademann\obj\Debug\Lademann.views.MainView.resources
+C:\Users\czars\Desktop\pojekt23-krac\Lademann\obj\Debug\Lademann.views.ScoreboardView.resources
+C:\Users\czars\Desktop\pojekt23-krac\Lademann\obj\Debug\Lademann.views.SettingsView.resources
+C:\Users\czars\Desktop\pojekt23-krac\Lademann\obj\Debug\Lademann.csproj.GenerateResource.cache
+C:\Users\czars\Desktop\pojekt23-krac\Lademann\obj\Debug\Lademann.csproj.CoreCompileInputs.cache
+C:\Users\czars\Desktop\pojekt23-krac\Lademann\obj\Debug\Lademann.exe
+C:\Users\czars\Desktop\pojekt23-krac\Lademann\obj\Debug\Lademann.pdb
+C:\Users\Grzep\Desktop\Lademann\bin\Debug\Lademann.exe.config
+C:\Users\Grzep\Desktop\Lademann\bin\Debug\Lademann.exe
+C:\Users\Grzep\Desktop\Lademann\bin\Debug\Lademann.pdb
+C:\Users\Grzep\Desktop\Lademann\obj\Debug\Lademann.csproj.AssemblyReference.cache
+C:\Users\Grzep\Desktop\Lademann\obj\Debug\Lademann.csproj.SuggestedBindingRedirects.cache
+C:\Users\Grzep\Desktop\Lademann\obj\Debug\Lademann.FormMain.resources
+C:\Users\Grzep\Desktop\Lademann\obj\Debug\Lademann.views.CreditsView.resources
+C:\Users\Grzep\Desktop\Lademann\obj\Debug\Lademann.views.GameLobbyView.resources
+C:\Users\Grzep\Desktop\Lademann\obj\Debug\Lademann.Play.PlayView.resources
+C:\Users\Grzep\Desktop\Lademann\obj\Debug\Lademann.Properties.Resources.resources
+C:\Users\Grzep\Desktop\Lademann\obj\Debug\Lademann.views.MainView.resources
+C:\Users\Grzep\Desktop\Lademann\obj\Debug\Lademann.views.ScoreboardView.resources
+C:\Users\Grzep\Desktop\Lademann\obj\Debug\Lademann.views.SettingsView.resources
+C:\Users\Grzep\Desktop\Lademann\obj\Debug\Lademann.csproj.GenerateResource.cache
+C:\Users\Grzep\Desktop\Lademann\obj\Debug\Lademann.csproj.CoreCompileInputs.cache
+C:\Users\Grzep\Desktop\Lademann\obj\Debug\Lademann.exe
+C:\Users\Grzep\Desktop\Lademann\obj\Debug\Lademann.pdb
+C:\Users\Czarek\Downloads\1803Lademann\Lademann\bin\Debug\Lademann.exe.config
+C:\Users\Czarek\Downloads\1803Lademann\Lademann\bin\Debug\Lademann.exe
+C:\Users\Czarek\Downloads\1803Lademann\Lademann\bin\Debug\Lademann.pdb
+C:\Users\Czarek\Downloads\1803Lademann\Lademann\obj\Debug\Lademann.csproj.AssemblyReference.cache
+C:\Users\Czarek\Downloads\1803Lademann\Lademann\obj\Debug\Lademann.csproj.SuggestedBindingRedirects.cache
+C:\Users\Czarek\Downloads\1803Lademann\Lademann\obj\Debug\Lademann.FormMain.resources
+C:\Users\Czarek\Downloads\1803Lademann\Lademann\obj\Debug\Lademann.views.CreditsView.resources
+C:\Users\Czarek\Downloads\1803Lademann\Lademann\obj\Debug\Lademann.views.GameLobbyView.resources
+C:\Users\Czarek\Downloads\1803Lademann\Lademann\obj\Debug\Lademann.Play.PlayView.resources
+C:\Users\Czarek\Downloads\1803Lademann\Lademann\obj\Debug\Lademann.Properties.Resources.resources
+C:\Users\Czarek\Downloads\1803Lademann\Lademann\obj\Debug\Lademann.views.MainView.resources
+C:\Users\Czarek\Downloads\1803Lademann\Lademann\obj\Debug\Lademann.views.ScoreboardView.resources
+C:\Users\Czarek\Downloads\1803Lademann\Lademann\obj\Debug\Lademann.views.SettingsView.resources
+C:\Users\Czarek\Downloads\1803Lademann\Lademann\obj\Debug\Lademann.csproj.GenerateResource.cache
+C:\Users\Czarek\Downloads\1803Lademann\Lademann\obj\Debug\Lademann.csproj.CoreCompileInputs.cache
+C:\Users\Czarek\Downloads\1803Lademann\Lademann\obj\Debug\Lademann.exe
+C:\Users\Czarek\Downloads\1803Lademann\Lademann\obj\Debug\Lademann.pdb
+C:\Users\Grzep\Downloads\1803Lademann\1803Lademann\Lademann\bin\Debug\Lademann.exe.config
+C:\Users\Grzep\Downloads\1803Lademann\1803Lademann\Lademann\bin\Debug\Lademann.exe
+C:\Users\Grzep\Downloads\1803Lademann\1803Lademann\Lademann\bin\Debug\Lademann.pdb
+C:\Users\Grzep\Downloads\1803Lademann\1803Lademann\Lademann\obj\Debug\Lademann.csproj.AssemblyReference.cache
+C:\Users\Grzep\Downloads\1803Lademann\1803Lademann\Lademann\obj\Debug\Lademann.csproj.SuggestedBindingRedirects.cache
+C:\Users\Grzep\Downloads\1803Lademann\1803Lademann\Lademann\obj\Debug\Lademann.FormMain.resources
+C:\Users\Grzep\Downloads\1803Lademann\1803Lademann\Lademann\obj\Debug\Lademann.views.CreditsView.resources
+C:\Users\Grzep\Downloads\1803Lademann\1803Lademann\Lademann\obj\Debug\Lademann.views.GameLobbyView.resources
+C:\Users\Grzep\Downloads\1803Lademann\1803Lademann\Lademann\obj\Debug\Lademann.Play.PlayView.resources
+C:\Users\Grzep\Downloads\1803Lademann\1803Lademann\Lademann\obj\Debug\Lademann.Properties.Resources.resources
+C:\Users\Grzep\Downloads\1803Lademann\1803Lademann\Lademann\obj\Debug\Lademann.views.MainView.resources
+C:\Users\Grzep\Downloads\1803Lademann\1803Lademann\Lademann\obj\Debug\Lademann.views.ScoreboardView.resources
+C:\Users\Grzep\Downloads\1803Lademann\1803Lademann\Lademann\obj\Debug\Lademann.views.SettingsView.resources
+C:\Users\Grzep\Downloads\1803Lademann\1803Lademann\Lademann\obj\Debug\Lademann.csproj.GenerateResource.cache
+C:\Users\Grzep\Downloads\1803Lademann\1803Lademann\Lademann\obj\Debug\Lademann.csproj.CoreCompileInputs.cache
+C:\Users\Grzep\Downloads\1803Lademann\1803Lademann\Lademann\obj\Debug\Lademann.exe
+C:\Users\Grzep\Downloads\1803Lademann\1803Lademann\Lademann\obj\Debug\Lademann.pdb
+C:\Users\czars\Desktop\pojekt23-krac\21_03Lademann\Lademann\bin\Debug\Lademann.exe.config
+C:\Users\czars\Desktop\pojekt23-krac\21_03Lademann\Lademann\bin\Debug\Lademann.exe
+C:\Users\czars\Desktop\pojekt23-krac\21_03Lademann\Lademann\bin\Debug\Lademann.pdb
+C:\Users\czars\Desktop\pojekt23-krac\21_03Lademann\Lademann\obj\Debug\Lademann.csproj.AssemblyReference.cache
+C:\Users\czars\Desktop\pojekt23-krac\21_03Lademann\Lademann\obj\Debug\Lademann.csproj.SuggestedBindingRedirects.cache
+C:\Users\czars\Desktop\pojekt23-krac\21_03Lademann\Lademann\obj\Debug\Lademann.FormMain.resources
+C:\Users\czars\Desktop\pojekt23-krac\21_03Lademann\Lademann\obj\Debug\Lademann.views.CreditsView.resources
+C:\Users\czars\Desktop\pojekt23-krac\21_03Lademann\Lademann\obj\Debug\Lademann.views.GameLobbyView.resources
+C:\Users\czars\Desktop\pojekt23-krac\21_03Lademann\Lademann\obj\Debug\Lademann.Play.PlayView.resources
+C:\Users\czars\Desktop\pojekt23-krac\21_03Lademann\Lademann\obj\Debug\Lademann.Properties.Resources.resources
+C:\Users\czars\Desktop\pojekt23-krac\21_03Lademann\Lademann\obj\Debug\Lademann.views.MainView.resources
+C:\Users\czars\Desktop\pojekt23-krac\21_03Lademann\Lademann\obj\Debug\Lademann.views.ScoreboardView.resources
+C:\Users\czars\Desktop\pojekt23-krac\21_03Lademann\Lademann\obj\Debug\Lademann.views.SettingsView.resources
+C:\Users\czars\Desktop\pojekt23-krac\21_03Lademann\Lademann\obj\Debug\Lademann.csproj.GenerateResource.cache
+C:\Users\czars\Desktop\pojekt23-krac\21_03Lademann\Lademann\obj\Debug\Lademann.csproj.CoreCompileInputs.cache
+C:\Users\czars\Desktop\pojekt23-krac\21_03Lademann\Lademann\obj\Debug\Lademann.exe
+C:\Users\czars\Desktop\pojekt23-krac\21_03Lademann\Lademann\obj\Debug\Lademann.pdb
+C:\Users\Grzep\Desktop\Lademann (2)\Lademann\bin\Debug\Lademann.exe.config
+C:\Users\Grzep\Desktop\Lademann (2)\Lademann\bin\Debug\Lademann.exe
+C:\Users\Grzep\Desktop\Lademann (2)\Lademann\bin\Debug\Lademann.pdb
+C:\Users\Grzep\Desktop\Lademann (2)\Lademann\obj\Debug\Lademann.csproj.AssemblyReference.cache
+C:\Users\Grzep\Desktop\Lademann (2)\Lademann\obj\Debug\Lademann.csproj.SuggestedBindingRedirects.cache
+C:\Users\Grzep\Desktop\Lademann (2)\Lademann\obj\Debug\Lademann.FormMain.resources
+C:\Users\Grzep\Desktop\Lademann (2)\Lademann\obj\Debug\Lademann.views.CreditsView.resources
+C:\Users\Grzep\Desktop\Lademann (2)\Lademann\obj\Debug\Lademann.views.GameLobbyView.resources
+C:\Users\Grzep\Desktop\Lademann (2)\Lademann\obj\Debug\Lademann.Play.PlayView.resources
+C:\Users\Grzep\Desktop\Lademann (2)\Lademann\obj\Debug\Lademann.Properties.Resources.resources
+C:\Users\Grzep\Desktop\Lademann (2)\Lademann\obj\Debug\Lademann.views.MainView.resources
+C:\Users\Grzep\Desktop\Lademann (2)\Lademann\obj\Debug\Lademann.views.ScoreboardView.resources
+C:\Users\Grzep\Desktop\Lademann (2)\Lademann\obj\Debug\Lademann.views.SettingsView.resources
+C:\Users\Grzep\Desktop\Lademann (2)\Lademann\obj\Debug\Lademann.csproj.GenerateResource.cache
+C:\Users\Grzep\Desktop\Lademann (2)\Lademann\obj\Debug\Lademann.csproj.CoreCompileInputs.cache
+C:\Users\Grzep\Desktop\Lademann (2)\Lademann\obj\Debug\Lademann.exe
+C:\Users\Grzep\Desktop\Lademann (2)\Lademann\obj\Debug\Lademann.pdb
+C:\Users\czars\Desktop\pojekt23-krac\2Lademann02042023\Lademann (2)\Lademann\bin\Debug\Lademann.exe.config
+C:\Users\czars\Desktop\pojekt23-krac\2Lademann02042023\Lademann (2)\Lademann\bin\Debug\Lademann.exe
+C:\Users\czars\Desktop\pojekt23-krac\2Lademann02042023\Lademann (2)\Lademann\bin\Debug\Lademann.pdb
+C:\Users\czars\Desktop\pojekt23-krac\2Lademann02042023\Lademann (2)\Lademann\obj\Debug\Lademann.csproj.AssemblyReference.cache
+C:\Users\czars\Desktop\pojekt23-krac\2Lademann02042023\Lademann (2)\Lademann\obj\Debug\Lademann.csproj.SuggestedBindingRedirects.cache
+C:\Users\czars\Desktop\pojekt23-krac\2Lademann02042023\Lademann (2)\Lademann\obj\Debug\Lademann.FormMain.resources
+C:\Users\czars\Desktop\pojekt23-krac\2Lademann02042023\Lademann (2)\Lademann\obj\Debug\Lademann.views.CreditsView.resources
+C:\Users\czars\Desktop\pojekt23-krac\2Lademann02042023\Lademann (2)\Lademann\obj\Debug\Lademann.views.GameLobbyView.resources
+C:\Users\czars\Desktop\pojekt23-krac\2Lademann02042023\Lademann (2)\Lademann\obj\Debug\Lademann.Play.PlayView.resources
+C:\Users\czars\Desktop\pojekt23-krac\2Lademann02042023\Lademann (2)\Lademann\obj\Debug\Lademann.Properties.Resources.resources
+C:\Users\czars\Desktop\pojekt23-krac\2Lademann02042023\Lademann (2)\Lademann\obj\Debug\Lademann.views.MainView.resources
+C:\Users\czars\Desktop\pojekt23-krac\2Lademann02042023\Lademann (2)\Lademann\obj\Debug\Lademann.views.ScoreboardView.resources
+C:\Users\czars\Desktop\pojekt23-krac\2Lademann02042023\Lademann (2)\Lademann\obj\Debug\Lademann.views.SettingsView.resources
+C:\Users\czars\Desktop\pojekt23-krac\2Lademann02042023\Lademann (2)\Lademann\obj\Debug\Lademann.csproj.GenerateResource.cache
+C:\Users\czars\Desktop\pojekt23-krac\2Lademann02042023\Lademann (2)\Lademann\obj\Debug\Lademann.csproj.CoreCompileInputs.cache
+C:\Users\czars\Desktop\pojekt23-krac\2Lademann02042023\Lademann (2)\Lademann\obj\Debug\Lademann.exe
+C:\Users\czars\Desktop\pojekt23-krac\2Lademann02042023\Lademann (2)\Lademann\obj\Debug\Lademann.pdb
+C:\Users\Grzep\Downloads\Lademann (3)\Lademann\bin\Debug\Lademann.exe.config
+C:\Users\Grzep\Downloads\Lademann (3)\Lademann\bin\Debug\Lademann.exe
+C:\Users\Grzep\Downloads\Lademann (3)\Lademann\bin\Debug\Lademann.pdb
+C:\Users\Grzep\Downloads\Lademann (3)\Lademann\obj\Debug\Lademann.csproj.AssemblyReference.cache
+C:\Users\Grzep\Downloads\Lademann (3)\Lademann\obj\Debug\Lademann.csproj.SuggestedBindingRedirects.cache
+C:\Users\Grzep\Downloads\Lademann (3)\Lademann\obj\Debug\Lademann.FormMain.resources
+C:\Users\Grzep\Downloads\Lademann (3)\Lademann\obj\Debug\Lademann.views.CreditsView.resources
+C:\Users\Grzep\Downloads\Lademann (3)\Lademann\obj\Debug\Lademann.views.GameLobbyView.resources
+C:\Users\Grzep\Downloads\Lademann (3)\Lademann\obj\Debug\Lademann.Play.PlayView.resources
+C:\Users\Grzep\Downloads\Lademann (3)\Lademann\obj\Debug\Lademann.Properties.Resources.resources
+C:\Users\Grzep\Downloads\Lademann (3)\Lademann\obj\Debug\Lademann.views.MainView.resources
+C:\Users\Grzep\Downloads\Lademann (3)\Lademann\obj\Debug\Lademann.views.ScoreboardView.resources
+C:\Users\Grzep\Downloads\Lademann (3)\Lademann\obj\Debug\Lademann.views.SettingsView.resources
+C:\Users\Grzep\Downloads\Lademann (3)\Lademann\obj\Debug\Lademann.csproj.GenerateResource.cache
+C:\Users\Grzep\Downloads\Lademann (3)\Lademann\obj\Debug\Lademann.csproj.CoreCompileInputs.cache
+C:\Users\Grzep\Downloads\Lademann (3)\Lademann\obj\Debug\Lademann.exe
+C:\Users\Grzep\Downloads\Lademann (3)\Lademann\obj\Debug\Lademann.pdb
+C:\Users\Grzep\Downloads\Lademann (3)\Lademann\bin\Debug\NAudio.dll
+C:\Users\Grzep\Downloads\Lademann (3)\Lademann\obj\Debug\Lademann.csproj.CopyComplete
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\projetk v4\Lademann (3)\Lademann\bin\Debug\Lademann.exe.config
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\projetk v4\Lademann (3)\Lademann\bin\Debug\Lademann.exe
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\projetk v4\Lademann (3)\Lademann\bin\Debug\Lademann.pdb
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\projetk v4\Lademann (3)\Lademann\bin\Debug\NAudio.dll
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.csproj.AssemblyReference.cache
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.csproj.SuggestedBindingRedirects.cache
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.FormMain.resources
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.views.CreditsView.resources
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.views.GameLobbyView.resources
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.Play.PlayView.resources
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.Properties.Resources.resources
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.views.MainView.resources
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.views.ScoreboardView.resources
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.views.SettingsView.resources
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.csproj.GenerateResource.cache
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.csproj.CoreCompileInputs.cache
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.csproj.CopyComplete
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.exe
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.pdb
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.views.Bot.resources
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\Projekt v10\projetk v4\Lademann (3)\Lademann\bin\Debug\Lademann.exe.config
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\Projekt v10\projetk v4\Lademann (3)\Lademann\bin\Debug\Lademann.exe
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\Projekt v10\projetk v4\Lademann (3)\Lademann\bin\Debug\Lademann.pdb
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\Projekt v10\projetk v4\Lademann (3)\Lademann\bin\Debug\NAudio.dll
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\Projekt v10\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.csproj.AssemblyReference.cache
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\Projekt v10\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.csproj.SuggestedBindingRedirects.cache
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\Projekt v10\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.FormMain.resources
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\Projekt v10\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.views.Bot.resources
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\Projekt v10\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.views.CreditsView.resources
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\Projekt v10\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.views.GameLobbyView.resources
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\Projekt v10\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.Play.PlayView.resources
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\Projekt v10\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.Properties.Resources.resources
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\Projekt v10\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.views.MainView.resources
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\Projekt v10\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.views.ScoreboardView.resources
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\Projekt v10\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.views.SettingsView.resources
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\Projekt v10\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.csproj.GenerateResource.cache
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\Projekt v10\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.csproj.CoreCompileInputs.cache
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\Projekt v10\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.csproj.CopyComplete
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\Projekt v10\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.exe
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\Projekt v10\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.pdb
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\projektv5\Projekt v10\projetk v4\Lademann (3)\Lademann\bin\Debug\Lademann.exe.config
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\projektv5\Projekt v10\projetk v4\Lademann (3)\Lademann\bin\Debug\Lademann.exe
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\projektv5\Projekt v10\projetk v4\Lademann (3)\Lademann\bin\Debug\Lademann.pdb
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\projektv5\Projekt v10\projetk v4\Lademann (3)\Lademann\bin\Debug\NAudio.dll
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\projektv5\Projekt v10\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.csproj.AssemblyReference.cache
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\projektv5\Projekt v10\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.csproj.SuggestedBindingRedirects.cache
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\projektv5\Projekt v10\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.FormMain.resources
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\projektv5\Projekt v10\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.views.Bot.resources
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\projektv5\Projekt v10\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.views.CreditsView.resources
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\projektv5\Projekt v10\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.views.GameLobbyView.resources
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\projektv5\Projekt v10\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.Play.PlayView.resources
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\projektv5\Projekt v10\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.Properties.Resources.resources
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\projektv5\Projekt v10\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.views.MainView.resources
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\projektv5\Projekt v10\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.views.ScoreboardView.resources
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\projektv5\Projekt v10\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.views.SettingsView.resources
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\projektv5\Projekt v10\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.csproj.GenerateResource.cache
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\projektv5\Projekt v10\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.csproj.CoreCompileInputs.cache
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\projektv5\Projekt v10\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.csproj.CopyComplete
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\projektv5\Projekt v10\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.exe
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\projektv5\Projekt v10\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.pdb
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\Projekt V11\projetk v4\Lademann (3)\Lademann\bin\Debug\Lademann.exe.config
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\Projekt V11\projetk v4\Lademann (3)\Lademann\bin\Debug\Lademann.exe
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\Projekt V11\projetk v4\Lademann (3)\Lademann\bin\Debug\Lademann.pdb
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\Projekt V11\projetk v4\Lademann (3)\Lademann\bin\Debug\NAudio.dll
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.csproj.AssemblyReference.cache
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.csproj.SuggestedBindingRedirects.cache
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.FormMain.resources
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.views.Bot.resources
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.views.CreditsView.resources
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.views.GameLobbyView.resources
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.Play.PlayView.resources
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.Properties.Resources.resources
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.views.MainView.resources
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.views.ScoreboardView.resources
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.views.SettingsView.resources
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.csproj.GenerateResource.cache
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.csproj.CoreCompileInputs.cache
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.csproj.CopyComplete
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.exe
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.pdb
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\bin\Debug\Lademann.exe.config
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\bin\Debug\Lademann.exe
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\bin\Debug\Lademann.pdb
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\bin\Debug\NAudio.dll
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.csproj.AssemblyReference.cache
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.csproj.SuggestedBindingRedirects.cache
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.FormMain.resources
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.views.Bot.resources
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.views.CreditsView.resources
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.views.GameLobbyView.resources
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.Play.PlayView.resources
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.Properties.Resources.resources
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.views.MainView.resources
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.views.ScoreboardView.resources
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.views.SettingsView.resources
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.csproj.GenerateResource.cache
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.csproj.CoreCompileInputs.cache
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.csproj.CopyComplete
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.exe
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.pdb
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\bin\Debug\Lademann.exe.config
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\bin\Debug\Lademann.exe
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\bin\Debug\Lademann.pdb
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\bin\Debug\NAudio.dll
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.csproj.AssemblyReference.cache
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.csproj.SuggestedBindingRedirects.cache
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.FormMain.resources
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.views.Bot.resources
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.views.CreditsView.resources
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.views.GameLobbyView.resources
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.Play.PlayView.resources
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.Properties.Resources.resources
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.views.MainView.resources
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.views.ScoreboardView.resources
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.views.SettingsView.resources
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.csproj.GenerateResource.cache
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.csproj.CoreCompileInputs.cache
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.csproj.CopyComplete
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.exe
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.pdb
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\Projekt v8\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\bin\Debug\Lademann.exe.config
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\Projekt v8\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\bin\Debug\Lademann.exe
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\Projekt v8\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\bin\Debug\Lademann.pdb
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\Projekt v8\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\bin\Debug\NAudio.dll
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\Projekt v8\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.csproj.AssemblyReference.cache
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\Projekt v8\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.csproj.SuggestedBindingRedirects.cache
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\Projekt v8\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.FormMain.resources
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\Projekt v8\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.views.Bot.resources
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\Projekt v8\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.views.CreditsView.resources
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\Projekt v8\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.views.GameLobbyView.resources
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\Projekt v8\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.Play.PlayView.resources
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\Projekt v8\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.Properties.Resources.resources
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\Projekt v8\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.views.MainView.resources
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\Projekt v8\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.views.ScoreboardView.resources
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\Projekt v8\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.views.SettingsView.resources
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\Projekt v8\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.csproj.GenerateResource.cache
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\Projekt v8\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.csproj.CoreCompileInputs.cache
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\Projekt v8\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.csproj.CopyComplete
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\Projekt v8\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.exe
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\Projekt v8\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.pdb
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\Projekt V14\Projekt v8\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\bin\Debug\Lademann.exe.config
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\Projekt V14\Projekt v8\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\bin\Debug\Lademann.exe
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\Projekt V14\Projekt v8\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\bin\Debug\Lademann.pdb
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\Projekt V14\Projekt v8\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\bin\Debug\NAudio.dll
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\Projekt V14\Projekt v8\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.csproj.AssemblyReference.cache
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\Projekt V14\Projekt v8\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.csproj.SuggestedBindingRedirects.cache
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\Projekt V14\Projekt v8\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.FormMain.resources
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\Projekt V14\Projekt v8\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.views.Bot.resources
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\Projekt V14\Projekt v8\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.views.CreditsView.resources
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\Projekt V14\Projekt v8\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.views.GameLobbyView.resources
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\Projekt V14\Projekt v8\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.Play.PlayView.resources
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\Projekt V14\Projekt v8\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.Properties.Resources.resources
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\Projekt V14\Projekt v8\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.views.MainView.resources
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\Projekt V14\Projekt v8\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.views.ScoreboardView.resources
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\Projekt V14\Projekt v8\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.views.SettingsView.resources
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\Projekt V14\Projekt v8\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.csproj.GenerateResource.cache
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\Projekt V14\Projekt v8\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.csproj.CoreCompileInputs.cache
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\Projekt V14\Projekt v8\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.csproj.CopyComplete
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\Projekt V14\Projekt v8\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.exe
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\Projekt V14\Projekt v8\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.pdb
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\Projekt V15\Projekt V14\Projekt v8\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\bin\Debug\Lademann.exe.config
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\Projekt V15\Projekt V14\Projekt v8\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\bin\Debug\Lademann.exe
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\Projekt V15\Projekt V14\Projekt v8\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\bin\Debug\Lademann.pdb
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\Projekt V15\Projekt V14\Projekt v8\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\bin\Debug\NAudio.dll
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\Projekt V15\Projekt V14\Projekt v8\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.csproj.AssemblyReference.cache
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\Projekt V15\Projekt V14\Projekt v8\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.csproj.SuggestedBindingRedirects.cache
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\Projekt V15\Projekt V14\Projekt v8\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.FormMain.resources
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\Projekt V15\Projekt V14\Projekt v8\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.views.Bot.resources
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\Projekt V15\Projekt V14\Projekt v8\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.views.CreditsView.resources
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\Projekt V15\Projekt V14\Projekt v8\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.views.GameLobbyView.resources
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\Projekt V15\Projekt V14\Projekt v8\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.Play.PlayView.resources
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\Projekt V15\Projekt V14\Projekt v8\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.Properties.Resources.resources
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\Projekt V15\Projekt V14\Projekt v8\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.views.MainView.resources
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\Projekt V15\Projekt V14\Projekt v8\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.views.ScoreboardView.resources
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\Projekt V15\Projekt V14\Projekt v8\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.views.SettingsView.resources
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\Projekt V15\Projekt V14\Projekt v8\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.csproj.GenerateResource.cache
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\Projekt V15\Projekt V14\Projekt v8\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.csproj.CoreCompileInputs.cache
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\Projekt V15\Projekt V14\Projekt v8\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.csproj.CopyComplete
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\Projekt V15\Projekt V14\Projekt v8\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.exe
+C:\Users\kubal\OneDrive\Pulpit\Projekt statki\Projekt V15\Projekt V14\Projekt v8\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.pdb
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\ProjektV19\Projekt V15\Projekt V14\Projekt v8\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\bin\Debug\Lademann.exe.config
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\ProjektV19\Projekt V15\Projekt V14\Projekt v8\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\bin\Debug\Lademann.exe
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\ProjektV19\Projekt V15\Projekt V14\Projekt v8\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\bin\Debug\Lademann.pdb
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\ProjektV19\Projekt V15\Projekt V14\Projekt v8\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\bin\Debug\NAudio.dll
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\ProjektV19\Projekt V15\Projekt V14\Projekt v8\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.csproj.AssemblyReference.cache
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\ProjektV19\Projekt V15\Projekt V14\Projekt v8\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.csproj.SuggestedBindingRedirects.cache
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\ProjektV19\Projekt V15\Projekt V14\Projekt v8\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.FormMain.resources
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\ProjektV19\Projekt V15\Projekt V14\Projekt v8\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.views.Bot.resources
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\ProjektV19\Projekt V15\Projekt V14\Projekt v8\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.views.CreditsView.resources
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\ProjektV19\Projekt V15\Projekt V14\Projekt v8\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.views.GameLobbyView.resources
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\ProjektV19\Projekt V15\Projekt V14\Projekt v8\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.Play.PlayView.resources
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\ProjektV19\Projekt V15\Projekt V14\Projekt v8\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.Properties.Resources.resources
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\ProjektV19\Projekt V15\Projekt V14\Projekt v8\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.views.MainView.resources
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\ProjektV19\Projekt V15\Projekt V14\Projekt v8\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.views.ScoreboardView.resources
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\ProjektV19\Projekt V15\Projekt V14\Projekt v8\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.views.SettingsView.resources
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\ProjektV19\Projekt V15\Projekt V14\Projekt v8\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.csproj.GenerateResource.cache
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\ProjektV19\Projekt V15\Projekt V14\Projekt v8\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.csproj.CoreCompileInputs.cache
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\ProjektV19\Projekt V15\Projekt V14\Projekt v8\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.csproj.CopyComplete
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\ProjektV19\Projekt V15\Projekt V14\Projekt v8\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.exe
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\ProjektV19\Projekt V15\Projekt V14\Projekt v8\ProjektV12\ProjektV7\Projekt V11\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.pdb
+C:\Users\Grzep\Desktop\projetk-v4\projetk v4\Lademann (3)\Lademann\bin\Debug\Lademann.exe.config
+C:\Users\Grzep\Desktop\projetk-v4\projetk v4\Lademann (3)\Lademann\bin\Debug\Lademann.exe
+C:\Users\Grzep\Desktop\projetk-v4\projetk v4\Lademann (3)\Lademann\bin\Debug\Lademann.pdb
+C:\Users\Grzep\Desktop\projetk-v4\projetk v4\Lademann (3)\Lademann\bin\Debug\NAudio.dll
+C:\Users\Grzep\Desktop\projetk-v4\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.csproj.AssemblyReference.cache
+C:\Users\Grzep\Desktop\projetk-v4\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.csproj.SuggestedBindingRedirects.cache
+C:\Users\Grzep\Desktop\projetk-v4\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.FormMain.resources
+C:\Users\Grzep\Desktop\projetk-v4\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.views.Bot.resources
+C:\Users\Grzep\Desktop\projetk-v4\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.views.CreditsView.resources
+C:\Users\Grzep\Desktop\projetk-v4\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.views.GameLobbyView.resources
+C:\Users\Grzep\Desktop\projetk-v4\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.Play.PlayView.resources
+C:\Users\Grzep\Desktop\projetk-v4\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.Properties.Resources.resources
+C:\Users\Grzep\Desktop\projetk-v4\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.views.MainView.resources
+C:\Users\Grzep\Desktop\projetk-v4\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.views.ScoreboardView.resources
+C:\Users\Grzep\Desktop\projetk-v4\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.views.SettingsView.resources
+C:\Users\Grzep\Desktop\projetk-v4\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.csproj.GenerateResource.cache
+C:\Users\Grzep\Desktop\projetk-v4\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.csproj.CoreCompileInputs.cache
+C:\Users\Grzep\Desktop\projetk-v4\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.csproj.CopyComplete
+C:\Users\Grzep\Desktop\projetk-v4\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.exe
+C:\Users\Grzep\Desktop\projetk-v4\projetk v4\Lademann (3)\Lademann\obj\Debug\Lademann.pdb
+C:\Users\Grzep\Desktop\projetk-v4\10052023\Lademann (3)\Lademann\bin\Debug\Lademann.exe.config
+C:\Users\Grzep\Desktop\projetk-v4\10052023\Lademann (3)\Lademann\bin\Debug\Lademann.exe
+C:\Users\Grzep\Desktop\projetk-v4\10052023\Lademann (3)\Lademann\bin\Debug\Lademann.pdb
+C:\Users\Grzep\Desktop\projetk-v4\10052023\Lademann (3)\Lademann\bin\Debug\NAudio.dll
+C:\Users\Grzep\Desktop\projetk-v4\10052023\Lademann (3)\Lademann\obj\Debug\Lademann.csproj.AssemblyReference.cache
+C:\Users\Grzep\Desktop\projetk-v4\10052023\Lademann (3)\Lademann\obj\Debug\Lademann.csproj.SuggestedBindingRedirects.cache
+C:\Users\Grzep\Desktop\projetk-v4\10052023\Lademann (3)\Lademann\obj\Debug\Lademann.FormMain.resources
+C:\Users\Grzep\Desktop\projetk-v4\10052023\Lademann (3)\Lademann\obj\Debug\Lademann.views.Bot.resources
+C:\Users\Grzep\Desktop\projetk-v4\10052023\Lademann (3)\Lademann\obj\Debug\Lademann.views.CreditsView.resources
+C:\Users\Grzep\Desktop\projetk-v4\10052023\Lademann (3)\Lademann\obj\Debug\Lademann.views.GameLobbyView.resources
+C:\Users\Grzep\Desktop\projetk-v4\10052023\Lademann (3)\Lademann\obj\Debug\Lademann.Play.PlayView.resources
+C:\Users\Grzep\Desktop\projetk-v4\10052023\Lademann (3)\Lademann\obj\Debug\Lademann.Properties.Resources.resources
+C:\Users\Grzep\Desktop\projetk-v4\10052023\Lademann (3)\Lademann\obj\Debug\Lademann.views.MainView.resources
+C:\Users\Grzep\Desktop\projetk-v4\10052023\Lademann (3)\Lademann\obj\Debug\Lademann.views.ScoreboardView.resources
+C:\Users\Grzep\Desktop\projetk-v4\10052023\Lademann (3)\Lademann\obj\Debug\Lademann.views.SettingsView.resources
+C:\Users\Grzep\Desktop\projetk-v4\10052023\Lademann (3)\Lademann\obj\Debug\Lademann.csproj.GenerateResource.cache
+C:\Users\Grzep\Desktop\projetk-v4\10052023\Lademann (3)\Lademann\obj\Debug\Lademann.csproj.CoreCompileInputs.cache
+C:\Users\Grzep\Desktop\projetk-v4\10052023\Lademann (3)\Lademann\obj\Debug\Lademann.csproj.CopyComplete
+C:\Users\Grzep\Desktop\projetk-v4\10052023\Lademann (3)\Lademann\obj\Debug\Lademann.exe
+C:\Users\Grzep\Desktop\projetk-v4\10052023\Lademann (3)\Lademann\obj\Debug\Lademann.pdb
+C:\Users\Grzep\Desktop\10052023\Lademann\Lademann\bin\Debug\Lademann.exe.config
+C:\Users\Grzep\Desktop\10052023\Lademann\Lademann\bin\Debug\Lademann.exe
+C:\Users\Grzep\Desktop\10052023\Lademann\Lademann\bin\Debug\NAudio.dll
+C:\Users\Grzep\Desktop\10052023\Lademann\Lademann\obj\Debug\Lademann.csproj.AssemblyReference.cache
+C:\Users\Grzep\Desktop\10052023\Lademann\Lademann\obj\Debug\Lademann.csproj.SuggestedBindingRedirects.cache
+C:\Users\Grzep\Desktop\10052023\Lademann\Lademann\obj\Debug\Lademann.FormMain.resources
+C:\Users\Grzep\Desktop\10052023\Lademann\Lademann\obj\Debug\Lademann.views.Bot.resources
+C:\Users\Grzep\Desktop\10052023\Lademann\Lademann\obj\Debug\Lademann.views.CreditsView.resources
+C:\Users\Grzep\Desktop\10052023\Lademann\Lademann\obj\Debug\Lademann.views.GameLobbyView.resources
+C:\Users\Grzep\Desktop\10052023\Lademann\Lademann\obj\Debug\Lademann.Play.PlayView.resources
+C:\Users\Grzep\Desktop\10052023\Lademann\Lademann\obj\Debug\Lademann.Properties.Resources.resources
+C:\Users\Grzep\Desktop\10052023\Lademann\Lademann\obj\Debug\Lademann.views.MainView.resources
+C:\Users\Grzep\Desktop\10052023\Lademann\Lademann\obj\Debug\Lademann.views.ScoreboardView.resources
+C:\Users\Grzep\Desktop\10052023\Lademann\Lademann\obj\Debug\Lademann.views.SettingsView.resources
+C:\Users\Grzep\Desktop\10052023\Lademann\Lademann\obj\Debug\Lademann.csproj.GenerateResource.cache
+C:\Users\Grzep\Desktop\10052023\Lademann\Lademann\obj\Debug\Lademann.csproj.CoreCompileInputs.cache
+C:\Users\Grzep\Desktop\10052023\Lademann\Lademann\obj\Debug\Lademann.csproj.CopyComplete
+C:\Users\Grzep\Desktop\10052023\Lademann\Lademann\obj\Debug\Lademann.exe
+C:\Users\Grzep\Desktop\10052023\Lademann\Lademann\obj\Debug\Lademann.pdb
+C:\Users\Grzep\Desktop\10052023\Lademann\Lademann\bin\Debug\Lademann.pdb
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\15 05 2023\Lademann\Lademann\bin\Debug\Lademann.exe.config
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\15 05 2023\Lademann\Lademann\bin\Debug\Lademann.exe
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\15 05 2023\Lademann\Lademann\bin\Debug\Lademann.pdb
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\15 05 2023\Lademann\Lademann\bin\Debug\NAudio.dll
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\15 05 2023\Lademann\Lademann\obj\Debug\Lademann.csproj.AssemblyReference.cache
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\15 05 2023\Lademann\Lademann\obj\Debug\Lademann.csproj.SuggestedBindingRedirects.cache
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\15 05 2023\Lademann\Lademann\obj\Debug\Lademann.FormMain.resources
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\15 05 2023\Lademann\Lademann\obj\Debug\Lademann.views.Bot.resources
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\15 05 2023\Lademann\Lademann\obj\Debug\Lademann.views.CreditsView.resources
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\15 05 2023\Lademann\Lademann\obj\Debug\Lademann.views.GameLobbyView.resources
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\15 05 2023\Lademann\Lademann\obj\Debug\Lademann.Play.PlayView.resources
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\15 05 2023\Lademann\Lademann\obj\Debug\Lademann.Properties.Resources.resources
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\15 05 2023\Lademann\Lademann\obj\Debug\Lademann.views.MainView.resources
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\15 05 2023\Lademann\Lademann\obj\Debug\Lademann.views.ScoreboardView.resources
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\15 05 2023\Lademann\Lademann\obj\Debug\Lademann.views.SettingsView.resources
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\15 05 2023\Lademann\Lademann\obj\Debug\Lademann.csproj.GenerateResource.cache
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\15 05 2023\Lademann\Lademann\obj\Debug\Lademann.csproj.CoreCompileInputs.cache
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\15 05 2023\Lademann\Lademann\obj\Debug\Lademann.csproj.CopyComplete
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\15 05 2023\Lademann\Lademann\obj\Debug\Lademann.exe
+C:\Users\kubal\OneDrive\Pulpit\projekt statki\15 05 2023\Lademann\Lademann\obj\Debug\Lademann.pdb
+C:\Users\kubal\OneDrive\Pulpit\15 05 2023\Lademann\Lademann\bin\Debug\Lademann.exe.config
+C:\Users\kubal\OneDrive\Pulpit\15 05 2023\Lademann\Lademann\bin\Debug\Lademann.exe
+C:\Users\kubal\OneDrive\Pulpit\15 05 2023\Lademann\Lademann\bin\Debug\Lademann.pdb
+C:\Users\kubal\OneDrive\Pulpit\15 05 2023\Lademann\Lademann\bin\Debug\NAudio.dll
+C:\Users\kubal\OneDrive\Pulpit\15 05 2023\Lademann\Lademann\obj\Debug\Lademann.csproj.AssemblyReference.cache
+C:\Users\kubal\OneDrive\Pulpit\15 05 2023\Lademann\Lademann\obj\Debug\Lademann.csproj.SuggestedBindingRedirects.cache
+C:\Users\kubal\OneDrive\Pulpit\15 05 2023\Lademann\Lademann\obj\Debug\Lademann.FormMain.resources
+C:\Users\kubal\OneDrive\Pulpit\15 05 2023\Lademann\Lademann\obj\Debug\Lademann.views.Bot.resources
+C:\Users\kubal\OneDrive\Pulpit\15 05 2023\Lademann\Lademann\obj\Debug\Lademann.views.CreditsView.resources
+C:\Users\kubal\OneDrive\Pulpit\15 05 2023\Lademann\Lademann\obj\Debug\Lademann.views.GameLobbyView.resources
+C:\Users\kubal\OneDrive\Pulpit\15 05 2023\Lademann\Lademann\obj\Debug\Lademann.Play.PlayView.resources
+C:\Users\kubal\OneDrive\Pulpit\15 05 2023\Lademann\Lademann\obj\Debug\Lademann.Properties.Resources.resources
+C:\Users\kubal\OneDrive\Pulpit\15 05 2023\Lademann\Lademann\obj\Debug\Lademann.views.MainView.resources
+C:\Users\kubal\OneDrive\Pulpit\15 05 2023\Lademann\Lademann\obj\Debug\Lademann.views.ScoreboardView.resources
+C:\Users\kubal\OneDrive\Pulpit\15 05 2023\Lademann\Lademann\obj\Debug\Lademann.views.SettingsView.resources
+C:\Users\kubal\OneDrive\Pulpit\15 05 2023\Lademann\Lademann\obj\Debug\Lademann.csproj.GenerateResource.cache
+C:\Users\kubal\OneDrive\Pulpit\15 05 2023\Lademann\Lademann\obj\Debug\Lademann.csproj.CoreCompileInputs.cache
+C:\Users\kubal\OneDrive\Pulpit\15 05 2023\Lademann\Lademann\obj\Debug\Lademann.csproj.CopyComplete
+C:\Users\kubal\OneDrive\Pulpit\15 05 2023\Lademann\Lademann\obj\Debug\Lademann.exe
+C:\Users\kubal\OneDrive\Pulpit\15 05 2023\Lademann\Lademann\obj\Debug\Lademann.pdb

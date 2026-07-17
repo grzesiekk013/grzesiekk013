@@ -1,0 +1,68 @@
+{% extends 'eye_app/base.html' %}
+{% block side_panel %} {% include 'eye_app/side_panel.html' %} {% endblock %}
+{% block main %}
+{% load extra_filters %}
+
+
+<div class="col position-relative bg-body-secondary rounded me-4 p-4">
+
+    <div class="position-absolute top-0 end-0 bg-body-secondary p-4 rounded z-1 text-end">
+        <div class="py-2 px-4 bg-body-tertiary rounded border">
+            <h1>{{ room.room_number }}</h1>
+            {% if last_seen %}
+            <span><small>Ostatnio widziany:</small></span>
+            <h5>{{ last_seen|date:"Y-m-d H:i:s" }}</h5>
+            {% endif %}
+        </div>
+    </div>
+
+    <h1>Widok Ogólny</h1>
+    <hr>
+
+    <div class="rounded-table-container bg-body-tertiary p-2 pb-0 rounded mt-2 border">
+        <table class="table w-auto mb-0">
+            <thead>
+                <tr>
+                    <th>Nazwa Pomiaru</th>
+                    <th>Stan</th>
+                    <th>Wartość Pomiaru</th>
+                </tr>
+            </thead>
+            <tbody class="table-group-divider">
+
+                {% if not values %}
+                <tr>
+                    <td colspan="3" class="text-center">Brak dostępnych pomiarów dla tego pokoju.</td>
+                </tr>
+                {% endif %}
+
+                {% for param in parameters %}
+                {% with key=param.key %}
+                {% if visibilities|get_item:key %}
+                {% with quality=qualities|get_item:key %}
+                <tr>
+                    <td>{{ param.label }}</td>
+                    <td class="{{ quality.1 }}">
+                        {{ quality.0 }} <span class="bi {{ quality.2 }}"></span>
+                    </td>
+                    <td>{{ values|get_item:key|default:"Brak danych" }} {{ param.unit }}</td>
+                </tr>
+                {% endwith %}
+                {% endif %}
+                {% endwith %}
+                {% endfor %}
+
+            </tbody>
+        </table>
+    </div>
+
+    <hr>
+
+    <h3>Opis</h3>
+    <div class="bg-body-tertiary p-2 rounded w-50 mt-3 border">
+        <p>{{ room.description }}</p>
+    </div>
+
+</div>
+
+{% endblock %}

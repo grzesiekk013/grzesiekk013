@@ -1,0 +1,24 @@
+<div class="modal fade" id="manage_delete_report{{ report.id }}">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <form method="POST" action="{%url 'reports_delete' report.id %}">
+        {% csrf_token %}
+        <div class="modal-header">
+          <p class="h4"><span class="bi bi-archive"></span>  Raport <i>{{ report.electric_meter }} z {{ report.created_at }}</i></p>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+
+        <div class="modal-body">
+
+          <p class="h5">Czy jesteś pewien?</p>
+
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-sm btn-outline-success"><span class="bi bi-archive"></span>  Usuń</button>
+            <button type="button" class="btn btn-sm btn-outline-danger" data-bs-dismiss="modal"><span class="bi bi-x-square"></span>  Anuluj</button>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>

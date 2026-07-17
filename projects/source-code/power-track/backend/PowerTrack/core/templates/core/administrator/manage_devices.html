@@ -1,0 +1,169 @@
+{% extends 'core/base.html' %}
+{% block aside %} {% include 'core/side_panel.html' with role=request.user.userrole.role %}
+{% endblock %}
+{% block main %}
+<div class="d-sm-flex align-items-center justify-content-between mb-2">
+  <p class="h3">{{ request.user.first_name }} {{ request.user.last_name }} <small>({{ request.user.userrole.get_role_display }})</small></p>
+  <p class="h3">Zarządzanie Urządzeniami</p>
+</div>
+
+<hr class="mb-2">
+
+<div class="mb-2">
+  <button type="button" class="btn btn-sm btn-dark my-2" data-bs-toggle="modal" data-bs-target="#create_device"><span class="bi bi-plus-square"></span> Dodaj Urządzenie</button>
+ </div>
+
+<hr class="mb-2">
+{% block modal %}
+{% include 'core/modals/add_device.html' %}
+{% endblock %}
+
+<div class="row mb-2">
+    <div class="col-lg-12">
+    <div class="card shadow">
+      <div class="card-header py-3">
+        <p class="h6 m-0 font-weight-bold text-color" title="Filtrowanie treści ma wpływ na statystyki">Statystyki*</p>
+      </div>
+      <div class="card-body d-flex gap-4">
+        <div>
+          <p class="h6 d-inline">Liczba urządzeń: </p>
+          <p class="h6 d-inline">{{ devices.paginator.count }}</p>
+        </div>
+      </div>
+    </div>
+    </div>
+</div>
+
+<div class="row mb-2">
+    <div class="col-lg-12">
+    <div class="card shadow">
+      <div class="card-header py-3">
+        <p class="h6 m-0 font-weight-bold text-color">Urządzenia</p>
+      </div>
+      <div class="card-body">
+        <table class="table table-striped">
+          <form method="GET" action="{%url 'manage_devices' %}">
+          <thead>
+          <tr class="table-secondary">
+            <th class="small">UUID</th>
+            <th class="small">Aktywny</th>
+            <th class="small">Rozdzielnia</th>
+            <th class="small">Adres IP</th>
+            <th class="small">Typ</th>
+<!--            <th class="small">Status</th>-->
+            <th class="small">Ostatnio widziany</th>
+            <th class="small">Data instalacji</th>
+            <th class="small">Opis</th>
+            <th class="small">Akcja</th>
+          </tr>
+          <tr class="table-secondary">
+             <th class="small" scope="col">
+               <div class="btn-group me-2" role="group" aria-label="">
+               <input type="text" class="form-control form-control-sm clearable-input" name="fuuid" id="fuuid" value="{{ form_vals.fuuid }}">
+               <button type="button" class="btn btn-sm clear-btn btn-outline-danger"><span class="bi bi-archive" title="Wyczyść filtr"></span>
+               </div>
+             </th>
+            <th class="small" scope="col">
+               <select class="form-select form-control form-select-sm" id="fis_active" name="fis_active">
+                  <option value="" {% if not form_vals.fis_active %} selected {%endif%}>Pusty</option>
+                 <option value="Tak" {% if form_vals.fis_active == "Tak" %} selected {%endif%}>Tak</option>
+                 <option value="Nie" {% if form_vals.fis_active == "Nie" %} selected {%endif%}>Nie</option>
+                </select>
+             </th>
+              <th class="small" scope="col">
+               <select class="form-select form-control form-select-sm" id="fswitch_board" name="fswitch_board">
+                  <option value="" {% if not form_vals.fswitch_board %} selected {%endif%}>Pusty</option>
+                  {% for switch_board in switch_boards %}
+                 <option value="{{switch_board.id}}" {% if form_vals.fswitch_board == switch_board.id|stringformat:"s" %} selected {%endif%}>{{switch_board}}</option>
+                  {% endfor %}
+                </select>
+               </div>
+             </th>
+            <th class="small" scope="col">
+               <div class="btn-group me-2" role="group" aria-label="">
+               <input type="text" class="form-control form-control-sm clearable-input" name="fip" id="fip" value="{{ form_vals.fip }}">
+               <button type="button" class="btn btn-sm clear-btn btn-outline-danger"><span class="bi bi-archive" title="Wyczyść filtr"></span>
+               </div>
+             </th>
+            <th class="small" scope="col">
+              <select class="form-select form-control form-select-sm" id="ftype" name="ftype">
+                  <option value="" {% if not form_vals.ftype %} selected {%endif%}>Pusty</option>
+                 <option value="LP_MAX" {% if form_vals.ftype == "LP_MAX" %} selected {%endif%}>LP_MAX</option>
+                 <option value="LP_LYRA" {% if form_vals.ftype == "LP_LYRA" %} selected {%endif%}>LP_LYRA</option>
+                 <option value="SIM" {% if form_vals.ftype == "SIM" %} selected {%endif%}>SIM</option>
+                </select>
+             </th>
+<!--            <th class="small" scope="col">-->
+<!--               <div class="btn-group me-2" role="group" aria-label="">-->
+<!--               <input type="text" class="form-control form-control-sm clearable-input" name="fstatus" id="fstatus" value=" form_vals.fstatus ">-->
+<!--               <button type="button" class="btn btn-sm clear-btn btn-outline-danger"><span class="bi bi-archive" title="Wyczyść filtr"></span>-->
+<!--               </div>-->
+<!--             </th>-->
+            <th class="small"></th><th class="small"></th>
+            <th class="small" scope="col">
+               <div class="btn-group me-2" role="group" aria-label="">
+               <input type="text" class="form-control form-control-sm clearable-input" name="fdescription" id="fdescription" value="{{ form_vals.fdescription }}">
+               <button type="button" class="btn btn-sm clear-btn btn-outline-danger"><span class="bi bi-archive" title="Wyczyść filtr"></span>
+               </div>
+             </th>
+
+            <th class="small" scope="col">
+               <div class="btn-group me-2" role="group" aria-label="">
+               <button type="submit" class="btn btn-sm btn-outline-dark"><span class="bi bi-filter-square" title="Filtruj wyniki"></span>  </button>
+               <a class="btn btn-sm btn-outline-dark" href="{% url 'manage_devices' %}" ><span class="bi bi-x-square" title="Wyczyść filtry"></span></a>
+               </div>
+             </th>
+          </tr>
+          </thead>
+          </form>
+          <tbody>
+          <tr>
+            {% for device in devices %}
+            <td class="small">{{ device.uuid }}</td>
+            <td class="small">{% if device.is_active %} Tak {% else %} Nie {% endif %}</td>
+            <td class="small">{{ device.switch_board }}</td>
+            <td class="small">{{ device.ip_address }}</td>
+            <td class="small">{{ device.type }}</td>
+<!--            <td class="small"> device.status </td>&lt;!&ndash;last_edit_time&ndash;&gt;-->
+            <td class="small">{{ device.last_seen }}</td>
+            <td class="small">{{ device.installed_date }}</td>
+            <td class="small">{{ device.description }}</td>
+            <td class="small">
+              <div class="btn-group me-2" role="group" aria-label="">
+                <button type="button" class="btn btn-sm btn-outline-warning" data-bs-toggle="modal" data-bs-target="#manage_edit_device{{ device.id }}" ><span class="bi bi-pencil-square" title="Edytuj pozycję"></span>  </button>
+                {% if request.user.userrole.role == "admin" %}
+                <button type="button" class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#manage_delete_device{{ device.id }}"><span class="bi bi-archive" title="Usuń pozycję"></span>  </button>
+                {% endif %}
+                {% block modal_edit %} {% include 'core/modals/edit_device.html' %} {% endblock %}
+                {% block modal_delete %} {% include 'core/modals/delete_device.html' %} {% endblock %}
+              </div>
+            </td>
+          </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+        <!-- Paginacja -->
+        {% with objects=devices%}
+        {% block pagination %}
+        {% include 'core/all/pagination.html' %}
+        {% endblock %}
+        {% endwith %}
+        <!-- Paginacja -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll('.clear-btn').forEach(btn => {
+  btn.addEventListener('click', function() {
+  const th = this.closest('th');
+  const input = th.querySelector('input.clearable-input');
+  if (input) {
+  input.value = '';
+  input.focus()
+  }});
+  });
+</script>
+
+{% endblock %}

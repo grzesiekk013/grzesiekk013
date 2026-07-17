@@ -1,0 +1,431 @@
+{% extends 'core/base.html' %}
+{% block aside %} {% include 'core/side_panel.html' with role=request.user.userrole.role %}
+{% endblock %}
+{% block main %}
+<div class="d-sm-flex align-items-center justify-content-between mb-2" xmlns:form_vals.fmeter>
+  <p class="h3">{{ request.user.first_name }} {{ request.user.last_name }} <small>({{ request.user.userrole.get_role_display }})</small></p>
+  <p class="h3">Dane licznika</p>
+</div>
+
+<hr class="mb-2">
+
+<div class="row mb-2">
+  <div class="col-lg-12 ">
+    <div class="card shadow">
+      {% if meter.is_timed_out %}
+        <div class="card-header bg-warning text-center p-0">
+          offline
+        </div>
+        {% else %}
+        <div class="card-header bg-success text-center p-0">
+          online
+        </div>
+        {% endif %}
+        <div class="card-header">
+            <table class="table-center w-100">
+              <tr>
+                <td><h6 class="m-0 p-0">{{ meter.room }}</h6> </td><td><p class="m-0 p-0 text-secondary text-end">{{ meter }}
+               </p></td>
+              </tr>
+            </table>
+          </div>
+      <div class="card-header text-end p-0 px-3">
+        <p class="my-1 small d-inline"><span class="bi bi-clock" title="Odświeżono ostatnio: "></span> Odświeżono {{ meter.last_measurement.reading_time|timesince }} temu</p></small>
+      </div>
+      <div class="card-body">
+        <div class="card shadow" style="background-color: #eee">
+          <div class="card-body m-1 p-1">
+            <p class="m-0 h6 fw-bold m-1 text-center">Bieżace zużycie</p>
+            <hr class="m-1">
+
+            <div class="row g-3 text-center">
+                <div class="col-2">
+                  <div class="card h-100 shadow-sm" style="background-color: #ddd; border: 1px solid #999">
+                    <div class="card-header">
+                      <p class="fw-bold small m-0 text-muted text-uppercase">Moc czynna</p>
+                    </div>
+                    <div class="card-body py-0">
+                      <p class="fw-bold text-secondary m-0 {% if meter.is_timed_out %}text-decoration-line-through{%endif%}">{{ meter.last_measurement.total_active_power }} W</p>
+                    </div>
+
+                 </div>
+               </div>
+              <div class="col-2">
+                  <div class="card h-100 shadow-sm" style="background-color: #ddd; border: 1px solid #999">
+                    <div class="card-header">
+                      <p class="fw-bold small m-0 text-muted text-uppercase">Moc bierna</p>
+                    </div>
+
+                    <div class="card-body py-0">
+                      <p class="fw-bold text-secondary m-0 {% if meter.is_timed_out %}text-decoration-line-through{%endif%}">{{ meter.last_measurement.total_reactive_power }} WAR</p>
+                    </div>
+                 </div>
+               </div>
+              <div class="col-2">
+                  <div class="card h-100 shadow-sm" style="background-color: #ddd; border: 1px solid #999">
+                    <div class="card-header">
+                      <p class="fw-bold small m-0 text-muted text-uppercase">Moc pozorna</p>
+                    </div>
+
+                    <div class="card-body py-0">
+                      <p class="fw-bold text-secondary m-0 {% if meter.is_timed_out %}text-decoration-line-through{%endif%}">{{ meter.last_measurement.total_apparent_power }} VA</p>
+                    </div>
+                 </div>
+               </div>
+              <div class="col-2">
+                  <div class="card h-100 shadow-sm" style="background-color: #ddd; border: 1px solid #999">
+                    <div class="card-header">
+                      <p class="fw-bold small m-0 text-muted text-uppercase">Częstotliwość</p>
+                    </div>
+
+                    <div class="card-body py-0">
+                      <p class="fw-bold text-secondary m-0 {% if meter.is_timed_out %}text-decoration-line-through{%endif%}">{{ meter.last_measurement.frequency }} Hz</p>
+                    </div>
+                 </div>
+               </div>
+              <div class="col-md-4">
+                  <div class="card h-100 shadow-sm" style="background-color: #ddd; border: 1px solid #999">
+                  <div class="card-header">
+                    <p class="fw-bold small m-0 text-muted text-uppercase">Współczynnik mocy</p>
+                  </div>
+                  <div class="card-body py-0">
+                   <p class="fw-bold text-secondary m-0 {% if meter.is_timed_out %}text-decoration-line-through{%endif%}">{{ meter.last_measurement.total_power_factor }} cos(φ)</p>
+                  </div>
+                 </div>
+            </div>
+            </div>
+            <div class="row g-3 text-center my-1">
+                <div class="col-md-6">
+                    <div class="card h-100 shadow-sm" style="background-color: #ddd; border: 1px solid #999">
+                    <div class="card-header">
+                      <p class="fw-bold small m-0 text-muted text-uppercase">Całkowita energia aktywna</p>
+                    </div>
+                    <div class="card-body py-0">
+                     <p class="fw-bold text-secondary m-0 {% if meter.is_timed_out %}text-decoration-line-through{%endif%}">{{ meter.last_measurement.total_active_energy }} kWh</p>
+                    </div>
+                   </div>
+                 </div>
+              <div class="col-md-6">
+                    <div class="card h-100 shadow-sm" style="background-color: #ddd; border: 1px solid #999">
+                       <div class="card-header">
+                         <p class="fw-bold small m-0 text-muted text-uppercase">Całkowita energia bierna</p>
+                       </div>
+                       <div class="card-body py-0">
+                           <p class="fw-bold text-secondary m-0 {% if meter.is_timed_out %}text-decoration-line-through{%endif%}">{{ meter.last_measurement.total_reactive_energy }} WAR</p>
+                       </div>
+                   </div>
+                 </div>
+
+               </div>
+
+
+
+            <div class="row g-3 text-center my-1">
+                <div class="col-md-4">
+                  <div class="card h-100 shadow-sm" style="background-color: #ddd; border: 1px solid #999">
+                    <div class="card-header">
+                    <p class="fw-bold small m-0 text-muted text-uppercase">L1</p>
+                    </div>
+                    <div class="card-body m-0 p-0">
+                    <p class="fw-bold text-secondary m-0 {% if meter.is_timed_out %}text-decoration-line-through{%endif%}">{{ meter.last_measurement.l1_voltage }} V</p>
+                    <p class="fw-bold text-secondary m-0 {% if meter.is_timed_out %}text-decoration-line-through{%endif%}">{{ meter.last_measurement.l1_current }} A</p>
+                    <p class="fw-bold text-secondary m-0 {% if meter.is_timed_out %}text-decoration-line-through{%endif%}">{{ meter.last_measurement.l1_active_power }} W</p>
+                    <p class="fw-bold text-secondary m-0 {% if meter.is_timed_out %}text-decoration-line-through{%endif%}">{{ meter.last_measurement.l1_reactive_power }} WAR</p>
+                    </div>
+                 </div>
+               </div>
+              {% if not meter.model == "OR-WE-504" %}
+              <div class="col-md-4">
+                  <div class="card h-100 shadow-sm" style="background-color: #ddd; border: 1px solid #999">
+                    <div class="card-header">
+                    <p class="fw-bold small m-0 text-muted text-uppercase">L2</p>
+                    </div>
+                    <div class="card-body m-0 p-0">
+                    <p class="fw-bold text-secondary m-0 {% if meter.is_timed_out %}text-decoration-line-through{%endif%}">{{ meter.last_measurement.l2_voltage }} V</p>
+                    <p class="fw-bold text-secondary m-0 {% if meter.is_timed_out %}text-decoration-line-through{%endif%}">{{ meter.last_measurement.l2_current }} A</p>
+                    <p class="fw-bold text-secondary m-0 {% if meter.is_timed_out %}text-decoration-line-through{%endif%}">{{ meter.last_measurement.l2_active_power }} W</p>
+                    <p class="fw-bold text-secondary m-0 {% if meter.is_timed_out %}text-decoration-line-through{%endif%}">{{ meter.last_measurement.l2_reactive_power }} WAR</p>
+                    </div>
+                 </div>
+               </div>
+              <div class="col-md-4">
+                  <div class="card h-100 shadow-sm" style="background-color: #ddd; border: 1px solid #999">
+                    <div class="card-header">
+                    <p class="fw-bold small m-0 text-muted text-uppercase">L3</p>
+                    </div>
+                    <div class="card-body m-0 p-0">
+                    <p class="fw-bold text-secondary m-0 {% if meter.is_timed_out %}text-decoration-line-through{%endif%}">{{ meter.last_measurement.l3_voltage }} V</p>
+                    <p class="fw-bold text-secondary m-0 {% if meter.is_timed_out %}text-decoration-line-through{%endif%}">{{ meter.last_measurement.l3_current }} A</p>
+                    <p class="fw-bold text-secondary m-0 {% if meter.is_timed_out %}text-decoration-line-through{%endif%}">{{ meter.last_measurement.l3_active_power }} W</p>
+                    <p class="fw-bold text-secondary m-0 {% if meter.is_timed_out %}text-decoration-line-through{%endif%}">{{ meter.last_measurement.l3_reactive_power }} WAR</p>
+                    </div>
+                 </div>
+               </div>
+              {% endif %}
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card shadow" style="background-color: #eee">
+          <div class="card-body m-1 my-0 p-1">
+            <div class="row g-3 my-1 mx-auto">
+              <div class="col">
+                <div class="rounded-3 p-1 h-100" >
+                  <div class="input-group input-group-sm flex-nowrap" style="max-width:400px">
+                    <span class="input-group-text fw-bold bg-light">od:</span>
+                    <input id="date_from" name="date_from" class="form-control" type="date" min="{{ lease_start }}" max="{{ lease_end }}">
+
+                    <span class="input-group-text fw-bold bg-light">do:</span>
+                    <input id="date_to" name="date_to" class="form-control" type="date"  min="{{ lease_start }}" max="{{ lease_end }}">
+                    <button class="btn btn-sm input-group-button bg-warning ">Wczytaj</button>
+                  </div>
+
+
+                </div>
+              </div>
+            </div>
+          <!-- Wykresy -->
+            <div class="container-fluid py-2">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <p class="h6 fw-bold">Raport tygodniowy: </p>
+                <div class="badge bg-info">Interwał: 15 min (Agregacja)</div>
+              </div>
+
+              <div class="row g-4">
+                <div class="col-12">
+                  <div class="card shadow shadow-sm border-0">
+                    <div class="card-header fw-bold d-flex justify-content-between align-items-center"><p class="m-0"><span class="bi bi-plug me-2"></span>Moce: Czynna, Bierna, Pozorna</p><button class="btn btn-sm btn-link p-0 text-dark text-end" onclick="openFullscreen('power_chart', 'Szczegółowa analiza mocy')"><span class="bi bi-fullscreen"></span></button></div>
+                    <div class="card-body"><canvas id="power_chart" style="height:300px"></canvas></div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="card shadow shadow-sm border-0">
+                    <div class="card-header fw-bold d-flex justify-content-between align-items-center"><p class="m-0"><span class="bi bi-plug me-2"></span>Napięcia Fazowe [V]</p><button class="btn btn-sm btn-link p-0 text-dark text-end" onclick="openFullscreen('voltage_chart', 'Szczegółowa analiza napięcia fazowego')"><span class="bi bi-fullscreen"></span></button></div>
+                    <div class="card-body"><canvas id="voltage_chart" style="height:150px"></canvas></div>
+                  </div>
+                </div>
+              <div class="col-md-6">
+                  <div class="card shadow shadow-sm border-0">
+                    <div class="card-header fw-bold d-flex justify-content-between align-items-center"><p class="m-0"><span class="bi bi-plug me-2"></span>Natężenie Prądu [A]</p><button class="btn btn-sm btn-link p-0 text-dark text-end" onclick="openFullscreen('current_chart', 'Szczegółowa analiza natężenia prądu')"><span class="bi bi-fullscreen"></span></button></div>
+                    <div class="card-body"><canvas id="current_chart" style="height:150px"></canvas></div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="card shadow shadow-sm border-0">
+                    <div class="card-header fw-bold d-flex justify-content-between align-items-center"><p class="m-0"><span class="bi bi-plug me-2"></span>Współczynnik Mocy [cos(φ)]</p><button class="btn btn-sm btn-link p-0 text-dark text-end" onclick="openFullscreen('power_factor_chart', 'Szczegółowa analiza współczynnika mocy')"><span class="bi bi-fullscreen"></span></button></div>
+                    <div class="card-body"><canvas id="power_factor_chart" style="height:150px"></canvas></div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="card shadow shadow-sm border-0">
+                    <div class="card-header fw-bold d-flex justify-content-between align-items-center"><p class="m-0"><span class="bi bi-plug me-2"></span>Częstotliwość [Hz]]</p><button class="btn btn-sm btn-link p-0 text-dark text-end" onclick="openFullscreen('frequency_chart', 'Szczegółowa analiza częstotliwości')"><span class="bi bi-fullscreen"></span></button></div>
+                    <div class="card-body"><canvas id="frequency_chart" style="height:150px"></canvas></div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="card shadow shadow-sm border-0">
+                    <div class="card-header fw-bold d-flex justify-content-between align-items-center"><p class="m-0"><span class="bi bi-plug me-2"></span>Zużycie Energii Czynnej [kWh]</p><button class="btn btn-sm btn-link p-0 text-dark text-end" onclick="openFullscreen('active_energy_chart', 'Szczegółowa analiza zużycia energi czynnej')"><span class="bi bi-fullscreen"></span></button></div>
+                    <div class="card-body"><canvas id="active_energy_chart" style="height:250px"></canvas></div>
+                  </div>
+                </div>
+                <div class="col-12">
+                 <div class="card shadow shadow-sm border-0">
+                   <div class="card-header fw-bold d-flex justify-content-between align-items-center"><p class="m-0"><span class="bi bi-plug me-2"></span>Zużycie Energii Biernej [WAR]</p><button class="btn btn-sm btn-link p-0 text-dark text-end" onclick="openFullscreen('reactive_energy_chart', 'Szczegółowa analiza zużycia energi biernej')"><span class="bi bi-fullscreen"></span></button></div>
+                    <div class="card-body"><canvas id="reactive_energy_chart" style="height:250px"></canvas></div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modal - wykresy fullsrn -->
+      <div class="modal fade" id="chart_modal" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+          <div class="modal-content border-0 shadow-lg">
+            <div class="modal-header">
+              <p class="h5 modal-title fw-bold" id="chart_modal_title"> Szczegółowy podgląd wykresu</p>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div style="height: 70vh; width:100%">
+                <canvas id="chart_full_screen_canvas"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- wykresy -->
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+
+let charts = {
+    power: null,
+    voltage: null,
+    current: null,
+    pf: null,
+    freq: null,
+    energy_active: null,
+    energy_reactive: null
+  }
+  document.addEventListener('DOMContentLoaded', function() {
+
+    const dateToInput = document.getElementById('date_to')
+    const dateFromInput = document.getElementById('date_from')
+
+    const minDate = dateFromInput.getAttribute('min')
+    const maxDate = dateFromInput.getAttribute('max')
+    const formatDate = (date) => date.toISOString().split('T')[0]
+    let defaultDateTo = new Date()
+
+    if (maxDate && new Date(maxDate) < defaultDateTo) {
+      defaultDateTo = new Date(maxDate);
+    }
+    dateToInput.value = formatDate(defaultDateTo);
+
+    let defaultDateFrom = new Date(defaultDateTo);
+    defaultDateFrom.setDate(defaultDateFrom.getDate() - 7);
+
+    if (minDate && new Date(minDate) > defaultDateFrom) {
+      defaultDateFrom = new Date(minDate);
+    }
+    dateFromInput.value = formatDate(defaultDateFrom)
+
+    if (!dateToInput.value) {
+      const today = new Date();
+      const lastWeek = new Date();
+      lastWeek.setDate(today.getDate() - 7);
+
+      dateToInput.value = today.toISOString().split('T')[0];
+      dateFromInput.value = lastWeek.toISOString().split('T')[0];
+    }
+
+    fetchMeterData();
+
+    const loadBtn = document.querySelector('.input-group-button');
+    if (loadBtn) {
+      loadBtn.addEventListener('click', function(x) {
+        x.preventDefault();
+        fetchMeterData();
+      });
+    }
+
+  });
+
+  async function fetchMeterData() {
+    const meter_id = "{{ meter.id }}";
+    const date_from = document.getElementById('date_from').value;
+    const date_to = document.getElementById('date_to').value;
+    try {
+      const url = `/meters/${meter_id}/chart_data?date_from=${date_from}&date_to=${date_to}`;
+      const response = await fetch(url);
+      if (!response.ok) throw new Error("Nie udało się pobrać danych licznika");
+      const data = await response.json();
+      if (data.labels.length == 0) {
+        alert("Brak danych w wybranym okresie");
+        return;
+      }
+
+      updateCharts(data);
+
+    } catch (error) {
+      console.log(error);
+      alert("Wystąpił błąd podczas pobierania danych pomiarowych");
+    }
+  }
+  function updateCharts(data) {
+    drawChart('power_chart', 'power', 'line', data.labels, [
+      { label: 'Czynna [W]', data: data.power.active, borderColor: '#0d6efd', backgroundColor: 'rgba(13,110,253, 0.1)', fill: true},
+      { label: 'Bierna [WAR]', data: data.power.reactive, borderColor: '#dc4535', borderDash: [5,5] },
+      { label: 'Pozorna [VA]', data: data.power.apparent, borderColor: '#198754'}
+    ]);
+    drawChart('voltage_chart', 'voltage', 'line', data.labels, [
+      { label: 'L1 [V]', data: data.voltage.l1, borderColor: '#ffc107' },
+      { label: 'L2 [V]', data: data.voltage.l2, borderColor: '#212529' },
+      { label: 'L3 [V]', data: data.voltage.l3, borderColor: '#dc3543' }
+
+    ]);
+
+    drawChart('current_chart', 'current', 'line', data.labels, [
+      { label: 'L1 [A]', data: data.current.l1, borderColor: '#ffc107' },
+      { label: 'L2 [A]', data: data.current.l2, borderColor: '#212529' },
+      { label: 'L3 [A]', data: data.current.l3, borderColor: '#dc3543' }
+    ]);
+
+    drawChart('power_factor_chart', 'pf', 'line', data.labels, [
+      { label: 'cos (φ)', data: data.quality.pf, borderColor: '#6612f2'}
+    ]);
+    drawChart('frequency_chart', 'freq', 'line', data.labels, [
+      { label: 'Hz', data: data.quality.freq, borderColor: '#6612f2'}
+    ]);
+    drawChart('active_energy_chart', 'energy_active', 'line', data.labels, [
+      { label: 'Energia Czynna [kWh]', data: data.energy.active, borderColor: '#20c997', backgroundColor: 'rgba(32,201,151,0.1)' ,fill: true}
+    ]);
+    drawChart('reactive_energy_chart', 'energy_reactive', 'line', data.labels, [
+      { label: 'Energia Czynna [kWh]', data: data.energy.reactive, borderColor: '#20c997', backgroundColor: 'rgba(32,201,151,0.1)' ,fill: true}
+    ]);
+  }
+function drawChart(canvas_id, chart_key, type, labels, datasets) {
+    const canvas_context = document.getElementById(canvas_id);
+    if (!canvas_context) return;
+
+    if (charts[chart_key]) {
+      charts[chart_key].destroy();
+    }
+
+    charts[chart_key] = new Chart(canvas_context.getContext('2d'), {
+      type: type,
+      data: {
+        labels: labels,
+        datasets: datasets.map(ds => ({
+          ...ds,
+          borderWidth: 2,
+          pointRadius: 1,
+          pointHoverRadius: 4,
+          tension: 0.3
+         }))
+      },
+      options: {
+        maintainAspectRatio: false,
+        interaction: {
+            mode: 'index',
+            intersect: false,
+        },
+        plugins: {
+            legend: {display: true, position: 'top' },
+            tooltip: { enabled: true }
+        },
+        scales: {
+            x: { ticks: { maxTicksLimit: 10 }}
+        }
+      }
+    });
+}
+</script>
+
+        <!-- -->
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+<script>
+  document.querySelectorAll('.clear-btn').forEach(btn => {
+  btn.addEventListener('click', function() {
+  const th = this.closest('th');
+  const input = th.querySelector('input.clearable-input');
+  if (input) {
+  input.value = '';
+  input.focus()
+  }});
+  });
+</script>
+
+{% endblock %}

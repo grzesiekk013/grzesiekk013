@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<meter type="electric" tag="orno504" brand="orno" model="orno504">
+    <serial baudrate="9600" parity="N" stopbits="1" timeoutSecs="0.25" />
+    <registers>
+        <!-- mode="" -> defaults: register; unit="" -> defaults: no unit -->
+        <register address="0x0000" size="1" name="LineVoltage" decpnt="1" mode="register" unit="Volts" />
+        <register address="0x0001" size="1" name="TotalAmps" decpnt="1" mode="" unit="Amps" />
+        <register address="0x0002" size="1" name="GridFreqHz" decpnt="1" mode="" unit="Hz" />
+        <register address="0x0003" size="1" name="TotalActivePower" decpnt="0" mode="" unit="Watts" />
+        <register address="0x0004" size="1" name="TotalReactivePower" decpnt="1" mode="" unit="VAr" />
+        <register address="0x0005" size="1" name="TotalApparentPower" decpnt="1" mode="" unit="VA" />
+        <register address="0x0006" size="1" name="TotalPowerFactor" decpnt="3" mode=""
+                  unit="" formatter="round2" />
+        <!-- # adam said it should be divided by 1000 -->
+        <register address="0x0007" size="2" name="TotalActiveEnergy" decpnt="1" mode="int"
+                  unit="kWh" formatter="divide1000r2" />
+        <register address="0x0009" size="2" name="TotalReactiveEnergy" decpnt="4" mode="int"
+                  unit="kVArh" formatter="divide1000r2" />
+        <register address="0x000B" size="3" name="SerialNumber" decpnt="0" mode="" unit="" />
+        <register address="0x000E" size="1" name="BaudRate" decpnt="0" mode="" unit="" />
+        <register address="0x000F" size="1" name="ModbusAddress" decpnt="0" mode="" unit="" />
+    </registers>
+</meter>

@@ -1,0 +1,51 @@
+dorobić strone - liczniki, pomieszczenia
+przypisanie pomieszczen do klientów
+podgląd danych
+alerty na stronie
+zdarzenia na stronie
+raporty na stronie
+konfiguracja device
+tworzenie kanałów
+parsowanie licznika
+wykresy
+moje konto
+raporty zasiusiane
+zabezpieczenia na stronie
+
+na plytce
+przemyslec klasy
+hot reload
+pobranie konfiguracji device
+kabelek
+dodac kolejny licznik
+
+HISTORIA KLIENT ZEBY NIE WIDZIAL CO BYLO WCZESNIEJ
+
+Przemyślenia
+
+Device:
+Last_Edit_DateTime (do hot reload)
+Intervals_Config
+Channels_Config
+
+urządzenie
+1. odczytuje konfiguracje z serwera .ini
+- konfiguracja próbkowania i wysyłania
+- konfiguracja kanałów i liczników
+- konfiguracja alertów
+
+Thread próbkowanie
+1. odczyt liczników
+2. analiza ograniczeń
+3. dodanie alerty do listy
+4. dodanie odczytu do listy
+
+thread wysyłanie
+1. pobranie i sprawdzenie Last_Edit_DateTime -> HotReload
+3. wysłanie alertów
+4. wysłanie stanu
+
+Dodanie .py jako serwisu
+
+Urządzenie - przycisk przeładuj
+wyjeb wróć do strony głównej

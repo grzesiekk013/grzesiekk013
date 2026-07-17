@@ -1,0 +1,187 @@
+{% extends 'core/base.html' %}
+{% block aside %} {% include 'core/side_panel.html' with role=request.user.userrole.role %}
+{% endblock %}
+{% block main %}
+
+<div class="d-sm-flex align-items-center justify-content-between mb-2">
+  <p class="h3">{{ request.user.first_name }} {{ request.user.last_name }} <small>({{ request.user.userrole.get_role_display }})</small></p>
+  <p class="h3">Użytkownicy i Uprawnienia</p>
+</div>
+
+<hr class="mb-2">
+
+<div class="mb-2">
+  <button type="button" class="btn btn-sm btn-dark my-2" data-bs-toggle="modal" data-bs-target="#create_user"><span class="bi bi-plus-square"></span> Dodaj Użytkownika</button>
+ </div>
+
+<hr class="mb-2">
+
+{% block modal %}
+{% include 'core/modals/add_user.html' %}
+{% endblock %}
+
+<div class="row mb-2">
+    <div class="col-lg-12">
+    <div class="card shadow">
+      <div class="card-header py-3">
+        <p class="h6 m-0 font-weight-bold text-color" title="Filtrowanie treści ma wpływ na statystyki">Statystyki*</p>
+      </div>
+      <div class="card-body d-flex gap-4">
+        <div>
+          <p class="h6 d-inline">Wszyscy: </p>
+          <p class="h6 d-inline">{{ users.count }}</p>
+        </div>
+        <div>
+          <p class="h6 d-inline">Administratorzy: </p>
+          <p class="h6 d-inline">{{ admins_count }}</p>
+        </div>
+        <div>
+          <p class="h6 d-inline">Operatorzy: </p>
+          <p class="h6 d-inline">{{ operators_count }}</p>
+        </div>
+        <div>
+          <p class="h6 d-inline">Użytkownicy: </p>
+          <p class="h6 d-inline">{{ users_count }}</p>
+        </div>
+      </div>
+    </div>
+    </div>
+</div>
+
+<div class="row mb-2">
+    <div class="col-lg-12">
+    <div class="card shadow">
+      <div class="card-header py-3">
+        <p class="h6 m-0 font-weight-bold text-color">Użytkownicy</p>
+      </div>
+      <div class="card-body">
+        <table class="table table-striped">
+          <form method="GET" action="{%url 'manage_users' %}">
+          <thead class="table-secondary">
+
+          <tr>
+      <!--      <td class="small" scope="col">#</th>-->
+            <th class="small" scope="col">Nazwa użytkownika</th>
+            <th class="small" scope="col">Adres e-mail</th>
+            <th class="small" scope="col">Imię</th>
+            <th class="small" scope="col">Nazwisko</th>
+            <th class="small" scope="col">Administrator systemu</th>
+            <th class="small" scope="col">Rola</th>
+            <th class="small" scope="col">Grupa</th>
+            <th class="small" scope="col">Akcja</th>
+          </tr>
+
+           <tr>
+             <th class="small" scope="col">
+               <div class="btn-group me-2" role="group" aria-label="">
+               <input type="text" class="form-control form-control-sm clearable-input" name="fusername" id="fusername" value="{{ form_vals.fusername }}">
+               <button type="button" class="btn btn-sm clear-btn btn-outline-danger"><span class="bi bi-archive" title="Wyczyść filtr"></span>
+               </div>
+             </th>
+              <th class="small" scope="col">
+               <div class="btn-group me-2" role="group" aria-label="">
+               <input type="text" class="form-control form-control-sm clearable-input" name="femail" id="femail" value="{{ form_vals.femail }}">
+               <button type="button" class="btn btn-sm clear-btn btn-outline-danger"><span class="bi bi-archive" title="Wyczyść filtr"></span>
+               </div>
+             </th>
+             <th class="small" scope="col">
+               <div class="btn-group me-2" role="group" aria-label="">
+               <input type="text" class="form-control form-control-sm clearable-input" name="ffirst_name" id="ffirst_name" value="{{ form_vals.ffirst_name }}">
+                 <button type="button" class="btn btn-sm clear-btn btn-outline-danger"><span class="bi bi-archive" title="Wyczyść filtr"></span>
+               </div>
+             </th>
+             <th class="small" scope="col">
+               <div class="btn-group me-2" role="group" aria-label="">
+               <input type="text" class="form-control form-control-sm clearable-input" name="flast_name" id="flast_name" value="{{ form_vals.flast_name }}">
+               <button type="button" class="btn btn-sm clear-btn btn-outline-danger"><span class="bi bi-archive" title="Wyczyść filtr"></span>
+               </div>
+             </th>
+             <th class="small" scope="col">
+               <select class="form-select form-control form-select-sm" id="fis_admin" name="fis_admin">
+                  <option value="" {% if not form_vals.fis_admin %} selected {%endif%}>Pusty</option>
+                 <option value="Tak" {% if form_vals.fis_admin == "Tak" %} selected {%endif%}>Tak</option>
+                 <option value="Nie" {% if form_vals.fis_admin == "Nie" %} selected {%endif%}>Nie</option>
+                </select>
+             </th>
+             <th class="small" scope="col">
+                <select class="form-select form-control form-select-sm" id="frole" name="frole">
+                  <option value="" {% if not form_vals.frole %} selected {%endif%}>Pusty</option>
+                 <option value="admin" {% if form_vals.frole == "admin" %} selected {%endif%}>Administrator</option>
+                 <option value="operator" {% if form_vals.frole == "operator" %} selected {%endif%}>Operator</option>
+                 <option value="user" {% if form_vals.frole == "user" %} selected {%endif%}>Użytkownik</option>
+                </select>
+             </th>
+             <th class="small" scope="col">
+               <select class="form-select form-control form-select-sm" id="fclient" name="fclient">
+                  <option value="" {% if not form_vals.fclient %} selected {%endif%}>Pusty</option>
+                 {% for client in clients %}
+                 <option value="{{ client.id }}" {% if form_vals.fclient == client.id|stringformat:"s" %} selected {%endif%}>{{ client.name }}</option>
+                 {% endfor %}
+                </select>
+             </th>
+             <th class="small" scope="col">
+               <div class="btn-group me-2" role="group" aria-label="">
+               <button type="submit" class="btn btn-sm btn-outline-dark"><span class="bi bi-filter-square" title="Filtruj wyniki"></span>  </button>
+               <a class="btn btn-sm btn-outline-dark" href="{% url 'manage_users' %}" ><span class="bi bi-x-square" title="Wyczyść filtry"></span></a>
+               </div>
+             </th>
+
+          </tr>
+
+          </thead>
+          </form>
+          <tbody>
+          {% for user in users %}
+          <tr>
+      <!--      <th scope="row">{{ forloop.counter }}</th>-->
+            <td class="small">{{ user.username }}</td>
+            <td class="small">{{ user.email }}</td>
+            <td class="small">{{ user.first_name }}</td>
+            <td class="small">{{ user.last_name }}</td>
+            <td class="small">{% if user.is_staff  %} Tak {% else %} Nie {%endif%}</td>
+            <td class="small">
+              {{ user.userrole.get_role_display }}
+            </td>
+            <td class="small">
+              {{ user.userrole.client.name }}
+            </td>
+            <td class="small">
+              <div class="btn-group me-2" role="group" aria-label="">
+                <button type="button" class="btn btn-sm btn-outline-warning" data-bs-toggle="modal" data-bs-target="#edit_user_modal{{ user.id }}"><span class="bi bi-pencil-square" title="Edytuj pozycję"></span>  </button>
+                {% block modal_edit %} {% include 'core/modals/edit_user.html' %} {% endblock %}
+                {% if request.user.userrole.role == "admin" %}
+                <button type="button" class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#delete_user_modal{{ user.id }}"><span class="bi bi-archive" title="Usuń pozycję"></span>  </button>
+                {% block modal_delete %} {% include 'core/modals/delete_user.html' %} {% endblock %}
+                {% endif %}
+              </div>
+            </td>
+          </tr>
+
+          {% endfor %}
+          </tbody>
+        </table>
+        <!-- Paginacja -->
+        {% with objects=users%}
+        {% block pagination %}
+        {% include 'core/all/pagination.html' %}
+        {% endblock %}
+        {% endwith %}
+        <!-- Paginacja -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll('.clear-btn').forEach(btn => {
+  btn.addEventListener('click', function() {
+  const th = this.closest('th');
+  const input = th.querySelector('input.clearable-input');
+  if (input) {
+  input.value = '';
+  input.focus()
+  }});
+  });
+</script>
+
+{% endblock %}

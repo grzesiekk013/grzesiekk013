@@ -1,0 +1,195 @@
+{% extends 'core/base.html' %}
+{% block aside %} {% include 'core/side_panel.html' with role=request.user.userrole.role %}
+{% endblock %}
+{% block main %}
+<div class="d-sm-flex align-items-center justify-content-between mb-2" xmlns:form_vals.fmeter>
+  <p class="h3">{{ request.user.first_name }} {{ request.user.last_name }} <small>({{ request.user.userrole.get_role_display }})</small></p>
+  <p class="h3">Moje liczniki</p>
+</div>
+
+<hr class="mb-2">
+
+<div class="row mb-2">
+    <div class="col-lg-6 ">
+    <div class="card shadow">
+      <div class="card-header py-3">
+        <p class="h6 m-0 font-weight-bold text-color">Filtry</p>
+      </div>
+      <div class="card-body">
+        <table>
+          <tr>
+            <td>
+              <table class="table table-striped">
+                <form method="GET" action="{%url 'my_meters_home' %}">
+                <thead class="table-secondary">
+                <tr>
+                  <th class="small" scope="col">Licznik</th>
+                  <th class="small" scope="col">Pomieszczenie</th>
+                  <th class="small" scope="col">Akcja</th>
+                </tr>
+                <tr>
+
+                  <th class="small" scope="col">
+                     <select class="form-select form-control form-select-sm" id="fmeter" name="fmeter">
+                        <option value="" {% if not form_vals.fmeter %} selected {%endif%}>Pusty</option>
+                       {% for m in meters_list %}
+                       <option value="{{m.id}}" {% if form_vals.fmeter|stringformat:"s" == m.id|stringformat:"s" %} selected {%endif%}>{{m}}</option>
+                       {% endfor %}
+                      </select>
+                   </th>
+                  <th class="small" scope="col">
+                     <select class="form-select form-control form-select-sm" id="froom" name="froom">
+                        <option value="" {% if not form_vals.froom %} selected {%endif%}>Pusty</option>
+                       {% for r in rooms_list %}
+                       <option value="{{r.id}}" {% if form_vals.froom|stringformat:"s" == r.id|stringformat:"s" %} selected {%endif%}>{{r}}</option>
+                       {% endfor %}
+                      </select>
+                   </th>
+                  <th class="small" scope="col">
+                     <div class="btn-group me-2" role="group" aria-label="">
+                     <button type="submit" class="btn btn-sm btn-outline-dark"><span class="bi bi-filter-square" title="Filtruj wyniki"></span>  </button>
+                     <a class="btn btn-sm btn-outline-dark" href="{% url 'my_meters_home' %}" ><span class="bi bi-x-square" title="Wyczyść filtry"></span></a>
+                     </div>
+                   </th>
+                </tr>
+                </thead>
+                </form>
+              </table>
+            </td>
+            <td>
+              <div class="mx-4">
+                <!-- Paginacja -->
+                {% with objects=meters%}
+                {% block pagination %}
+                {% include 'core/all/pagination.html' %}
+                {% endblock %}
+                {% endwith %}
+                <!-- Paginacja -->
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div></div>
+<div class="row mb-2">
+  <div class="col-lg-12 ">
+    <div class="card shadow">
+      <div class="card-header py-3">
+        <p class="h6 m-0 font-weight-bold text-color">Liczniki</p>
+      </div>
+      <div class="card-body">
+       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+         {% for meter in meters %}
+         <!-- -->
+          <div class="col">
+              <div class="card shadow-sm">
+                {% if meter.is_timed_out %}
+                <div class="card-header bg-warning text-center p-0">
+                  offline
+                </div>
+                {% else %}
+                <div class="card-header bg-success text-center p-0">
+                  online
+                </div>
+                {% endif %}
+                <div class="card-header">
+                  <table class="table-center w-100">
+                    <tr>
+                      <td><h6 class="m-0 p-0">{{ meter.room }}</h6> </td><td><p class="m-0 p-0 text-secondary text-end">{{ meter }} {% if request.user.userrole.role == "admin" or request.user.userrole.role == "operator" %}
+                      {% if meter.alert_unconfirmed_count_admin > 0 %}
+                        <span class="bi bi-bell" title="Licznik posiada niepotwierdzone zdarzenia"></span>
+                      {% endif %}
+                      {% endif %}
+                      {% if request.user.userrole.role == "user" %}
+                      {% if meter.alert_unconfirmed_user > 0 %}
+                        <span class="bi bi-bell" title="Licznik posiada niepotwierdzone zdarzenia"></span>
+                      {% endif %}
+                      {% endif %}
+
+                    </p></td>
+                    </tr>
+                  </table>
+                </div>
+                  <div class="card-body">
+                    <table class=" w-100 text-center">
+                      <tr>
+                        <td colspan="3"><div class="rounded-2 p-2" style="background-color: #ddd" title="Moc czynna">{{meter.last_measurement.total_active_power}}W</div></td>
+                      </tr>
+
+                      <tr>
+                        <td ><div class="rounded-2 p-2" style="background-color: #eee">
+                          <p class="m-0 fw-bold">L1</p>
+                          <p class="m-0 small">
+                            {{ meter.last_measurement.l1_voltage }} V
+                          </p>
+                          <p class="m-0 small">
+                            {{ meter.last_measurement.l1_current }} A
+                          </p>
+                        </div>
+                        </td>
+                        {% if not meter.model == "OR-WE-504" %}
+                        <td ><div class="rounded-2 p-2" style="background-color: #eee">
+                          <p class="m-0 fw-bold">L2</p>
+                          <p class="m-0 small">
+                            {{ meter.last_measurement.l2_voltage }} V
+                          </p>
+                          <p class="m-0 small">
+                            {{ meter.last_measurement.l2_current }} A
+                          </p>
+                        </div>
+                        </td>
+                        <td ><div class="rounded-2 p-2" style="background-color: #eee">
+                          <p class="m-0 fw-bold">L3</p>
+                          <p class="m-0 small">
+                            {{ meter.last_measurement.l3_voltage }} V
+                          </p>
+                          <p class="m-0 small">
+                            {{ meter.last_measurement.l3_current }} A
+                          </p>
+                        </div>
+                        </td>
+                        {% endif %}
+                      </tr>
+                      <tr>
+                        <td colspan="3"><div class="rounded-2 p-2" style="background-color: #ddd" title="Energia czynna">
+                           {{meter.last_measurement.total_active_energy}} kWh
+                        </div>
+                        </td>
+                      </tr>
+
+                    </table>
+                      <p class="card-text"></p>
+
+                      <div class="d-flex justify-content-between align-items-center card-footer">
+                          <div class="btn-group"> <a href="{% url 'my_meters_details' meter.id %}" class="btn btn-sm btn-outline-secondary">Otwórz</a>
+                              </div> <small class="text-body-secondary">
+                        <p class="my-1"><span class="bi bi-clock" title="Odświeżono ostatnio: "></span> {{ meter.last_measurement.reading_time|timesince }} temu</p></small>
+                      </div>
+                  </div>
+              </div>
+          </div>
+         {% endfor %}
+      </div>
+        <!-- -->
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+<script>
+  document.querySelectorAll('.clear-btn').forEach(btn => {
+  btn.addEventListener('click', function() {
+  const th = this.closest('th');
+  const input = th.querySelector('input.clearable-input');
+  if (input) {
+  input.value = '';
+  input.focus()
+  }});
+  });
+</script>
+
+{% endblock %}

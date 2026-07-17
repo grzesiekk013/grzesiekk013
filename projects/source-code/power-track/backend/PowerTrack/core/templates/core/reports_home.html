@@ -1,0 +1,71 @@
+{% extends 'core/base.html' %}
+{% block aside %} {% include 'core/side_panels/side_panel.html' %}
+{% endblock %}
+{% block main %}
+
+<p class="h2">Raportowanie</p>
+<hr>
+<p class="h2>">Cykl rozliczeniowy</p>
+<div class="m-0 border-1 shadow p-2 rounded-3 text-bg-dark" style="width: min-content">
+<table>
+    <tr>
+      <td>
+        Początek
+      </td>
+      <td>
+        Koniec
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <input type="datetime-local" class="form-control" style="max-width:200px">
+      </td>
+      <td>
+        <input type="datetime-local" class="form-control" style="max-width:200px">
+      </td>
+    </tr>
+  </table>
+</div>
+<hr>
+<p class="h2>">Ustawienia raportu</p>
+<div class="mb-3 form-check">
+  <input type="checkbox" class="form-check-input" id="cb-active-energy" checked>
+  <label class="form-check-label" for="cb-active-energy">Energia czynna</label>
+</div>
+<div class="mb-3 form-check">
+  <input type="checkbox" class="form-check-input" id="cb-reactive-energy" checked>
+  <label class="form-check-label" for="cb-active-energy">Energia bierna</label>
+</div>
+<div class="mb-3 form-check">
+  <input type="checkbox" class="form-check-input" id="cb-multiple-csv">
+  <label class="form-check-label" for="cb-multiple-csv">Osobne arkusze</label>
+</div>
+<hr>
+<p class="h2>">Dane do raportu</p>
+<button type="button" class="btn btn-sm btn-outline-light">Zaznacz wszystkie</button>
+<button type="button" class="btn btn-sm btn-outline-light">Odznacz wszystkie</button>
+<div class="m-0 border-1 shadow p-2 rounded-3 text-bg-dark">
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+      <th scope="col">#</th>
+      <th scope="col"> </th>
+      <th scope="col">Pomieszczenie</th>
+      <th scope="col">Licznik</th>
+      <th scope="col">Klient</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+    <th scope="row">1</th>
+    <td><input type="checkbox" class="form-check-input" id="cb0"></td>
+    <td>Otto</td>
+    <td>Otto</td>
+    <td>@mdo</td>
+
+    </tr>
+    </tbody>
+  </table>
+</div>
+{% endblock %}

@@ -1,0 +1,174 @@
+<div class="modal fade" id="manage_edit_device{{ device.id }}">
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content">
+      <form method="POST" action="{%url 'manage_edit_device' device.id %}">
+        {% csrf_token %}
+        <div class="modal-header">
+          <p class="h4"><span class="bi bi-pencil-square"></span>  Urządzenie <i>{{ device.uuid }}</i> </p>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <hr>
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col p2">
+                <div class="form-group mb-2">
+                  <label for="switch_board">Rozdzielnia</label>
+                  <select class="form-select" id="switch_board" name="switch_board" required>
+                    {% for switch_board in switch_boards %}
+                    <option value="{{ switch_board.id }}" {% if switch_board.id == device.switch_board.id %} selected {% endif %}>{{ switch_board.name }}</option>
+                    {% endfor %}
+                  </select>
+                </div>
+
+                <div class="form-group mb-2">
+                  <label for="uuid">UUID</label>
+                  <input id="uuid" type="text" class="form-control form-control-sm" name="uuid" required value="{{ device.uuid }}" disabled>
+                </div>
+
+                <div class="form-group mb-2">
+                  <label for="type">Typ urzadzenia</label>
+                  <select class="form-select" id="type" name="type" required>
+                    <option value="LP_MAX" {% if device.type == 'LP_MAX' %} selected {% endif %}>LP_MAX</option>
+                    <option value="LP_LYRA" {% if device.type == 'LP_LYRA' %} selected {% endif %}>LP_LYRA</option>
+                    <option value="SIM" {% if device.type == 'SIM' %} selected {% endif %}>SIM</option>
+                  </select>
+                </div>
+                <div class="form-group mb-2">
+                  <label for="password">Hasło (Pozostaw puste jeżeli chcesz zachować poprzednie)</label>
+                  <input id="password" type="password" class="form-control form-control-sm" name="password" maxlength="64">
+                </div>
+                <div class="form-group mb-2">
+                  <label for="description">Opis</label>
+                  <input id="description" type="text" class="form-control form-control-sm" name="description" required value="{{ device.description }}" minlength="4" maxlength="128>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="is_active" {% if device.is_active %} checked {% endif %}>
+                  <label class="form-check-label">Aktywny</label>
+                </div>
+
+              </div>
+              <div class="col p-2">
+                  <div class="form-group mb-2">
+                  <label for="polling_interval">Interwał Próbkowania [s]</label>
+                  <input class="form-control form-control-sm" type="number" id=polling_interval" name="polling_interval" min="60" max="43200" value="{{ device.polling_interval }}">
+                </div>
+                <div class="form-group mb-2">
+                  <label for="flushing_interval">Interwał Wysyłania [s]</label>
+                  <input class="form-control form-control-sm" type="number" name="flushing_interval" id="flushing_interval" min="30" max="43200" value="{{ device.flushing_interval }}">
+                </div>
+                <div class="form-group mb-2">
+                  <label for="flushing_interval">Kanały</label>
+                </div>
+                <div class="form-group mb-2">
+                  <button type="button" class="btn btn-sm btn-dark add-port-row-btn"><span class="bi bi-plus-square"></span> Dodaj</button>
+
+                  <div style="max-height:300px; overflow-y: auto">
+                    <table class="table table-striped">
+                    <thead>
+                    <tr class="table-secondary">
+                      <th class="visually-hidden">ID</th>
+                      <th class="small">Nazwa</th>
+                      <th class="small">UART</th>
+                      <th class="small">BAUD</th>
+                      <th class="small">PARITY</th>
+                      <th class="small">STOPBITS</th>
+                      <th class="small">DATA LEN</th>
+                      <th class="small">Akcja</th>
+                    </tr>
+                    </thead>
+                    <tbody class="ports-table-body">
+                      {% for channel in device.channel_set.all %}
+                        <tr>
+                      <td class="visually-hidden"><input type="hidden" name="channel_ids[]" value="{{ channel.id }}"></td>
+                      <td><input class="form-control form-control-sm" name="names[]" type="text" maxlength="8" minlength="1" placeholder="A" required value="{{ channel.channel_name }}"></td>
+                      <td><input class="form-control form-control-sm" name="uart[]" type="text" maxlength="16" minlength="4" placeholder="/dev/null" required value="{{ channel.uart }}"></td>
+                      <td>
+                        <select class="form-select form-select-sm" name="baud[]" required>
+                          <option value="9600" {% if channel.baud_rate == 9600 %} selected {% endif %}>9600</option>
+                          <option value="19200" {% if channel.baud_rate == 19200 %} selected {% endif %}>19200</option>
+                          <option value="34800" {% if channel.baud_rate == 34800 %} selected {% endif %}>34800</option>
+                          <option value="57600" {% if channel.baud_rate == 57600 %} selected {% endif %}>57600</option>
+                          <option value="115200" {% if channel.baud_rate == 115200 %} selected {% endif %}>115200</option>
+                        </select>
+                      </td>
+                      <td>
+                        <select class="form-select form-select-sm" name="parity[]" required>
+                          <option value="N" {% if channel.parity == "N" %} selected {% endif %}>N</option>
+                          <option value="E" {% if channel.parity == "E" %} selected {% endif %}>E</option>
+                          <option value="O" {% if channel.parity == "O" %} selected {% endif %}>O</option>
+                        </select>
+                      </td>
+                      <td>
+                        <select class="form-select form-select-sm" name="stopbits[]" required>
+                          <option value="1" {% if channel.stop_bits == 1 %} selected {% endif %}>1</option>
+                          <option value="2" {% if channel.stop_bits == 2 %} selected {% endif %}>2</option>
+                        </select>
+                      </td>
+                      <td>
+                        <select class="form-select form-select-sm" name="datalen[]" required>
+                          <option value="8" {% if channel.data_len == 8 %} selected {% endif %}>8</option>
+                          <option value="7" {% if channel.data_len == 7 %} selected {% endif %}>7</option>
+                        </select>
+                      </td>
+                      <td>
+                        <button type="button" class="btn btn-sm btn-outline-danger del-port-row-btn">X</button>
+                      </td>
+                    {% endfor %}
+                    </tbody>
+                  </table>
+                  </div>
+                  <template id="port-row-template">
+                    <tr>
+                      <td class="visually-hidden">ID</td>
+                      <td><input class="form-control form-control-sm" name="names[]" type="text" maxlength="8" minlength="1" placeholder="A" required></td>
+                      <td><input class="form-control form-control-sm" name="uart[]" type="text" maxlength="16" minlength="4" placeholder="/dev/null" required></td>
+                      <td>
+                        <select class="form-select form-select-sm" name="baud[]" required>
+                          <option value="9600" selected>9600</option>
+                          <option value="19200">19200</option>
+                          <option value="34800">34800</option>
+                          <option value="57600">57600</option>
+                          <option value="115200">115200</option>
+                        </select>
+                      </td>
+                      <td>
+                        <select class="form-select form-select-sm" name="parity[]" required>
+                          <option value="N" selected>N</option>
+                          <option value="E">E</option>
+                          <option value="O">O</option>
+                        </select>
+                      </td>
+                      <td>
+                        <select class="form-select form-select-sm" name="stopbits[]" required>
+                          <option value="1" selected>1</option>
+                          <option value="2">2</option>
+                        </select>
+                      </td>
+                      <td>
+                        <select class="form-select form-select-sm" name="datalen[]" required>
+                          <option value="8" selected>8</option>
+                          <option value="7">7</option>
+                        </select>
+                      </td>
+                      <td>
+                        <button type="button" class="btn btn-sm btn-outline-danger del-port-row-btn">X</button>
+                      </td>
+                    </tr>
+                  </template>
+                  </div>
+
+              </div>
+
+            </div>
+          </div>
+           <div class="modal-footer">
+            <button type="submit" class="btn btn-sm btn-outline-success"><span class="bi bi-floppy"></span>  Zapisz</button>
+            <button type="button" class="btn btn-sm btn-outline-danger" data-bs-dismiss="modal"><span class="bi bi-x-square"></span>  Anuluj</button>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>

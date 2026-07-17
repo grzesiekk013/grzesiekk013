@@ -1,0 +1,32 @@
+{% extends 'core/base.html' %}
+{% block aside %} {% include 'core/side_panel.html' with role=role %}
+{% endblock %}
+{% block main %}
+<div class="d-sm-flex align-items-center justify-content-between mb-2">
+  <p class="h3">{{ request.user.first_name }} {{ request.user.last_name }} <small>({{ request.user.userrole.get_role_display }})</small></p>
+  <p class="h3">Wystąpił Błąd</p>
+</div>
+
+<hr class="mb-2">
+
+<div class="row mb-2">
+    <div class="col-lg-12">
+    <div class="card shadow">
+      <div class="card-header py-3">
+        <p class="h6 m-0 font-weight-bold text-color">Wystąpił błąd</p>
+      </div>
+      <div class="card-body">
+        <ul>
+          {% if messages %}
+          {% for message in messages %}
+          <li>{{ message }}</li>
+          {% endfor %}
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}

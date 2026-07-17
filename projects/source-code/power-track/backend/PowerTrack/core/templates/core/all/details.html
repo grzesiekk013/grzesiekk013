@@ -1,0 +1,49 @@
+{% extends 'core/base.html' %}
+{% block aside %} {% include 'core/side_panel.html' with role=request.user.userrole.role %}
+{% endblock %}
+{% block main %}
+<div class="d-sm-flex align-items-center justify-content-between mb-2">
+  <p class="h3">{{ request.user.first_name }} {{ request.user.last_name }} <small>({{ request.user.userrole.get_role_display }})</small></p>
+  <p class="h3">Szczegóły konta</p>
+</div>
+
+<hr class="mb-2">
+
+
+<div class="row mb-2">
+    <div class="col-lg-12">
+    <div class="card shadow">
+      <div class="card-header py-3">
+        <p class="h6 m-0 font-weight-bold text-color">Konto użytkownika <i>{{ request.user.first_name }} {{ request.user.last_name }}</i></p>
+      </div>
+      <div class="card-body">
+        <p><strong>Nazwa użytkownika: </strong>{{ request.user.username }}</p>
+        <p><strong>Adres e-mail: </strong>{{ request.user.email }}</p>
+        <p><strong>Imię i nazwisko: </strong>{{ request.user.first_name }} {{ request.user.last_name }}</p>
+        <p><strong>Rola: </strong>{{ request.user.userrole.get_role_display }}</p>
+        <p><strong>Grupa: </strong>{{ request.user.userrole.client.name }}</p>
+      </div>
+      <div class="card-footer">
+        <div class="btn-group  p-2" role="group" aria-label="">
+        <button type="button" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#password_change"><span class="bi bi-braces" title="Zmiana hasła"></span>  Zmiana hasła</button>
+        <a href="{% url 'logout' %}" class="btn btn-sm btn-outline-success"><span class="bi bi-shield-slash" title="Wyloguj"></span>  Wyloguj</a>
+      </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  document.querySelectorAll('.clear-btn').forEach(btn => {
+  btn.addEventListener('click', function() {
+  const th = this.closest('th');
+  const input = th.querySelector('input.clearable-input');
+  if (input) {
+  input.value = '';
+  input.focus()
+  }});
+  });
+</script>
+
+{% endblock %}

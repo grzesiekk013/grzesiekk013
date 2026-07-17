@@ -1,0 +1,145 @@
+{% extends 'eye_app/base.html' %}
+
+{% block main %}
+
+<div class="container rounded bg-body-secondary pb-4 pt-4 w-75">
+
+    <h1>Zarządzanie Kontami</h1>
+    <hr>
+
+    <a type="button" class="btn btn-outline-light text-start mb-1" href="{% url 'main' %}"><span class="bi bi-arrow-left"></span> Wróć Do Głównej</a><br>
+
+    <button type="button" class="btn btn-light my-2" data-bs-toggle="modal" data-bs-target="#addAccount"><span class="bi bi-person-plus"></span> Dodaj Nowe Konto</button>
+
+    <!-- Modal dodawania konta -->
+    <div class="modal fade" id="addAccount">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <form method="POST" action="{% url 'add_account' %}">
+                    {% csrf_token %}
+                    <div class="modal-header">
+                        <h4 class="modal-title">Dodanie Nowego Konta</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <div class="modal-body">
+                        <div class="form-group mb-2">
+                            <label for="username">Nazwa Użytkownika:</label>
+                            <input type="text" class="form-control" name="username" required>
+                        </div>
+                        <div class="form-group mb-2">
+                            <label for="email">Email:</label>
+                            <input type="email" class="form-control" name="email">
+                        </div>
+                        <div class="form-group mb-2">
+                            <label for="first_name">Imię:</label>
+                            <input type="text" class="form-control" name="first_name">
+                        </div>
+                        <div class="form-group mb-2">
+                            <label for="last_name">Nazwisko:</label>
+                            <input type="text" class="form-control" name="last_name">
+                        </div>
+                        <div class="form-group mb-2">
+                            <label for="password">Hasło:</label>
+                            <input type="password" class="form-control" name="password" required>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="is_staff">
+                            <label class="form-check-label">Administrator</label>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-light"><span class="bi bi-plus-square"></span> Dodaj</button>
+                        <button type="button" class="btn btn-light" data-bs-dismiss="modal"><span class="bi bi-x-square"></span> Anuluj</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- tabela użytkowników -->
+    <div class="rounded-table-container bg-body-tertiary border p-2 pb-0 rounded mt-2 w-100">
+        <table class="table w-100 mb-0">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Username</th>
+                    <th>Adres Email</th>
+                    <th>Imię</th>
+                    <th>Nazwisko</th>
+                    <th>Staff Status</th>
+                    <th>Akcje</th>
+                </tr>
+            </thead>
+            <tbody class="table-group-divider">
+                {% for user in users %}
+                <tr>
+                    <td>{{ user.id }}</td>
+                    <td>{{ user.username }}</td>
+                    <td>{{ user.email }}</td>
+                    <td>{{ user.first_name }}</td>
+                    <td>{{ user.last_name }}</td>
+                    <td>{{ user.is_staff }}</td>
+                    <td>
+                        <div class="btn-group btn-group-sm" role="group">
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editAccountModal{{ user.id }}">Edytuj</button>
+                            <a href="{% url 'delete_account' user.id %}" class="btn btn-danger" onclick="return confirm('Na pewno usunąć konto?')">Usuń</a>
+                        </div>
+                    </td>
+                </tr>
+
+                <!-- Modal edycji konta -->
+                <div class="modal fade" id="editAccountModal{{ user.id }}">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <form method="POST" action="{% url 'edit_account' user.id %}">
+                                {% csrf_token %}
+                                <div class="modal-header">
+                                    <h4 class="modal-title">Edycja Konta: {{ user.username }}</h4>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+
+                                <div class="modal-body">
+                                    <div class="form-group mb-2">
+                                        <label for="username">Nazwa Użytkownika:</label>
+                                        <input type="text" class="form-control" name="username" value="{{ user.username }}" required>
+                                    </div>
+                                    <div class="form-group mb-2">
+                                        <label for="email">Email:</label>
+                                        <input type="email" class="form-control" name="email" value="{{ user.email }}">
+                                    </div>
+                                    <div class="form-group mb-2">
+                                        <label for="first_name">Imię:</label>
+                                        <input type="text" class="form-control" name="first_name" value="{{ user.first_name }}">
+                                    </div>
+                                    <div class="form-group mb-2">
+                                        <label for="last_name">Nazwisko:</label>
+                                        <input type="text" class="form-control" name="last_name" value="{{ user.last_name }}">
+                                    </div>
+                                    <div class="form-group mb-2">
+                                        <label for="password">Nowe Hasło (opcjonalnie):</label>
+                                        <input type="password" class="form-control" name="password">
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="is_staff" {% if user.is_staff %}checked{% endif %}>
+                                        <label class="form-check-label">Administrator</label>
+                                    </div>
+                                </div>
+
+                                <div class="modal-footer">
+                                    <button type="submit" class="btn btn-primary">Zapisz</button>
+                                    <button type="button" class="btn btn-light" data-bs-dismiss="modal">Anuluj</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+{% endblock %}

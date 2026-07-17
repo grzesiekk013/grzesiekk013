@@ -1,0 +1,5 @@
+Linux i tylko Linux
+zdarzenia na lini modbus, i połączeniowe
+serwis python
+dwa liczniki
+1 licznik 0..n klientów brak sumowania

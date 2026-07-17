@@ -1,0 +1,154 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.2.5 Chrome/138.0.7204.251 Electron/37.6.1 Safari/537.36" version="28.2.5">
+  <diagram name="Strona-1" id="WWyRUCrin-zTb_pjcCDE">
+    <mxGraphModel dx="1188" dy="3039" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="BIRCNo-Rcr4yLAWSZl8p-2" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.annotation_2;align=left;labelPosition=right;pointerEvents=1;" vertex="1" parent="1">
+          <mxGeometry x="90" y="-1100" width="50" height="470" as="geometry" />
+        </mxCell>
+        <mxCell id="BIRCNo-Rcr4yLAWSZl8p-3" value="" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="10" y="-905" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="BIRCNo-Rcr4yLAWSZl8p-4" value="PROGRAM&lt;div&gt;GŁÓWNY&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="-880" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="BIRCNo-Rcr4yLAWSZl8p-7" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="140" y="-1130" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BIRCNo-Rcr4yLAWSZl8p-8" value="INICJALIZACJA" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="170" y="-1115" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="BIRCNo-Rcr4yLAWSZl8p-9" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.annotation_2;align=left;labelPosition=right;pointerEvents=1;" vertex="1" parent="1">
+          <mxGeometry x="260" y="-1170" width="50" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="BIRCNo-Rcr4yLAWSZl8p-10" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="310" y="-1200" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BIRCNo-Rcr4yLAWSZl8p-11" value="PARSER INI" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="340" y="-1185" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="BIRCNo-Rcr4yLAWSZl8p-12" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="310" y="-1060" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BIRCNo-Rcr4yLAWSZl8p-13" value="WĄTKI" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="340" y="-1045" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="BIRCNo-Rcr4yLAWSZl8p-17" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.annotation_2;align=left;labelPosition=right;pointerEvents=1;" vertex="1" parent="1">
+          <mxGeometry x="430" y="-1080" width="50" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="BIRCNo-Rcr4yLAWSZl8p-18" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="480" y="-1110" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BIRCNo-Rcr4yLAWSZl8p-19" value="POLLING" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="510" y="-1095" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="BIRCNo-Rcr4yLAWSZl8p-20" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="480" y="-1010" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BIRCNo-Rcr4yLAWSZl8p-21" value="SENDING" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="510" y="-995" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="BIRCNo-Rcr4yLAWSZl8p-23" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.annotation_2;align=left;labelPosition=right;pointerEvents=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="-1130" width="50" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="BIRCNo-Rcr4yLAWSZl8p-24" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="650" y="-1160" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BIRCNo-Rcr4yLAWSZl8p-25" value="MODBUS" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="680" y="-1145" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="BIRCNo-Rcr4yLAWSZl8p-26" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="650" y="-1060" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BIRCNo-Rcr4yLAWSZl8p-27" value="RAMDISK" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="680" y="-1045" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="BIRCNo-Rcr4yLAWSZl8p-29" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="BIRCNo-Rcr4yLAWSZl8p-20">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="700" y="-1010" as="sourcePoint" />
+            <mxPoint x="680" y="-950" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BIRCNo-Rcr4yLAWSZl8p-30" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="650" y="-995" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BIRCNo-Rcr4yLAWSZl8p-31" value="SERWER" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="680" y="-980" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="BIRCNo-Rcr4yLAWSZl8p-32" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="140" y="-660" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BIRCNo-Rcr4yLAWSZl8p-33" value="WĄTKI" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="170" y="-645" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="BIRCNo-Rcr4yLAWSZl8p-34" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.annotation_2;align=left;labelPosition=right;pointerEvents=1;" vertex="1" parent="1">
+          <mxGeometry x="260" y="-680" width="50" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="BIRCNo-Rcr4yLAWSZl8p-35" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.annotation_2;align=left;labelPosition=right;pointerEvents=1;" vertex="1" parent="1">
+          <mxGeometry x="110" y="-915" width="50" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="BIRCNo-Rcr4yLAWSZl8p-37" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="-950" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BIRCNo-Rcr4yLAWSZl8p-38" value="MONITOR ZDARZEŃ" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="190" y="-935" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="BIRCNo-Rcr4yLAWSZl8p-39" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="310" y="-730" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BIRCNo-Rcr4yLAWSZl8p-40" value="POLLING" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="340" y="-715" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="BIRCNo-Rcr4yLAWSZl8p-41" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="310" y="-590" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BIRCNo-Rcr4yLAWSZl8p-42" value="SENDING" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="340" y="-575" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="BIRCNo-Rcr4yLAWSZl8p-43" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.annotation_2;align=left;labelPosition=right;pointerEvents=1;" vertex="1" parent="1">
+          <mxGeometry x="430" y="-770" width="50" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="BIRCNo-Rcr4yLAWSZl8p-44" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="480" y="-800" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BIRCNo-Rcr4yLAWSZl8p-45" value="ODCZYT LICZNIKOW&amp;nbsp;&lt;div&gt;PARSOWANIE&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="510" y="-785" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="BIRCNo-Rcr4yLAWSZl8p-46" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="480" y="-720" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BIRCNo-Rcr4yLAWSZl8p-47" value="ZAPISANIE NA RAMDISK" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="510" y="-705" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="BIRCNo-Rcr4yLAWSZl8p-48" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.annotation_2;align=left;labelPosition=right;pointerEvents=1;" vertex="1" parent="1">
+          <mxGeometry x="430" y="-590" width="50" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="BIRCNo-Rcr4yLAWSZl8p-49" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="480" y="-620" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BIRCNo-Rcr4yLAWSZl8p-50" value="ODCZYTANIE&amp;nbsp;&lt;div&gt;Z RAMDISK&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="510" y="-605" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="BIRCNo-Rcr4yLAWSZl8p-51" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="480" y="-520" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BIRCNo-Rcr4yLAWSZl8p-52" value="WYSŁANIE SERWER" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="510" y="-505" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="BIRCNo-Rcr4yLAWSZl8p-53" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="-505" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BIRCNo-Rcr4yLAWSZl8p-54" value="POBIERANIE KONFIGURACJI" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="130" y="-490" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="BIRCNo-Rcr4yLAWSZl8p-55" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="260" y="-445" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BIRCNo-Rcr4yLAWSZl8p-56" value="LOGOWANIE&lt;div&gt;ZDARZEŃ&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="290" y="-430" width="60" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

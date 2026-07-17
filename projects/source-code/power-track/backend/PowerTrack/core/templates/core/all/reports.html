@@ -1,0 +1,153 @@
+{% extends 'core/base.html' %}
+{% block aside %} {% include 'core/side_panel.html' with role=request.user.userrole.role %}
+{% endblock %}
+{% block main %}
+<div class="d-sm-flex align-items-center justify-content-between mb-2">
+  <p class="h3">{{ request.user.first_name }} {{ request.user.last_name }} <small>({{ request.user.userrole.get_role_display }})</small></p>
+  <p class="h3">Lista Raportów</p>
+</div>
+
+<hr class="mb-2">
+
+<div class="mb-2">
+  <button type="button" class="btn btn-sm btn-dark my-2" data-bs-toggle="modal" data-bs-target="#create_raport"><span class="bi bi-plus-square"></span> Wygeneruj Raport</button>
+ </div>
+
+<hr class="mb-2">
+{% if request.user.userrole.role == "admin" or request.user.userrole.role == "operator" %}
+{% block modal %}
+{% include 'core/modals/add_report.html' %}
+{% endblock %}
+{% endif %}
+
+<div class="row mb-2">
+    <div class="col-lg-8">
+    <div class="card shadow">
+      <div class="card-header py-3">
+        <p class="h6 m-0 font-weight-bold text-color">Raporty</p>
+      </div>
+      <div class="card-body">
+       <table class="table table-striped">
+          <form method="GET" action="{%url 'reports_list' %}">
+          <thead>
+          <tr class="table-secondary">
+            <th class="small">Licznik</th>
+            <th class="small">Pomieszczenie</th>
+            <th class="small">Klient</th>
+            <th class="small">Data początkowa</th>
+            <th class="small">Data końcowa</th>
+            <th class="small">Wygenerowany przez:</th>
+            <th class="small">Czas wygenerowania:</th>
+            <th class="small">Akcja</th>
+          </tr>
+          <tr class="table-secondary">
+             <th class="small" scope="col">
+               <select class="form-select form-control form-select-sm" id="fmeter" name="fmeter">
+                  <option value="" {% if not form_vals.fmeter %} selected {%endif%}>Pusty</option>
+                 {% for meter in meters %}
+                 <option value="{{meter.id}}" {% if form_vals.fmeter == meter.id|stringformat:"s" %} selected {%endif%}>{{ meter }}</option>
+                  {% endfor %}
+                </select>
+             </th>
+               <th class="small" scope="col">
+                <select class="form-select form-control form-select-sm" id="froom" name="froom">
+                  <option value="" {% if not form_vals.froom %} selected {%endif%}>Pusty</option>
+                  {% for room in rooms %}
+                 <option value="{{room.id}}" {% if form_vals.froom == room.id|stringformat:"s" %} selected {%endif%}>{{room}}</option>
+                  {% endfor %}
+                </select>
+             </th>
+
+            <th class="small" scope="col">
+               <select class="form-select form-control form-select-sm" id="fclient" name="fclient">
+                  <option value="" {% if not form_vals.fclient %} selected {%endif%}>Pusty</option>
+                 {% for client in clients %}
+                  <option value="{{ client.id }}" {% if form_vals.fclient == client.id|stringformat:"s" %} selected {%endif%}>{{ client.name }}</option>
+                 {% endfor %}
+                </select>
+
+             </th>
+            <th></th><th></th>
+            <th class="small" scope="col">
+               <select class="form-select form-control form-select-sm" id="fuser" name="fuser">
+                  <option value="" {% if not form_vals.fuser %} selected {%endif%}>Pusty</option>
+                 {% for user in users %}
+                  <option value="{{ user.id }}" {% if form_vals.fuser == user.id|stringformat:"s" %} selected {%endif%}>{{ user.first_name }}  {{ user.last_name }} ({{ request.user.userrole.get_role_display }})</option>
+                 {% endfor %}
+                </select>
+            </th>
+            <th></th>
+            <th class="small" scope="col">
+               <div class="btn-group me-2" role="group" aria-label="">
+               <button type="submit" class="btn btn-sm btn-outline-dark"><span class="bi bi-filter-square" title="Filtruj wyniki"></span>  </button>
+               <a class="btn btn-sm btn-outline-dark" href="{% url 'reports_list' %}" ><span class="bi bi-x-square" title="Wyczyść filtry"></span></a>
+               </div>
+             </th>
+            </tr>
+          </tr>
+          </thead>
+          </form>
+          <tbody>
+          {% for report in reports %}
+          <tr>
+
+            <td class="small">{{ report.electric_meter }}</td>
+            <td class="small">{% if report.electric_meter.room %}{{ report.electric_meter.room }}{% else %}Brak{%endif%}</td>
+            <td class="small">{% if report.electric_meter.room.room_group %}{{ report.electric_meter.room.room_group.name }}{% else %}Brak{% endif %}</td>
+            <td class="small">{{ report.date_from }}</td>
+            <td class="small">{{ report.date_to }}</td>
+            <td class="small">{{ report.generated_by.first_name }} {{ report.generated_by.last_name }} ({{ report.generated_by.userrole.get_role_display }})</td>
+            <td class="small">{{ report.created_at }}</td>
+            <td class="small">
+              <div class="btn-group me-2" role="group" aria-label="">
+                <a href="{% url 'reports_download' report.id %}" class="btn btn-sm btn-outline-success"><span class="bi bi-download" title="Pobierz Raport"></span>  </a>
+                {% if request.user.userrole.role == "admin" %}
+                <button type="button" class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#manage_delete_report{{ report.id }}"><span class="bi bi-archive" title="Usuń raport"></span>  </button>
+                {% block modal_delete %} {% include 'core/modals/delete_report.html' %} {% endblock %}
+                {% endif %}
+
+              </div>
+            </td>
+          </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+        <!-- Paginacja -->
+        {% with objects=reports%}
+        {% block pagination %}
+        {% include 'core/all/pagination.html' %}
+        {% endblock %}
+        {% endwith %}
+        <!-- Paginacja -->
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4">
+    <div class="card shadow">
+      <div class="card-header py-3">
+        <p class="h6 m-0 font-weight-bold text-color" title="Filtrowanie treści ma wpływ na statystyki">Statystyki*</p>
+      </div>
+      <div class="card-body">
+        <div>
+          <p class="h6 d-inline">Liczba Raportów: </p>
+          <p class="h6 d-inline">{{ reports.paginator.count }}</p>
+        </div>
+
+      </div>
+    </div>
+    </div>
+</div>
+
+<script>
+  document.querySelectorAll('.clear-btn').forEach(btn => {
+  btn.addEventListener('click', function() {
+  const th = this.closest('th');
+  const input = th.querySelector('input.clearable-input');
+  if (input) {
+  input.value = '';
+  input.focus()
+  }});
+  });
+</script>
+
+{% endblock %}

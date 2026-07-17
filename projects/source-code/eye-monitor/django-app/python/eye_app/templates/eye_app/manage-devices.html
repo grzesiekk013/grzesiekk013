@@ -1,0 +1,98 @@
+{% extends 'eye_app/base.html' %}
+
+{% block main %}
+<div class="container rounded bg-body-secondary pb-4 pt-4 w-75">
+    <h1 class="mb-3">Zarządzanie Urządzeniami</h1>
+    <hr>
+
+    <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3">
+        <a type="button" class="btn btn-outline-light" href="{% url 'main' %}">
+            <span class="bi bi-arrow-left"></span> Wróć Do Głównej
+        </a>
+
+        <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#addDevice">
+            <span class="bi bi-plus-square"></span> Dodaj Nowe Urządzenie
+        </button>
+    </div>
+
+    <!-- Modal Dodawania Nowego Urządzenia -->
+    <div class="modal fade" id="addDevice">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="modal-header">
+                        <h4 class="modal-title">Dodanie Nowego Urządzenia</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body px-4">
+
+                        <div class="mb-3">
+                            <label class="form-label">UUID</label>
+                            {{ form.device_uuid }}
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Klucz</label>
+                            {{ form.key }}
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Opis (opcjonalny)</label>
+                            {{ form.description }}
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-success">
+                            <span class="bi bi-plus-circle"></span> Dodaj
+                        </button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                            <span class="bi bi-x-square"></span> Anuluj
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lista urządzeń -->
+    <div class="rounded-table-container border bg-body-tertiary p-3 rounded mt-2 w-100">
+        <table class="table table-sm table-bordered table-striped table-hover align-middle text-center mb-0">
+            <thead class="table-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>UUID</th>
+                    <th>Klucz</th>
+                    <th>Opis</th>
+                    <th>Adres IP</th>
+                    <th>Ostatnio Widziany</th>
+                    <th>Akcje</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for device in devices %}
+                <tr>
+                    <td>{{ device.id }}</td>
+                    <td class="text-break small">{{ device.device_uuid }}</td>
+                    <td class="text-break small">
+                        {{ device.key|slice:":12" }}...{{ device.key|slice:"-6:" }}
+                    </td>
+                    <td class="text-break small">{{ device.description|default:"—" }}</td>
+                    <td class="text-break small">{{ device.ip }}</td>
+                    <td class="text-break small">{{ device.last_seen|date:"Y-m-d H:i:s" }}</td>
+                    <td>
+                        <div class="btn-group btn-group-sm" role="group">
+                            <a class="btn btn-outline-primary" href="{% url 'edit_device' device.id %}">Edytuj</a>
+                            <a class="btn btn-outline-danger" href="{% url 'delete_device' device.id %}">Usuń</a>
+                        </div>
+                    </td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="7" class="text-center text-muted">Brak urządzeń w systemie</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

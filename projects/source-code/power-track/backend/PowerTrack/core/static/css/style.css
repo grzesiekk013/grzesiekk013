@@ -1,0 +1,11 @@
+* {
+    font-family: Nunito !important;
+}
+
+.sidebar-bg {
+    background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+}
+
+text-color {
+    color: linear-gradient(180deg, #0f172a 0%, #1e293b 100%) !important
+}

@@ -1,0 +1,153 @@
+<div class="modal fade" id="manage_edit_alert{{ alert.id}}">
+    <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <form method="POST" action="{%url 'manage_edit_alert' alert.id %}">
+        {% csrf_token %}
+        <div class="modal-header">
+          <p class="h4"><span class="bi bi-pencil-square"></span>  Profil Zdarzeń <i>{{ alert.name }}</i> </p>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <hr>
+        <div class="modal-body">
+          <div class="form-group mb-2">
+            <label for="name">Nazwa</label>
+            <input id="name" type="text" class="form-control form-control-sm" name="name" required value="{{ alert.name }}" minlength="4" maxlength="64">
+          </div>
+        <div class="form-group mb-2">
+          <input type="checkbox" class="form-check-input form-check-input-sm" id ="is_active" name="is_active" {% if alert.is_active %} checked {% endif %}>
+          <label class="form-check-label" for="is_active">Aktywny</label>
+        </div>
+          <hr>
+        <div class="w-auto">
+          <h6>Wybór faz</h6>
+          <table class="table table-striped  table-borderless w-auto ">
+            <tr>
+              <th class="small">L1</th>
+              <th class="small">L2</th>
+              <th class="small">L3</th>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" class="form-check-input form-check-input-sm" id ="fl1_active" name="fl1_active" {% if alert.l1_enable %} checked {% endif %}>
+              </td>
+              <td>
+                 <input type="checkbox" class="form-check-input form-check-input-sm" id ="fl2_active" name="fl2_active" {% if alert.l2_enable %} checked {% endif %}>
+              </td>
+              <td>
+                <input type="checkbox" class="form-check-input form-check-input-sm" id ="fl3_active" name="fl3_active" {% if alert.l3_enable %} checked {% endif %}>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <hr>
+          <div class="form-group mb-2">
+            <table class="table table-responsive table-borderless table-striped">
+              <tr>
+                <th class="">Nazwa</th>
+                <th class="">Aktywny</th>
+                <th class="">Minimum</th>
+                <th class="">Maksimum</th>
+                <th class="">Jednostka</th>
+              </tr>
+              <tr>
+                <td class="small">
+                  Napięcie
+                </td>
+                <td>
+                  <input type="checkbox" class="form-check-input form-check-input-sm" id="fvoltage_active" name="fvoltage_active" {% if alert.monitor_voltage %} checked {% endif %}>
+                </td>
+                <td>
+                  <input id="fvoltage_min" type="number" class="form-control form-control-sm" name="fvoltage_min" required value="{{ alert.min_voltage }}" min="-400" max="400">
+                </td>
+                <td>
+                  <input id="fvoltage_max" type="number" class="form-control form-control-sm" name="fvoltage_max" required value="{{ alert.max_voltage }}" min="-400" max="400">
+                </td>
+                <td class="small">[V]</td>
+              </tr>
+              <tr>
+                <td class="small">
+                  Prąd
+                </td>
+                <td>
+                  <input type="checkbox" class="form-check-input form-check-input-sm" id="fcurrent_active" name="fcurrent_active" {% if alert.monitor_current %} checked {% endif %}>
+                </td>
+                <td>
+                  <input id="fcurrent_min" type="number" class="form-control form-control-sm" name="fcurrent_min" required value="{{ alert.min_current }}" min="-255" max="255">
+                </td>
+                <td>
+                  <input id="fcurrent_max" type="number" class="form-control form-control-sm" name="fcurrent_max" required value="{{ alert.max_current }}" min="-255" max="255">
+                </td>
+                <td class="small">[A]</td>
+              </tr>
+              <tr>
+                <td class="small">
+                  Częstotliwość
+                </td>
+                <td>
+                  <input type="checkbox" class="form-check-input form-check-input-sm" id="ffrequency_active" name="ffrequency_active" {% if alert.monitor_frequency %} checked {% endif %}>
+                </td>
+                <td>
+                  <input id="ffrequency_min" type="number" class="form-control form-control-sm" name="ffrequency_min" required value="{{ alert.min_frequency|stringformat:'.1f' }}" step="0.1">
+                </td>
+                <td>
+                  <input id="ffrequency_max" type="number" class="form-control form-control-sm" name="ffrequency_max" required value="{{ alert.max_frequency|stringformat:'.1f' }}" step="0.1">
+                </td>
+                <td class="small">[Hz]</td>
+              </tr>
+              <tr>
+                <td class="small">
+                  Moc czynna
+                </td>
+                <td>
+                  <input type="checkbox" class="form-check-input form-check-input-sm" id ="factive_power_active" name="factive_power_active" {% if alert.monitor_active_power %} checked {% endif %}>
+                </td>
+                <td>
+                  <input id="factive_power_min" type="number" class="form-control form-control-sm" name="factive_power_min" required value="{{ alert.min_active_power }}" min="-100000" max="100000">
+                </td>
+                <td>
+                  <input id="factive_power_max" type="number" class="form-control form-control-sm" name="factive_power_max" required value="{{ alert.max_active_power }}" min="-100000" max="100000">
+                </td>
+                <td class="small">[W]</td>
+              </tr>
+              <tr>
+                <td class="small">
+                  Moc Bierna
+                </td>
+                <td>
+                  <input type="checkbox" class="form-check-input form-check-input-sm" id ="freactive_power_active" name="factive_power_active" {% if alert.monitor_reactive_power %} checked {% endif %}>
+                </td>
+                <td>
+                  <input id="freactive_power_min" type="number" class="form-control form-control-sm" name="freactive_power_min" required value="{{ alert.min_reactive_power }}" min="-100000" max="100000">
+                </td>
+                <td>
+                  <input id="freactive_power_max" type="number" class="form-control form-control-sm" name="freactive_power_max" required value="{{ alert.max_reactive_power }}" min="-100000" max="100000">
+                </td>
+                <td class="small">[W]</td>
+              </tr>
+              <tr>
+                <td class="small">
+                  Jakość
+                </td>
+                <td>
+                  <input type="checkbox" class="form-check-input form-check-input-sm" id ="fpower_factor_active" name="fpower_factor_active" {% if alert.monitor_power_factor %} checked {% endif %}>
+                </td>
+                <td>
+                  <input id="fpower_factor_min" type="number" class="form-control form-control-sm" name="fpower_factor_min" required value="{{ alert.min_power_factor|stringformat:'.1f' }}" min="0.0" max="1.0" step="0.1">
+                </td>
+                <td>
+                  <input id="fpower_factor_max" type="number" class="form-control form-control-sm" name="fpower_factor_max" required value="{{ alert.max_power_factor|stringformat:'.1f' }}" min="0.0" max="1.0" step="0.1">
+                </td>
+                <td class="small">[cos(φ)]</td>
+              </tr>
+            </table>
+            <div class="modal-footer">
+            <button type="submit" class="btn btn-sm btn-outline-success"><span class="bi bi-floppy"></span>  Zapisz</button>
+            <button type="button" class="btn btn-sm btn-outline-danger" data-bs-dismiss="modal"><span class="bi bi-x-square"></span>  Anuluj</button>
+          </div>
+        </div>
+
+          </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,159 @@
+{% extends 'core/base.html' %}
+{% block aside %} {% include 'core/side_panel.html' with role=request.user.userrole.role %}
+{% endblock %}
+{% block main %}
+<div class="d-sm-flex align-items-center justify-content-between mb-2">
+  <p class="h3">{{ request.user.first_name }} {{ request.user.last_name }} <small>({{ request.user.userrole.get_role_display }})</small></p>
+  <p class="h3">Zarządzanie Licznikami</p>
+</div>
+
+<hr class="mb-2">
+
+<div class="mb-2">
+  <button type="button" class="btn btn-sm btn-dark my-2" data-bs-toggle="modal" data-bs-target="#create_meter"><span class="bi bi-plus-square"></span> Dodaj Licznik</button>
+ </div>
+
+<hr class="mb-2">
+{% block modal %}
+{% include 'core/modals/add_meter.html' %}
+{% endblock %}
+
+<div class="row mb-2">
+    <div class="col-lg-8">
+    <div class="card shadow">
+      <div class="card-header py-3">
+        <p class="h6 m-0 font-weight-bold text-color">Liczniki Energii Elektrycznej</p>
+      </div>
+      <div class="card-body">
+       <table class="table table-striped">
+          <form method="GET" action="{%url 'manage_meters' %}">
+          <thead>
+          <tr class="table-secondary">
+            <th class="small">Kanał</th>
+            <th class="small">Adres Modbus</th>
+            <th class="small">Pomieszczenie</th>
+            <th class="small">Model</th>
+            <th class="small">Aktywny</th>
+            <th class="small">Profil alarmowy</th>
+            <th class="small">Akcja</th>
+          </tr>
+          <tr class="table-secondary">
+             <th class="small" scope="col">
+               <select class="form-select form-control form-select-sm" id="fchannel" name="fchannel">
+                  <option value="" {% if not form_vals.fchannel %} selected {%endif%}>Pusty</option>
+                 {% for channel in channels %}
+                 <option value="{{channel.id}}" {% if form_vals.fchannel == channel.id|stringformat:"s" %} selected {%endif%}>{{ channel }}</option>
+                  {% endfor %}
+                </select>
+
+             </th>
+                    <th class="small" scope="col">
+               <div class="btn-group me-2" role="group" aria-label="">
+               <input type="number" class="form-control form-control-sm clearable-input" name="faddress" min="1" max="255" id="faddress" value={{ form_vals.faddress|add:0 }}>
+               <button type="button" class="btn btn-sm clear-btn btn-outline-danger"><span class="bi bi-archive" title="Wyczyść filtr"></span>
+               </div>
+             </th>
+
+              <th class="small" scope="col">
+                <select class="form-select form-control form-select-sm" id="froom" name="froom">
+                  <option value="" {% if not form_vals.froom %} selected {%endif%}>Pusty</option>
+                  {% for room in allrooms %}
+                 <option value="{{room.id}}" {% if form_vals.froom == room.id|stringformat:"s" %} selected {%endif%}>{{room}}</option>
+                  {% endfor %}
+                </select>
+             </th>
+            <th class="small" scope="col">
+               <select class="form-select form-control form-select-sm" id="fmodel" name="fmodel">
+                  <option value="" {% if not form_vals.fmodel %} selected {%endif%}>Pusty</option>
+                  <option value="OR-WE-504" {% if form_vals.fmodel == 'OR-WE-504' %} selected {%endif%}>ORNO OR-WE-504</option>
+                  <option value="OR-WE-516" {% if form_vals.fmodel == 'OR-WE-516' %} selected {%endif%}>ORNO OR-WE-516</option>
+                </select>
+
+             </th>
+            <th class="small">
+              <select class="form-select form-control form-select-sm" id="fis_active" name="fis_active">
+                  <option value="" {% if not form_vals.fis_active %} selected {%endif%}>Pusty</option>
+                 <option value="Tak" {% if form_vals.fis_active == "Tak" %} selected {%endif%}>Tak</option>
+                 <option value="Nie" {% if form_vals.fis_active == "Nie" %} selected {%endif%}>Nie</option>
+                </select>
+            </th>
+             <th class="small" scope="col">
+               <select class="form-select form-control form-select-sm" id="falert_profile" name="falert_profile">
+                  <option value="" {% if not form_vals.fmodel %} selected {%endif%}>Pusty</option>
+                  {% for alert in alert_profiles %}
+                    <option value="{{ alert.id }}" {% if form_vals.falert_profile == alert.id|stringformat:"s" %} selected {%endif%}>{{ alert.name }}</option>
+                  {% endfor %}
+               </select>
+             </th>
+            <th class="small" scope="col">
+               <div class="btn-group me-2" role="group" aria-label="">
+               <button type="submit" class="btn btn-sm btn-outline-dark"><span class="bi bi-filter-square" title="Filtruj wyniki"></span>  </button>
+               <a class="btn btn-sm btn-outline-dark" href="{% url 'manage_meters' %}" ><span class="bi bi-x-square" title="Wyczyść filtry"></span></a>
+               </div>
+             </th>
+            </tr>
+          </tr>
+          </thead>
+          </form>
+          <tbody>
+          <tr>
+            {% for meter in meters %}
+            <td class="small">{{ meter.channel }}</td>
+            <td class="small">{{ meter.slave_id }}</td>
+            <td class="small">{{ meter.room }}</td>
+            <td class="small">{{ meter.model }}</td>
+            <td class="small">{% if meter.is_active %} Tak {% else %} Nie {%endif%}</td>
+            <td class="small">{% if meter.alert_profile %} {{ meter.alert_profile.name }} {% else %} Brak {% endif %}</td>
+            <td class="small">
+              <div class="btn-group me-2" role="group" aria-label="">
+                <button type="button" class="btn btn-sm btn-outline-warning" data-bs-toggle="modal" data-bs-target="#manage_edit_meter{{ meter.id }}"><span class="bi bi-pencil-square" title="Edytuj pozycję"></span>  </button>
+                {% if request.user.userrole.role == "admin" %}
+                <button type="button" class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#manage_delete_meter{{ meter.id }}"><span class="bi bi-archive" title="Usuń pozycję"></span>  </button>
+                {% endif %}
+                 {% block modal_edit %} {% include 'core/modals/edit_meter.html' %} {% endblock %}
+                 {% block modal_delete %} {% include 'core/modals/delete_meter.html' %} {% endblock %}
+              </div>
+            </td>
+          </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+        <!-- Paginacja -->
+        {% with objects=meters%}
+        {% block pagination %}
+        {% include 'core/all/pagination.html' %}
+        {% endblock %}
+        {% endwith %}
+        <!-- Paginacja -->
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4">
+    <div class="card shadow">
+      <div class="card-header py-3">
+        <p class="h6 m-0 font-weight-bold text-color" title="Filtrowanie treści ma wpływ na statystyki">Statystyki*</p>
+      </div>
+      <div class="card-body">
+        <div>
+          <p class="h6 d-inline">Liczba Liczników: </p>
+          <p class="h6 d-inline">{{ meters.paginator.count }}</p>
+        </div>
+
+      </div>
+    </div>
+    </div>
+</div>
+
+<script>
+  document.querySelectorAll('.clear-btn').forEach(btn => {
+  btn.addEventListener('click', function() {
+  const th = this.closest('th');
+  const input = th.querySelector('input.clearable-input');
+  if (input) {
+  input.value = '';
+  input.focus()
+  }});
+  });
+</script>
+
+{% endblock %}

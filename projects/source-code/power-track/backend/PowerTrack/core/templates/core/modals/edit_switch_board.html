@@ -1,0 +1,33 @@
+<div class="modal fade" id="manage_edit_switch_board{{ switch_board.id }}">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <form method="POST" action="{%url 'manage_edit_switch_board' switch_board.id %}">
+        {% csrf_token %}
+        <div class="modal-header">
+          <p class="h4"><span class="bi bi-pencil-square"></span>  Rozdzielnia <i>{{ switch_board.name }}</i> </p>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <hr>
+        <div class="modal-body">
+          <div class="form-group mb-2">
+            <label for="name">Nazwa</label>
+            <input id="name" type="text" class="form-control form-control-sm" name="name" required value="{{ switch_board.name }}" minlength="4" maxlength="64">
+          </div>
+          <div class="form-group mb-2">
+            <label for="location">Lokalizacja</label>
+            <input id="location" type="text" class="form-control form-control-sm" name="location" required value="{{ switch_board.location }}" minlength="4" maxlength="64">
+          </div>
+          <div class="form-group mb-2">
+            <label for="description">Opis</label>
+            <input id="description" type="text" class="form-control form-control-sm" name="description" required value="{{ switch_board.description }}" minlength="4" maxlength="128">
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-sm btn-outline-success"><span class="bi bi-floppy"></span>  Zapisz</button>
+            <button type="button" class="btn btn-sm btn-outline-danger" data-bs-dismiss="modal"><span class="bi bi-x-square"></span>  Anuluj</button>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>

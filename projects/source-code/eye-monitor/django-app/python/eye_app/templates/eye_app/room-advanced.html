@@ -1,0 +1,177 @@
+{% extends 'eye_app/base.html' %}
+{% block side_panel %} {% include 'eye_app/side_panel.html' %} {% endblock %}
+{% block main %}
+{% load extra_filters %}
+
+<div class="col position-relative bg-body-secondary rounded me-4 p-4">
+
+    <div class="position-absolute top-0 end-0 bg-body-secondary p-4 rounded z-1 text-end">
+        <div class="py-2 px-4 bg-body-tertiary rounded border">
+            <h1>{{ room.room_number }}</h1>
+            {% if last_seen %}
+            <span><small>Ostatnio widziany:</small></span>
+            <h5>{{ last_seen|date:"Y-m-d H:i:s" }}</h5>
+            {% endif %}
+        </div>
+    </div>
+
+    <h1>Widok Zaawansowany</h1><br>
+
+
+
+    <span>Przedział Czasowy:</span><br>
+    <form method="get" class="d-flex flex-wrap gap-2 align-items-center mb-4">
+        <table>
+            <tr>
+                <td><span>Od:</span></td>
+                <td><input id="start-time" type="date" name="start" value="{{ start }}" class="form-control w-100"></td>
+                <td><span>Do:</span></td>
+                <td><input id="end-time" type="date" name="end" value="{{ end }}" class="form-control w-100"></td>
+                <td><button type="submit" class="btn btn-light ms-2">Zastosuj</button></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button type="button" id="set-full-range" class="btn btn-outline-light w-100 text-start">Ustaw pełny
+                        zakres</button></td>
+                <td></td>
+                <td><button type="button" id="set-now" class="btn btn-outline-light w-100 text-start">Ustaw "do" na
+                        teraz</button></td>
+            </tr>
+        </table>
+    </form>
+
+    <script>
+        const fullRange = {
+            start: "{{ full_range_start }}",
+            end: "{{ full_range_end }}"
+        };
+        document.getElementById("set-now").addEventListener("click", () => {
+            const now = new Date();
+            const pad = n => String(n).padStart(2, "0");
+            const localISO = now.getFullYear() + "-" + pad(now.getMonth() + 1) + "-" + pad(now.getDate());
+            document.getElementById("end-time").value = localISO;
+        });
+        document.getElementById("set-full-range").addEventListener("click", () => {
+            document.getElementById("start-time").value = fullRange.start;
+            document.getElementById("end-time").value = fullRange.end;
+        });
+    </script>
+
+    <hr>
+
+    {{ chart_data|json_script:"chart-data" }}
+    {{ parameters|json_script:"parameter-labels" }}
+    {{ visibilities|json_script:"parameter-visibilities" }}
+    <script>
+        const chartRange = {
+            start: "{{ start_iso }}",
+            end: "{{ end_iso }}"
+        };
+    </script>
+
+    <div id="chart-area" class="mt-4">
+        {% for param in parameters %}
+        {% with key=param.key %}
+        {% if visibilities|get_item:key %}
+        {% with stat=chart_stats|get_item:param.key %}
+        <div class="bg-body-tertiary p-2 rounded mt-4 pb-3 me-3 border" style="display: inline-block;">
+            <h5>{{ param.label }}</h5>
+            <div>Obecnie: <span class="{{ stat.latest.quality.1 }}">{{ stat.latest.value }} {{ param.unit }}</span></div>
+            <div id="chart-{{ key }}"></div>
+            <div>Min: <span class="{{ stat.min.quality.1 }}">{{ stat.min.value }} {{ param.unit }}</span> ({{ stat.min.timestamp }})</div>
+            <div>Max: <span class="{{ stat.min.quality.1 }}">{{ stat.max.value }} {{ param.unit }}</span> ({{ stat.max.timestamp }})</div>
+        </div>
+        {% endwith %}
+        {% endif %}
+        {% endwith %}
+        {% endfor %}
+    </div>
+
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const chartData = JSON.parse(document.getElementById("chart-data").textContent);
+            const parameterLabels = JSON.parse(document.getElementById("parameter-labels").textContent);
+            const visibilities = JSON.parse(document.getElementById("parameter-visibilities").textContent);
+            const parseTime = d3.timeParse("%Y-%m-%d %H:%M:%S");
+            const chartRangeStart = parseTime(chartRange.start);
+            const chartRangeEnd = parseTime(chartRange.end);
+
+            function getLabel(param) {
+                const p = parameterLabels.find(x => x.key === param);
+                return p ? p.label : param;
+            }
+
+            Object.entries(chartData).forEach(([param, rawData]) => {
+                if (!visibilities[param]) return;
+
+                const container = d3.select(`#chart-${param}`);
+                if (!container.node()) return;
+
+                const margin = { top: 10, right: 20, bottom: 30, left: 40 },
+                    width = 500 - margin.left - margin.right,
+                    height = 300 - margin.top - margin.bottom;
+
+                const svg = container.append("svg")
+                    .attr("width", width + margin.left + margin.right)
+                    .attr("height", height + margin.top + margin.bottom)
+                    .append("g")
+                    .attr("transform", `translate(${margin.left},${margin.top})`);
+
+                const data = rawData.map(d => ({
+                    x: parseTime(d.x),
+                    y: d.y
+                })).filter(d => d.x && d.y !== null);
+
+                const x = d3.scaleTime()
+                    .domain([chartRangeStart, chartRangeEnd])
+                    .range([0, width]);
+
+                const yValues = data.map(d => d.y);
+                const yMin = d3.min(yValues);
+                const yMax = d3.max(yValues);
+                const yRange = yMax - yMin || 1;  // avoid division by zero
+
+                const y = d3.scaleLinear()
+                    .domain([yMin - 0.1 * yRange, yMax + 0.1 * yRange])
+                    .nice()
+                    .range([height, 0]);
+
+                svg.append("g")
+                    .attr("transform", `translate(0,${height})`)
+                    .call(d3.axisBottom(x).ticks(5))
+                    .selectAll("text").style("fill", "#aaa");
+
+                svg.append("g")
+                    .call(d3.axisLeft(y).ticks(5))
+                    .selectAll("text").style("fill", "#aaa");
+
+                if (data.length > 0) {
+                    const line = d3.line()
+                        .x(d => x(d.x))
+                        .y(d => y(d.y))
+                        .curve(d3.curveMonotoneX);
+
+                    svg.append("path")
+                        .datum(data)
+                        .attr("fill", "none")
+                        .attr("stroke", "#4fc3f7")
+                        .attr("stroke-width", 2)
+                        .attr("d", line);
+                } else {
+                    svg.append("text")
+                        .attr("x", width / 2)
+                        .attr("y", height / 2)
+                        .attr("text-anchor", "middle")
+                        .attr("fill", "#777")
+                        .text("Brak Danych");
+                }
+            });
+
+        });
+    </script>
+
+</div>
+
+{% endblock %}

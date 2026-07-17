@@ -1,0 +1,33 @@
+{% extends 'eye_app/base.html' %}
+
+{% block main %}
+<div class="container mt-4">
+    <h2>Edytuj urządzenie</h2>
+    <form method="POST">
+        {% csrf_token %}
+
+        <div class="mb-3">
+            <label for="uuid" class="form-label">UUID</label>
+            <input type="text" class="form-control" id="uuid" name="uuid" value="{{ device.device_uuid }}" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="key" class="form-label">Klucz</label>
+            <input type="text" class="form-control" id="key" name="key" value="{{ device.key }}" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="description" class="form-label">Opis</label>
+            <input type="text" class="form-control" id="description" name="description" value="{{ device.description }}">
+        </div>
+
+        <div class="mb-3">
+            <label for="ip_address" class="form-label">Adres IP</label>
+            <input type="text" class="form-control" id="ip_address" name="ip_address" value="{{ device.ip }}" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Zapisz</button>
+        <a href="{% url 'manage_devices' %}" class="btn btn-secondary">Anuluj</a>
+    </form>
+</div>
+{% endblock %}

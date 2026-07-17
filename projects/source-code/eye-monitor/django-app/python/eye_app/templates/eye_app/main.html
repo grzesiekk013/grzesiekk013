@@ -1,0 +1,143 @@
+{% extends 'eye_app/base.html' %}
+
+{% block main %}
+<style>
+.room-card {
+    height: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.table td, .table th {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+</style>
+
+<div class="container rounded bg-body-secondary pb-4 pt-4 w-75">
+    <h1>Witamy w EYE</h1>
+    <hr>
+
+    {% if user.is_staff %}
+    <div class="d-flex gap-2 mb-3">
+        <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#addRoom">
+            <span class="bi bi-plus-square"></span> Dodaj Nowe Pomieszczenie
+        </button>
+    </div>
+
+    <div class="modal fade" id="addRoom">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="modal-header">
+                        <h4 class="modal-title">Dodanie Nowego Pomieszczenia</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <div class="modal-body p-3">
+                        <div class="mb-3">
+                            <label class="form-label">Urządzenie (SensorDevice):</label>
+                            {{ form.device_id }}
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Numer pokoju:</label>
+                            {{ form.room_number }}
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Piętro:</label>
+                            {{ form.floor }}
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Maksymalna liczba osób:</label>
+                            {{ form.capacity }}
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Opis pokoju:</label>
+                            {{ form.description }}
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-light">
+                            <span class="bi bi-plus-square"></span> Dodaj
+                        </button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                            <span class="bi bi-x-square"></span> Anuluj
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+    <p class="pt-4 pb-0">Dostępne Pomieszczenia (Alfabetycznie):</p>
+
+    <div class="container-fluid bg-body-tertiary border rounded px-4 py-2 mx-0">
+        <div class="row">
+            {% for room in rooms %}
+            <div class="col-3 py-3">
+                <div class="card card-body bg-body-tertiary room-card">
+                    <table class="table mb-1">
+                        <tr>
+                            <td class="bg-body-tertiary">
+                                <h2 class="d-flex align-items-center justify-content-between">
+                                    <span>
+                                        {{ room.room_number }}
+                                        <span class="ms-2 {{ room.overall_quality.1 }} fs-5">
+                                            {{ room.overall_quality.0 }}
+                                            {% if room.overall_quality.2 %}
+                                                <i class="bi {{ room.overall_quality.2 }}"></i>
+                                            {% endif %}
+                                        </span>
+                                    </span>
+                                    <a type="button" class="btn btn-outline-light btn-sm"
+                                       href="{% url 'room_overall' room.id %}">Wejdź</a>
+                                </h2>
+                                {% if room.last_seen %}
+                                    <small class="text-muted">Ostatnio widziany: {{ room.last_seen|date:"Y-m-d H:i:s" }}</small>
+                                {% endif %}
+                            </td>
+                        </tr>
+                    </table>
+
+                    {% if room.quality_display %}
+                    <table class="table table-sm">
+                        <thead>
+                            <tr>
+                                <th>Nazwa</th>
+                                <th>Stan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for q in room.quality_display %}
+                            <tr>
+                                <td>{{ q.label }}</td>
+                                <td class="{{ q.color }}">
+                                    {{ q.text }}
+                                    {% if q.icon %}
+                                        <i class="bi {{ q.icon }}"></i>
+                                    {% endif %}
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                    {% else %}
+                    <p class="text-muted">Brak danych pomiarowych.</p>
+                    {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}

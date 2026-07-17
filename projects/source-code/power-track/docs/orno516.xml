@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<meter type="electric" tag="orno516" brand="orno" model="orno516">
+    <serial baudrate="9600" parity="E" stopbits="1" timeoutSecs="0.25" />
+    <registers>
+        <!-- mode="" -> defaults: register; unit="" -> defaults: no unit -->
+        <register address="0x0000" size="2" name="SerialNumber" decpnt="1" mode="" unit="" />
+        <register address="0x0002" size="1" name="ModbusAddress" decpnt="0" unit="" />
+        <register address="0x0003" size="1" name="BaudRate" decpnt="1" unit="" />
+        <register address="0x0004" size="2" name="SoftwareVersion" decpnt="3" mode="float" unit=""
+            formatter="round2" />
+        <register address="0x0006" size="2" name="HardwareVersion" decpnt="3" mode="float" unit=""
+            formatter="round2" />
+        <register address="0x0008" size="1" name="CT_Rate" decpnt="1" mode="" unit="" />
+        <register address="0x0009" size="2" name="S0_OutputRate" decpnt="0" mode="" unit="" />
+        <register address="0x000B" size="2" name="A3" decpnt="0" mode="" unit="" />
+        <register address="0x000D" size="1" name="CycleTime" decpnt="0" mode="" unit="" />
+        <!-- volts & frequency -->
+        <register address="0x000E" size="2" name="L1_Voltage" decpnt="2" mode="float"
+                  unit="Volts" formatter="round2" />
+        <register address="0x0010" size="2" name="L2_Voltage" decpnt="2" mode="float"
+                  unit="Volts" formatter="round2" />
+        <register address="0x0012" size="2" name="L3_Voltage" decpnt="2" mode="float"
+                  unit="Volts" formatter="round2" />
+        <register address="0x0014" size="2" name="GridFreqHz" decpnt="2" mode="float"
+                  unit="Hz" formatter="round2" />
+        <!-- amps -->
+        <register address="0x0016" size="2" name="L1_Amps" decpnt="2" mode="float"
+                  unit="Amps" formatter="round2" />
+        <register address="0x0018" size="2" name="L2_Amps" decpnt="2" mode="float"
+                  unit="Amps" formatter="round2" />
+        <register address="0x001A" size="2" name="L3_Amps" decpnt="2" mode="float"
+                  unit="Amps" formatter="round2" />
+        <!-- reactive power -->
+        <register address="0x001C" size="2" name="TotalActivePower" decpnt="0" mode="float"
+                  unit="Watts" formatter="times1000r2" />
+        <register address="0x001E" size="2" name="L1_ActivePower" decpnt="0" mode="float"
+                  unit="Watts" formatter="times1000r2" />
+        <register address="0x0020" size="2" name="L2_ActivePower" decpnt="0" mode="float"
+                  unit="Watts" formatter="times1000r2" />
+        <register address="0x0022" size="2" name="L3_ActivePower" decpnt="0" mode="float"
+                  unit="Watts" formatter="times1000r2" />
+        <!-- reactive power -->
+        <register address="0x0024" size="2" name="TotalReactivePower" decpnt="2" mode="float"
+                  unit="kVArh" formatter="round2"/>
+        <register address="0x0026" size="2" name="L1_ReactivePower" decpnt="2" mode="float"
+                  unit="kVArh" formatter="round2" />
+        <register address="0x0028" size="2" name="L2_ReactivePower" decpnt="2" mode="float"
+                  unit="kVArh" formatter="round2" />
+        <register address="0x0030" size="2" name="L3_ReactivePower" decpnt="2" mode="float"
+                  unit="kVArh" formatter="round2" />
+        <!-- power factor -->
+        <register address="0x0034" size="2" name="TotalPowerFactor" decpnt="2" mode="float"
+                  unit="kVArh" formatter="round2"/>
+        <register address="0x0036" size="2" name="L1_PowerFactor" decpnt="2" mode="float"
+                  unit="kVArh" formatter="round2" />
+        <register address="0x0038" size="2" name="L2_PowerFactor" decpnt="2" mode="float"
+                  unit="kVArh" formatter="round2" />
+        <register address="0x003A" size="2" name="L3_PowerFactor" decpnt="2" mode="float"
+                  unit="kVArh" formatter="round2" />
+        <!-- active energy -->
+        <register address="0x0100" size="2" name="TotalActiveEnergy" decpnt="2" mode="float"
+                  unit="kWh" formatter="round2"/>
+        <register address="0x0102" size="2" name="L1_TotalActiveEnergy" decpnt="2" mode="float"
+                  unit="kWh" formatter="round2" />
+        <register address="0x0104" size="2" name="L2_TotalActiveEnergy" decpnt="2" mode="float"
+                  unit="kWh" formatter="round2" />
+        <register address="0x0106" size="2" name="L3_TotalActiveEnergy" decpnt="2" mode="float"
+                  unit="kWh" formatter="round2" />
+        <!-- reactive energy -->
+        <register address="0x0118" size="2" name="TotalReactiveEnergy" decpnt="2" mode="float"
+                  unit="kVArh" formatter="round2"/>
+        <register address="0x011A" size="2" name="L1_TotalReactiveEnergy" decpnt="2" mode="float"
+                  unit="kVArh" formatter="round2" />
+        <register address="0x011C" size="2" name="L2_TotalReactiveEnergy" decpnt="2" mode="float"
+                  unit="kVArh" formatter="round2" />
+        <register address="0x011E" size="2" name="L3_TotalReactiveEnergy" decpnt="2" mode="float"
+                  unit="kVArh" formatter="round2" />
+    </registers>
+</meter>

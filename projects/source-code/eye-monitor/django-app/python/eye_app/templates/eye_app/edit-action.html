@@ -1,0 +1,18 @@
+{% extends 'eye_app/base.html' %}
+{% block side_panel %} {% include 'eye_app/side_panel.html' %} {% endblock %}
+{% block main %}
+
+<div class="col bg-body-secondary rounded me-4 p-4">
+    <h1>Edycja Akcji</h1>
+    <hr>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-light">
+            <span class="bi bi-check2-square"></span> Zapisz zmiany
+        </button>
+        <a href="{% url 'room_actions' room.id %}" class="btn btn-outline-light">Anuluj</a>
+    </form>
+</div>
+
+{% endblock %}

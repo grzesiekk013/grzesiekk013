@@ -1,0 +1,191 @@
+{% extends 'eye_app/base.html' %}
+{% block side_panel %} {% include 'eye_app/side_panel.html' %} {% endblock %}
+{% block main %}
+
+<div class="col position-relative bg-body-secondary rounded me-4 p-4">
+
+    <!-- nazwa pokoju + ostatnio widziany -->
+    <div class="position-absolute top-0 end-0 bg-body-secondary p-4 rounded z-1 text-end">
+        <div class="px-4 pt-3 pb-2 bg-body-tertiary rounded border">
+            <h1>{{ room.room_number }}</h1>
+            {% if last_seen %}
+            <span><small>Ostatnio widziany:</small></span>
+            <h5>{{ last_seen|date:"Y-m-d H:i:s" }}</h5>
+            {% endif %}
+        </div>
+    </div>
+
+    <h1>Edycja Pojęć Jakościowych</h1>
+    <hr>
+
+    <!-- formularz z przesunięciem -->
+    <form method="post" class="mt-5 pt-5">
+        {% csrf_token %}
+
+        <!-- Temperatura otoczenia -->
+        <div class="rounded-table-container bg-body-tertiary p-2 rounded mt-3 border">
+            <h4>Temperatura Otoczenia (°C)</h4>
+            <table class="table table-bordered text-center align-middle">
+                <tr>
+                    <th class="text-danger">Maks. Zły</th>
+                    <th class="text-warning">Min. Średni</th>
+                    <th class="text-warning">Maks. Średni</th>
+                    <th class="text-success">Min. Dobry</th>
+                    <th class="text-success">Maks. Dobry</th>
+                    <th class="text-warning">Min. Średni2</th>
+                    <th class="text-warning">Maks. Średni2</th>
+                    <th class="text-danger">Min. Zły2</th>
+                </tr>
+                <tr>
+                    <td>{{ form.max_bad_temp_otocz }}</td>
+                    <td>{{ form.min_mid_temp_otocz }}</td>
+                    <td>{{ form.max_mid_temp_otocz }}</td>
+                    <td>{{ form.min_good_temp_otocz }}</td>
+                    <td>{{ form.max_good_temp_otocz }}</td>
+                    <td>{{ form.min_mid2_temp_otocz }}</td>
+                    <td>{{ form.max_mid2_temp_otocz }}</td>
+                    <td>{{ form.min_bad2_temp_otocz }}</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Temperatura zbliżeniowa -->
+        <div class="rounded-table-container bg-body-tertiary p-2 rounded mt-4 border">
+            <h4>Temperatura Zbliżeniowa (°C)</h4>
+            <table class="table table-bordered text-center align-middle">
+                <tr>
+                    <th class="text-danger">Maks. Zły</th>
+                    <th class="text-warning">Min. Średni</th>
+                    <th class="text-warning">Maks. Średni</th>
+                    <th class="text-success">Min. Dobry</th>
+                    <th class="text-success">Maks. Dobry</th>
+                    <th class="text-warning">Min. Średni2</th>
+                    <th class="text-warning">Maks. Średni2</th>
+                    <th class="text-danger">Min. Zły2</th>
+                </tr>
+                <tr>
+                    <td>{{ form.max_bad_temp_zbliz }}</td>
+                    <td>{{ form.min_mid_temp_zbliz }}</td>
+                    <td>{{ form.max_mid_temp_zbliz }}</td>
+                    <td>{{ form.min_good_temp_zbliz }}</td>
+                    <td>{{ form.max_good_temp_zbliz }}</td>
+                    <td>{{ form.min_mid2_temp_zbliz }}</td>
+                    <td>{{ form.max_mid2_temp_zbliz }}</td>
+                    <td>{{ form.min_bad2_temp_zbliz }}</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Wilgotność -->
+        <div class="rounded-table-container bg-body-tertiary p-2 rounded mt-4 border">
+            <h4>Wilgotność (%)</h4>
+            <table class="table table-bordered text-center align-middle">
+                <tr>
+                    <th class="text-danger">Maks. Zły</th>
+                    <th class="text-warning">Min. Średni</th>
+                    <th class="text-warning">Maks. Średni</th>
+                    <th class="text-success">Min. Dobry</th>
+                    <th class="text-success">Maks. Dobry</th>
+                    <th class="text-warning">Min. Średni2</th>
+                    <th class="text-warning">Maks. Średni2</th>
+                    <th class="text-danger">Min. Zły2</th>
+                </tr>
+                <tr>
+                    <td>{{ form.max_bad_wiglotnosc }}</td>
+                    <td>{{ form.min_mid_wiglotnosc }}</td>
+                    <td>{{ form.max_mid_wiglotnosc }}</td>
+                    <td>{{ form.min_good_wiglotnosc }}</td>
+                    <td>{{ form.max_good_wiglotnosc }}</td>
+                    <td>{{ form.min_mid2_wiglotnosc }}</td>
+                    <td>{{ form.max_mid2_wiglotnosc }}</td>
+                    <td>{{ form.min_bad2_wiglotnosc }}</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- CO2 -->
+        <div class="rounded-table-container bg-body-tertiary p-2 rounded mt-4 border">
+            <h4>CO₂ (ppm)</h4>
+            <table class="table table-bordered text-center align-middle">
+                <tr>
+                    <th class="text-success">Maks. Dobry</th>
+                    <th class="text-warning">Min. Średni</th>
+                    <th class="text-warning">Maks. Średni</th>
+                    <th class="text-danger">Min. Zły</th>
+                </tr>
+                <tr>
+                    <td>{{ form.max_good_co2 }}</td>
+                    <td>{{ form.min_mid_co2 }}</td>
+                    <td>{{ form.max_mid_co2 }}</td>
+                    <td>{{ form.min_bad_co2 }}</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- TVOC -->
+        <div class="rounded-table-container bg-body-tertiary p-2 rounded mt-4 border">
+            <h4>TVOC (ppb)</h4>
+            <table class="table table-bordered text-center align-middle">
+                <tr>
+                    <th class="text-success">Maks. Dobry</th>
+                    <th class="text-warning">Min. Średni</th>
+                    <th class="text-warning">Maks. Średni</th>
+                    <th class="text-danger">Min. Zły</th>
+                </tr>
+                <tr>
+                    <td>{{ form.max_good_tvoc }}</td>
+                    <td>{{ form.min_mid_tvoc }}</td>
+                    <td>{{ form.max_mid_tvoc }}</td>
+                    <td>{{ form.min_bad_tvoc }}</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- eCO2 -->
+        <div class="rounded-table-container bg-body-tertiary p-2 rounded mt-4 border">
+            <h4>eCO₂ (ppm)</h4>
+            <table class="table table-bordered text-center align-middle">
+                <tr>
+                    <th class="text-success">Maks. Dobry</th>
+                    <th class="text-warning">Min. Średni</th>
+                    <th class="text-warning">Maks. Średni</th>
+                    <th class="text-danger">Min. Zły</th>
+                </tr>
+                <tr>
+                    <td>{{ form.max_good_eco2 }}</td>
+                    <td>{{ form.min_mid_eco2 }}</td>
+                    <td>{{ form.max_mid_eco2 }}</td>
+                    <td>{{ form.min_bad_eco2 }}</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- AQI -->
+        <div class="rounded-table-container bg-body-tertiary p-2 rounded mt-4 border">
+            <h4>Jakość Powietrza (AQI)</h4>
+            <table class="table table-bordered text-center align-middle">
+                <tr>
+                    <th class="text-success">Maks. Dobry</th>
+                    <th class="text-warning">Min. Średni</th>
+                    <th class="text-warning">Maks. Średni</th>
+                    <th class="text-danger">Min. Zły</th>
+                </tr>
+                <tr>
+                    <td>{{ form.max_good_aqi }}</td>
+                    <td>{{ form.min_mid_aqi }}</td>
+                    <td>{{ form.max_mid_aqi }}</td>
+                    <td>{{ form.min_bad_aqi }}</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- przycisk zapisu -->
+        <div class="text-end mt-4">
+            <button type="submit" class="btn btn-success">
+                <span class="bi bi-check2-square"></span> Zapisz zmiany
+            </button>
+        </div>
+    </form>
+</div>
+
+{% endblock %}

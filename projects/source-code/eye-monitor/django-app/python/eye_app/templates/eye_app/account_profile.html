@@ -1,0 +1,48 @@
+{% extends 'eye_app/base.html' %}
+{% block side_panel %} {% include 'eye_app/side_panel.html' %} {% endblock %}
+{% block main %}
+
+<div class="col bg-body-secondary rounded me-4 p-4">
+    <h1>Konto</h1>
+    <hr>
+
+    <div class="bg-body-tertiary p-3 rounded border mb-4 w-50">
+        <table class="table table-sm table-borderless mb-0">
+            <tr>
+                <th>Nazwa użytkownika:</th>
+                <td>{{ user.username }}</td>
+            </tr>
+            <tr>
+                <th>Email:</th>
+                <td>{{ user.email }}</td>
+            </tr>
+            <tr>
+                <th>Imię i nazwisko:</th>
+                <td>{{ user.first_name }} {{ user.last_name }}</td>
+            </tr>
+            <tr>
+                <th>Uprawnienia:</th>
+                <td>
+                    {% if user.is_staff %}
+                        <span class="text-success">Administrator</span>
+                    {% else %}
+                        <span class="text-muted">Użytkownik standardowy</span>
+                    {% endif %}
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <hr class="my-4">
+
+    <h4>Zmiana Hasła</h4>
+    <form method="post" class="mt-3 w-50">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">
+            <span class="bi bi-key"></span> Zmień hasło
+        </button>
+    </form>
+</div>
+
+{% endblock %}

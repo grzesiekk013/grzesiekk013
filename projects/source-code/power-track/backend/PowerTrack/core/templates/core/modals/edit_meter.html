@@ -1,0 +1,62 @@
+<div class="modal fade" id="manage_edit_meter{{ meter.id}}">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <form method="POST" action="{%url 'manage_edit_meter' meter.id %}">
+        {% csrf_token %}
+        <div class="modal-header">
+          <p class="h4"><span class="bi bi-pencil-square"></span>  Licznik <i>{{ meter }}</i> </p>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <hr>
+        <div class="modal-body">
+          <div class="form-group mb-2">
+            <label for="slave_id">Adres Modbus</label>
+            <input id="slave_id" type="number" class="form-control form-control-sm" name="slave_id" min="1" max="247" required value="{{ meter.slave_id }}">
+          </div>
+          <div class="form-group mb-2">
+            <label for="channel">Kanał</label>
+            <select class="form-select form-select-sm" id="channel" name="channel" required>
+              {% for channel in channels %}
+              <option value="{{channel.id}}" {% if meter.channel == channel %} selected {% endif %}>{{channel}}</option>
+              {% endfor %}
+            </select>
+          </div>
+          <div class="form-group mb-2">
+            <label for="channel">Pomieszczenie</label>
+            <select class="form-select form-select-sm" id="room" name="room">
+              <option selected value="">-- Wybierz pomieszczenie --</option>
+              {% for room in rooms %}
+              <option value="{{room.id}}" {% if meter.room == room %} selected {% endif %}>{{room}}</option>
+              {% endfor %}
+            </select>
+          </div>
+          <div class="form-group mb-2">
+            <label for="model">Model</label>
+            <select class="form-select form-select-sm" id="model" name="model" required>
+              <option value="OR-WE-504" {% if meter.model == 'OR-WE-504' %} selected {% endif %}>ORNO OR-WE-504</option>
+              <option value="OR-WE-516" {% if meter.model == 'OR-WE-516' %} selected {% endif %}>ORNO OR-WE-516</option>
+            </select>
+          </div>
+          <div class="form-group mb-2">
+            <label class="form-check-label" for="is_active">Aktywny</label>
+            <input type="checkbox" class="form-check-input form-check-input-sm" id ="is_active" name="is_active" {% if meter.is_active %} checked {% endif %}>
+          </div>
+          <div class="form-group mb-2">
+            <label class="form-control-label" for="falert_profile">Profil Alarmowy</label>
+               <select class="form-select form-control form-select-sm" id="falert_profile" name="falert_profile">
+                  <option value="" {% if not meter.alert_profile %} selected {%endif%}>Pusty</option>
+                  {% for alert in alert_profiles %}
+                    <option value="{{ alert.id }}" {% if meter.alert_profile.id == alert.id %} selected {%endif%}>{{ alert.name }}</option>
+                  {% endfor %}
+               </select>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-sm btn-outline-success"><span class="bi bi-floppy"></span>  Zapisz</button>
+            <button type="button" class="btn btn-sm btn-outline-danger" data-bs-dismiss="modal"><span class="bi bi-x-square"></span>  Anuluj</button>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>
