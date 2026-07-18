@@ -126,7 +126,7 @@ Click on the links below to see dedicated pages with detailed descriptions.
 *   **UAV Drone Build (A to Z):** Full mechanical and electrical build of an FPV drone. Modeled frame parts in Blender, 3D printed them, soldered the electronicts, and tuned Betaflight.
 *   **LUA GameDev Scripts:** Custom state machines and game logic, scripting scenarios and tests.
 *   **Project "Komputer" & The Legacy Batch Snake:** A monolithic text-based OS simulation built entirely in Windows Batch (`.bat`) at age 15–16, featuring 28 built-in apps (including a custom diary, calculator, and drawing tools). I have isolated the **2,000-line Snake game** module into a public repository. It was written with zero formal knowledge of loops or data structures, built purely via `GOTO` jumps and raw environment variables.  **[View the Legacy Batch Snake Repository](https://github.com/grzesiekk013/my-first-project)**
-*   
+  
 ---
 <a name="recruiters"></a>
 ### Quick Code Guide for Recruiters
