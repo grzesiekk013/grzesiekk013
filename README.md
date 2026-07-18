@@ -125,7 +125,8 @@ Click on the links below to see dedicated pages with detailed descriptions.
 ### Quick Hobby & Software Experiments
 *   **UAV Drone Build (A to Z):** Full mechanical and electrical build of an FPV drone. Modeled frame parts in Blender, 3D printed them, soldered the electronicts, and tuned Betaflight.
 *   **LUA GameDev Scripts:** Custom state machines and game logic, scripting scenarios and tests.
-
+*   **Project "Komputer" & The Legacy Batch Snake:** A monolithic text-based OS simulation built entirely in Windows Batch (`.bat`) at age 15–16, featuring 28 built-in apps (including a custom diary, calculator, and drawing tools). I have isolated the **2,000-line Snake game** module into a public repository. It was written with zero formal knowledge of loops or data structures, built purely via `GOTO` jumps and raw environment variables. 👉 **[View the Legacy Batch Snake Repository](https://github.com/grzesiekk013/my-first-project)**
+*   
 ---
 <a name="recruiters"></a>
 ### Quick Code Guide for Recruiters
@@ -133,7 +134,7 @@ If you are here to quickly evaluate my programming proficiency and architectural
 
 *   **Modern C++ (C++17):** Look straight into the **[Mini-Redis Engine](https://github.com/grzesiekk013/mini-redis)** or **[Zero Copy Ring Packet](https://github.com/grzesiekk013/zero-copy-telemetry-ring-packet)** repo. It demonstrates how I handle C++ language.
 *   **Python Engineering:** Check out my **[PowerTrack (Engineering Thesis)](projects/power-track.md)** for a full-stack Django & SQL setup on embedded SBCs. See pico-worker/core and backend/PowerTrack/core.
-
+*   **My Coding Roots (Windows Batch):** Check out the **[Legacy Batch Snake Repo](https://github.com/grzesiekk013/my-first-project)**. This is a 2,000-line Snake game module extracted from a larger 4,500-line environment called "Komputer". I wrote it at age 15 with no formal programming skills—just pure trial and error, hacking together endless `IF` statements and `GOTO` jumps until it actually worked.
 --- 
 
 *  🌱 I’m currently learning: C++ and STM32 microcontrollers (focusing on HAL, LL drivers, and direct register access).
