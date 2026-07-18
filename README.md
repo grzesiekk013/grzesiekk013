@@ -40,7 +40,7 @@ Click on the links below to see dedicated pages with detailed descriptions.
 ### [2. UAV & Maritime Simulations](projects/simulations.md)
 <img width="1584" height="396" alt="Banner" src="https://github.com/user-attachments/assets/1d99669d-7f3e-44ab-863c-8c27cc6bb05d" />
 
-*   **What it is:** High-fidelity simulations enviroments built in *   *   **Unreal Engine** using JSBSim for testing real-case scenarios and maritime crane behaviors operating unrer wave movements.
+*   **What it is:** High-fidelity simulations enviroments built in **Unreal Engine** using JSBSim for testing real-case scenarios and maritime crane behaviors operating unrer wave movements.
 *   **My role:** Designed the virtual physics enviroments, integrated the outputs and prepared the simulation pipeline.
 
   
@@ -72,10 +72,11 @@ While the core enterprise codebase remains proprietary, I architected and built 
     *   **Simulation & Physics:** Developed the complete quadcopter simulation from scratch, including custom environment modeling, drone flight physics, a dynamic weather configuration application, and real-time GPS localization.
     *   **Hardware Assembly:** Built the physical quadcopter drone from the ground up, which was utilized for the physical demonstration side of the setup.
     *   **RF & VTX Integration:** Integrated a live video transmitter (VTX) system that streamed the virtual camera feed from the simulation directly to physical field monitors and FPV goggles over the air (proving successful real-world RF broadcasting during the exhibition).
-*   **System Architecture:** Developed as a Hardware-in-the-Loop (HITL) system where the physical drone mirrored the real movements of the simulation. *(Note: Radio signal routing/splitting and the basic Python/C++ communication layer were co-developed with the Lead Architect).*
+*   **System Architecture:** Developed as a Hardware-in-the-Loop (HITL) system where the physical drone mirrored the real movements of the simulation. *(Note: Radio signal routing/splitting and the basic Python/C++ communication layer were co-developed with the Lead Architect; I was personally responsible for parsing the incoming CSRF frames over RS232 and mapping to movement).*
 <p align="center">
 <img width="695" height="389" alt="image" src="https://github.com/user-attachments/assets/eea6155d-099e-4fe3-9f11-34f098147ced" />
-</p>
+</p>  
+  
 [Showcase Video](/images/drone_expo26.mp4)   
 
 
