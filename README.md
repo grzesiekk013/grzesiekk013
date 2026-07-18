@@ -131,7 +131,7 @@ Click on the links below to see dedicated pages with detailed descriptions.
 ### Quick Code Guide for Recruiters
 If you are here to quickly evaluate my programming proficiency and architectural style, here is a direct map to my best and most up-to-date source code showcases:
 
-*   **Modern C++ (C++17):** Look straight into the **[Mini-Redis Engine](https://github.com/grzesiekk013/mini-redis)** repo. It demonstrates how I handle C++ language.
+*   **Modern C++ (C++17):** Look straight into the **[Mini-Redis Engine](https://github.com/grzesiekk013/mini-redis)** or **[Zero Copy Ring Packet](https://github.com/grzesiekk013/zero-copy-telemetry-ring-packet)** repo. It demonstrates how I handle C++ language.
 *   **Python Engineering:** Check out my **[PowerTrack (Engineering Thesis)](projects/power-track.md)** for a full-stack Django & SQL setup on embedded SBCs. See pico-worker/core and backend/PowerTrack/core.
 
 --- 
