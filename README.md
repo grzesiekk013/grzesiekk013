@@ -31,8 +31,13 @@ I am a versatile Software and Hardware Engineer, graduate of Gdynia Maritime Uni
 
 Click on the links below to see dedicated pages with detailed descriptions.  
 ### **[1. Mini-Redis as In-Memory Cache Engine](https://github.com/grzesiekk013/mini-redis)**
-   <img width="1000" height="100" alt="Projekt bez nazwy (12)" src="https://github.com/user-attachments/assets/257d285c-3a31-4f16-b998-c57ee8868371" />
+  
+   <p style="center">  
+  <img width="1000" height="100" alt="Tekst akapitu (1)" src="https://github.com/user-attachments/assets/f758cbe7-a30d-43d5-92b6-fe16fee254b5" />
 
+   </p>  
+
+  
    * **What it is:** A minimalist, high-performance in-memory key-value storage engine built from scratch to demonstrate low-level memory efficiency, persistence, and precise time tracking without external dependencies.
    * **Key features:** Custom TTL expiration via `std::chrono`, automated CSV serialization/deserialization, type-safe null handling using `std::optional`, RAII-based memory management.
    * **Tech stack:** C++17, std::unordered_map, std::filesystem
@@ -102,7 +107,8 @@ Click on the links below to see dedicated pages with detailed descriptions.
 
 *   **[Ant Colony Maze Solver](projects/ant-colony-maze-solver.md)** - Pathfinding algorith visualizer using and colony optimization. <img width="1584" height="396" alt="Beige Simple Elegant Personal LinkedIn Banner (3)" src="https://github.com/user-attachments/assets/aaf5fcfe-fad2-4e98-8f9f-1c54905591f9" />
 
-*   **[The Ship Game](projects/the-ship-game.md)** - A PC implementation of the classic Battleship game. <img width="800" height="200" alt="Projekt bez nazwy (6)" src="https://github.com/user-attachments/assets/f2717f42-f8ea-48b3-8e0e-e07b75d10b8b" />
+*   **[The Ship Game](projects/the-ship-game.md)** - A PC implementation of the classic Battleship game. <img width="1000" height="100" alt="Tekst akapitu (2)" src="https://github.com/user-attachments/assets/3530fde7-ba73-4cc4-8dc4-7bf55a38ce6c" />
+
 
 *   **[Auto Ware Bot](projects/auto-ware-bot.md)** - Autonomus robot built on ESP32.<img width="800" height="200" alt="Projekt bez nazwy (8)" src="https://github.com/user-attachments/assets/265aa35a-835e-42a6-a65f-b45131dca03d" />
 
