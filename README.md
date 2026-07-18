@@ -42,7 +42,7 @@ Click on the links below to see dedicated pages with detailed descriptions.
 
 *   **What it is:** High-fidelity simulations enviroments built in **Unreal Engine** using JSBSim for testing real-case scenarios and maritime crane behaviors operating unrer wave movements.
 *   **My role:** Designed the virtual physics enviroments, integrated the outputs and prepared the simulation pipeline.
-
+*   **Tech stack:** Unreal Engine 5, JSBSim, Python, C++, Blueprints
   
 
 ### [3. PowerTrack (Engineering Thesis)](projects/power-track.md)
@@ -72,7 +72,7 @@ While the core enterprise codebase remains proprietary, I architected and built 
     *   **Simulation & Physics:** Developed the complete quadcopter simulation from scratch, including custom environment modeling, drone flight physics, a dynamic weather configuration application, and real-time GPS localization.
     *   **Hardware Assembly:** Built the physical quadcopter drone from the ground up, which was utilized for the physical demonstration side of the setup.
     *   **RF & VTX Integration:** Integrated a live video transmitter (VTX) system that streamed the virtual camera feed from the simulation directly to physical field monitors and FPV goggles over the air (proving successful real-world RF broadcasting during the exhibition).
-*   **System Architecture:** Developed as a Hardware-in-the-Loop (HITL) system where the physical drone mirrored the real movements of the simulation. *(Note: Radio signal routing/splitting and the basic Python/C++ communication layer were co-developed with the Lead Architect; I was personally responsible for parsing the incoming CSRF frames over RS232 and mapping to movement).*
+*   **System Architecture:** Developed as a Hardware-in-the-Loop (HITL) system where the physical drone mirrored the real movements of the simulation. *(Note: Radio signal routing/splitting and the basic Python/C++ communication layer were co-developed with the Lead Architect; I was personally responsible for parsing the incoming CRSF (CrossFire) frames over RS232 and mapping to movement).*
 <p align="center">
 <img width="695" height="389" alt="image" src="https://github.com/user-attachments/assets/eea6155d-099e-4fe3-9f11-34f098147ced" />
 </p>  
@@ -135,7 +135,7 @@ If you are here to quickly evaluate my programming proficiency and architectural
 
 *   **Modern C++ (C++17):** Look straight into the **[Mini-Redis Engine](https://github.com/grzesiekk013/mini-redis)** or **[Zero Copy Ring Packet](https://github.com/grzesiekk013/zero-copy-telemetry-ring-packet)** repo. It demonstrates how I handle C++ language.
 *   **Python Engineering:** Check out my **[PowerTrack (Engineering Thesis)](projects/power-track.md)** for a full-stack Django & SQL setup on embedded SBCs. See pico-worker/core and backend/PowerTrack/core.
-*   **My Coding Roots (Windows Batch):** Check out the **[Legacy Batch Snake Repo](https://github.com/grzesiekk013/my-first-project)**. This is a 2,000-line Snake game module extracted from a larger 4,500-line environment called "Komputer". I wrote it at age 15 with no formal programming skills - just pure trial and error, hacking together endless `IF` statements and `GOTO` jumps until it actually worked.
+*   **My Coding Roots (Windows Batch):** Check out the **[Legacy Batch Snake Repo](https://github.com/grzesiekk013/my-first-project)**. This is a 2,000-line Snake game module extracted from a larger 4,800-line environment called "Komputer". I wrote it at age 15 with no formal programming skills - just pure trial and error, hacking together endless `IF` statements and `GOTO` jumps until it actually worked.
 --- 
 
 *  🌱 I’m currently learning: C++ and STM32 microcontrollers (focusing on HAL, LL drivers, and direct register access).
