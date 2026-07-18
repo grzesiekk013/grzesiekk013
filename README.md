@@ -134,7 +134,7 @@ If you are here to quickly evaluate my programming proficiency and architectural
 
 *   **Modern C++ (C++17):** Look straight into the **[Mini-Redis Engine](https://github.com/grzesiekk013/mini-redis)** or **[Zero Copy Ring Packet](https://github.com/grzesiekk013/zero-copy-telemetry-ring-packet)** repo. It demonstrates how I handle C++ language.
 *   **Python Engineering:** Check out my **[PowerTrack (Engineering Thesis)](projects/power-track.md)** for a full-stack Django & SQL setup on embedded SBCs. See pico-worker/core and backend/PowerTrack/core.
-*   **My Coding Roots (Windows Batch):** Check out the **[Legacy Batch Snake Repo](https://github.com/grzesiekk013/my-first-project)**. This is a 2,000-line Snake game module extracted from a larger 4,500-line environment called "Komputer". I wrote it at age 15 with no formal programming skills—just pure trial and error, hacking together endless `IF` statements and `GOTO` jumps until it actually worked.
+*   **My Coding Roots (Windows Batch):** Check out the **[Legacy Batch Snake Repo](https://github.com/grzesiekk013/my-first-project)**. This is a 2,000-line Snake game module extracted from a larger 4,500-line environment called "Komputer". I wrote it at age 15 with no formal programming skills - just pure trial and error, hacking together endless `IF` statements and `GOTO` jumps until it actually worked.
 --- 
 
 *  🌱 I’m currently learning: C++ and STM32 microcontrollers (focusing on HAL, LL drivers, and direct register access).
