@@ -102,7 +102,7 @@ Click on the links below to see dedicated pages with detailed descriptions.
 
 *   **[Ant Colony Maze Solver](projects/ant-colony-maze-solver.md)** - Pathfinding algorith visualizer using and colony optimization. <img width="1584" height="396" alt="Beige Simple Elegant Personal LinkedIn Banner (3)" src="https://github.com/user-attachments/assets/aaf5fcfe-fad2-4e98-8f9f-1c54905591f9" />
 
-*   **[The Ship Game](projects/the-ship-game.md)** - Ship game in a digital environment. <img width="800" height="200" alt="Projekt bez nazwy (6)" src="https://github.com/user-attachments/assets/f2717f42-f8ea-48b3-8e0e-e07b75d10b8b" />
+*   **[The Ship Game](projects/the-ship-game.md)** - A PC implementation of the classic Battleship game. <img width="800" height="200" alt="Projekt bez nazwy (6)" src="https://github.com/user-attachments/assets/f2717f42-f8ea-48b3-8e0e-e07b75d10b8b" />
 
 *   **[Auto Ware Bot](projects/auto-ware-bot.md)** - Autonomus robot built on ESP32.<img width="800" height="200" alt="Projekt bez nazwy (8)" src="https://github.com/user-attachments/assets/265aa35a-835e-42a6-a65f-b45131dca03d" />
 
