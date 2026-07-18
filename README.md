@@ -112,8 +112,6 @@ Click on the links below to see dedicated pages with detailed descriptions.
 
 *   **[Thermal Scope Attachment](projects/infrared-scope.md)** - Infrared heat-source tracker with integrated display for rifles.<img width="800" height="200" alt="Projekt bez nazwy (11)" src="https://github.com/user-attachments/assets/07dfeb1d-f27c-4ad6-8ef6-bc97ed317bd7" />
 
-****
-
 ---
 <a name="certifications"></a>
 ## Certifications & Vocational Qualifications
