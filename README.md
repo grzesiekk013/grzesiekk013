@@ -36,7 +36,6 @@ Click on the links below to see dedicated pages with detailed descriptions.
   <img width="1000" height="100" alt="Tekst akapitu (1)" src="https://github.com/user-attachments/assets/f758cbe7-a30d-43d5-92b6-fe16fee254b5" />
 
    </p>  
-
   
    * **What it is:** A minimalist, high-performance in-memory key-value storage engine built from scratch to demonstrate low-level memory efficiency, persistence, and precise time tracking without external dependencies.
    * **Key features:** Custom TTL expiration via `std::chrono`, automated CSV serialization/deserialization, type-safe null handling using `std::optional`, RAII-based memory management.
@@ -117,6 +116,8 @@ Click on the links below to see dedicated pages with detailed descriptions.
 *   **[EYE Monitor](projects/eye-monitor.md)** - Smart multi-sensor IoT node for office workspace optimization.<img width="800" height="200" alt="Projekt bez nazwy (10)" src="https://github.com/user-attachments/assets/aa038edf-00c2-47ec-8824-119c2abefba0" />
 
 *   **[Thermal Scope Attachment](projects/infrared-scope.md)** - Infrared heat-source tracker with integrated display for rifles.<img width="800" height="200" alt="Projekt bez nazwy (11)" src="https://github.com/user-attachments/assets/07dfeb1d-f27c-4ad6-8ef6-bc97ed317bd7" />
+
+* **[BMS Cell PID HIL Simulator](https://github.com/grzesiekk013/bms-cell-pid-hil-simulator)** – Hardware-in-the-Loop testing platform with bare-metal STM32 PID loop and Modern C++ telemetry parser. *(Under Construction)*
 
 ---
 <a name="certifications"></a>
