@@ -71,6 +71,19 @@ To keep the robot's physical payload light and power-efficient, we offloaded hea
 ### Robot Idea  
 ![Robot Idea](/images/auto-ware-bot-idea-1.png)  
 
+### What's inside?  
+<p style="center">  
+  
+<img width="300" height="600" alt="robot-inside" src="https://github.com/user-attachments/assets/fb16cc77-2aee-430f-9e16-effeaa5e3800" />  
+
+</p>  
+
+### Live Preview and Debug Data  
+
+<p style="center">  
+<img width="1058" height="457" alt="robot-live-preview-and-debug-data" src="https://github.com/user-attachments/assets/6d61a666-3eaf-4dc3-bfc7-2c0cbe605312" />  
+</p>  
+
 ### [Server Side Live Data Preview Video](/images/auto-ware-bot-live-data.mp4)
 
 ### [Robot Doing Task Video](/images/auto-ware-bot-in-work.mp4)
