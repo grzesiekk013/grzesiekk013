@@ -146,7 +146,7 @@ If you are here to quickly evaluate my programming proficiency and architectural
 *  🌱 I’m currently learning: C++ and STM32 microcontrollers (focusing on HAL, LL drivers, and direct register access).
 
 ### Reverse Engineering
-*   **E-WASTE Camera** Look straight into the **[grain81xx-camera](https://github.com/grzesiekk013//grain81xx-camera)**. 
+*   **E-WASTE Camera** Look straight into the **[grain81xx-camera](https://github.com/grzesiekk013/grain81xx-camera)**. 
 <!--
 **grzesiekk013/grzesiekk013** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
