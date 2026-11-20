@@ -13,6 +13,7 @@ I am a versatile Software and Hardware Engineer, graduate of Gdynia Maritime Uni
 * [Certifications & Vocational Qualifications](#certifications)
 * [Quick Hobby & Software Experiments](#hobby)
 * [Quick Code Guide for Recruiters](#recruiters)
+* [Reverse Engineering](#revenv)  
 ---
 <a name="tech-stack-and-skills"></a>
 ## Tech Stack & Skills
@@ -145,6 +146,7 @@ If you are here to quickly evaluate my programming proficiency and architectural
 
 *  🌱 I’m currently learning: C++ and STM32 microcontrollers (focusing on HAL, LL drivers, and direct register access).
 
+<a name="tech-stack-and-skills"></a>
 ### Reverse Engineering
 *   **E-WASTE Camera** Look straight into the **[grain81xx-camera](https://github.com/grzesiekk013/grain81xx-camera)**. 
 <!--
