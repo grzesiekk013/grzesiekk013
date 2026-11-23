@@ -148,7 +148,8 @@ If you are here to quickly evaluate my programming proficiency and architectural
 
 <a name="revenv"></a>
 ### Reverse Engineering
-*   **E-WASTE Camera** Look straight into the **[grain81xx-camera](https://github.com/grzesiekk013/grain81xx-camera)**. 
+-   **E-WASTE Camera** Look straight into the **[grain81xx-camera](https://github.com/grzesiekk013/grain81xx-camera)**.  <img width="1584" height="396" alt="Beige Simple Elegant Personal LinkedIn Banner (3)" src="https://github.com/grzesiekk013/grzesiekk013/grain-camera-banner.png" />
+    Rescuing a **Blow 78-701** IP camera (`GM8125`, ARMv5, Linux 2.6.28) from dead cloud services by reverse-engineering `nvisr` in Ghidra, replacing it with standalone C tools (`snap`, `ptz_test`), PTZ/IR control, RT3070 WiFi, MicroSD (`/mnt/sd`), and a local BusyBox `httpd` web UI.
 <!--
 **grzesiekk013/grzesiekk013** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
