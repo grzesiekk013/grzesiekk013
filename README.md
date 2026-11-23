@@ -12,8 +12,9 @@ I am a versatile Software and Hardware Engineer, graduate of Gdynia Maritime Uni
 * [Other R&D & Hardware Projects](#other-r-and-d)
 * [Certifications & Vocational Qualifications](#certifications)
 * [Quick Hobby & Software Experiments](#hobby)
-* [Quick Code Guide for Recruiters](#recruiters)
 * [Reverse Engineering](#revenv)  
+* [Quick Code Guide for Recruiters](#recruiters)
+
 ---
 <a name="tech-stack-and-skills"></a>
 ## Tech Stack & Skills
@@ -105,7 +106,7 @@ While the core enterprise codebase remains proprietary, I architected and built 
 
 Click on the links below to see dedicated pages with detailed descriptions.
 
-*   **[Ant Colony Maze Solver](projects/ant-colony-maze-solver.md)** - Pathfinding algorith visualizer using and colony optimization. <img width="1584" height="396" alt="Beige Simple Elegant Personal LinkedIn Banner (3)" src="https://github.com/user-attachments/assets/aaf5fcfe-fad2-4e98-8f9f-1c54905591f9" />
+*   **[Ant Colony Maze Solver](projects/ant-colony-maze-solver.md)** - Pathfinding algorith visualizer using and colony optimization. <img width="1584" height="396" alt="Banner" src="https://github.com/user-attachments/assets/aaf5fcfe-fad2-4e98-8f9f-1c54905591f9" />
 
 *   **[The Ship Game](projects/the-ship-game.md)** - A PC implementation of the classic Battleship game. <img width="1000" height="100" alt="Tekst akapitu (2)" src="https://github.com/user-attachments/assets/3530fde7-ba73-4cc4-8dc4-7bf55a38ce6c" />
 
@@ -133,7 +134,14 @@ Click on the links below to see dedicated pages with detailed descriptions.
 *   **UAV Drone Build (A to Z):** Full mechanical and electrical build of an FPV drone. Modeled frame parts in Blender, 3D printed them, soldered the electronicts, and tuned Betaflight.
 *   **LUA GameDev Scripts:** Custom state machines and game logic, scripting scenarios and tests.
 *   **Project "Komputer" & The Legacy Batch Snake:** A monolithic text-based OS simulation built entirely in Windows Batch (`.bat`) at age 15–16, featuring 28 built-in apps (including a custom diary, calculator, and drawing tools). I have isolated the **2,000-line Snake game** module into a public repository. It was written with zero formal knowledge of loops or data structures, built purely via `GOTO` jumps and raw environment variables.  **[View the Legacy Batch Snake Repository](https://github.com/grzesiekk013/my-first-project)**
-  
+
+---
+
+<a name="revenv"></a>
+### Reverse Engineering
+-   **E-WASTE Camera** Look straight into the **[grain81xx-camera](https://github.com/grzesiekk013/grain81xx-camera)**.  <img width="1584" height="396" alt="Banner" src="https://github.com/grzesiekk013/grzesiekk013/blob/main/images/grain-camera-banner.png" />
+    Rescuing a **Blow 78-701** IP camera (`GM8125`, ARMv5, Linux 2.6.28) from dead cloud services by reverse-engineering `nvisr` in Ghidra, replacing it with standalone C tools (`snap`, `ptz_test`), PTZ/IR control, RT3070 WiFi, MicroSD (`/mnt/sd`), and a local BusyBox `httpd` web UI.
+
 ---
 <a name="recruiters"></a>
 ### Quick Code Guide for Recruiters
@@ -144,12 +152,9 @@ If you are here to quickly evaluate my programming proficiency and architectural
 *   **My Coding Roots (Windows Batch):** Check out the **[Legacy Batch Snake Repo](https://github.com/grzesiekk013/my-first-project)**. This is a 2,000-line Snake game module extracted from a larger 4,800-line environment called "Komputer". I wrote it at age 15 with no formal programming skills - just pure trial and error, hacking together endless `IF` statements and `GOTO` jumps until it actually worked.
 --- 
 
-*  🌱 I’m currently learning: C++ and STM32 microcontrollers (focusing on HAL, LL drivers, and direct register access).
+<!--*  🌱 I’m currently learning: C++ and STM32 microcontrollers (focusing on HAL, LL drivers, and direct register access).-->
 
-<a name="revenv"></a>
-### Reverse Engineering
--   **E-WASTE Camera** Look straight into the **[grain81xx-camera](https://github.com/grzesiekk013/grain81xx-camera)**.  <img width="1584" height="396" alt="Beige Simple Elegant Personal LinkedIn Banner (3)" src="https://github.com/grzesiekk013/grzesiekk013/grain-camera-banner.png" />
-    Rescuing a **Blow 78-701** IP camera (`GM8125`, ARMv5, Linux 2.6.28) from dead cloud services by reverse-engineering `nvisr` in Ghidra, replacing it with standalone C tools (`snap`, `ptz_test`), PTZ/IR control, RT3070 WiFi, MicroSD (`/mnt/sd`), and a local BusyBox `httpd` web UI.
+
 <!--
 **grzesiekk013/grzesiekk013** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
